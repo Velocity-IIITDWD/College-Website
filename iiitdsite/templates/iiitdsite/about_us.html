@@ -1,0 +1,558 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>About</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="55x55"
+      href="{% static 'iiitdsite/images/iiit-logo-small.png' %}"
+    />
+    <!--         Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'iiitdsite/css/top_nav-scroll.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/about_us.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'iiitdsite/css/favicon_nav.css' %}"
+    />
+
+    <!-- Fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--    <link-->
+    <!--      rel="stylesheet"-->
+    <!--      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+    <!--    />-->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <style>
+      html {
+  scroll-behavior: smooth;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  /* height: 2000px; */
+  /* background: black; */
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+    </style>
+    <!-- Top Nav -->
+    <!-- Start Header Area -->
+    {% include 'iiitdsite/nav_bar.html' %}
+    <script>
+      var a = document.querySelector(".desktop-menu").querySelectorAll("li");
+      a[1].className = "active";
+    </script>
+
+    <!-- end Header Area -->
+    <!-- Page sta rts -->
+    <!-- {% for about in about %} -->
+    <!-- <h1 class="text-center" style="font-size: 30px">About Us</h1>
+    <div class="row mx-1">
+      <div class="col-lg-12 col-md-12 col-sm-12" id="aboutiiit">
+        <h3 style="text-decoration: underline" id="one">About IIIT Dharwad</h3>
+        <p class="about_font">
+          The Institute commenced its academic session from August 2015. The           Institute is currently operating out of its transit campus housed in           the IT Park in Hubballi with well-equipped classrooms, laboratories           and a library.IIIT Dharwad is keen to develop its permanent campus in           a plot of 61 acres allotted by the Government of Karnataka at           Tadasinakoppa village between Hubballi and Dharwad cities. As a           not-for-profit institute of higher learning in the area of Information           Technology (IT), the primary objective of IIIT Dharwad is to address           the skill gap in high-end information technology and thereby enable           India to retain its global leadership role in IT and allied areas. To           achieve this objective, IIIT Dharwad currently offers B.Tech. Degree           programmes in Computer Science and Electronics & Communication.
+        </p>
+      </div>
+    </div>
+    <div class="media mt-3">
+      <img
+        src="{% static 'iiitdsite/images/sudhamurty.jpg' %}"
+        class="align-self-top ml-1"
+        id="images"
+      />
+      <div class="media-body ml-2">
+        <h4 class="chairperson" id="two">Chairperson's message</h4>
+        <hr class="w-100 mx-0 my-0 py-0.5 btn-dark" />
+        <p class="chairperson">
+          “As the Chairperson of the Board of Governors of IIIT Dharwad, I would           like to share a slice of wisdom with the young generation around us:           Vision without action is merely a dream; action without vision is           merely passing time; but vision and action together can change the           world. We can give our children only two things in life which are           essential – strong roots and powerful wings. Afterwards, they may fly           anywhere and live independently; of all the luxuries in life, the           greatest one is getting freedom of the right kind. To come up in life,           the young generation requires talent, hard work, drive, and ability to           communicate genuinely with people. With my experience in life, I feel           that having good relationships, compassion, and peace of mind is much           more important than achievements, awards, degrees, or money. Hence, we           should always have a definite aim in life which we must try to achieve           while being of help to others. I wish IIIT Dharwad great success in           shaping young minds into professionals with the best of skills coupled           with the highest of values.”
+        </p>
+      </div>
+    </div>
+
+    <div class="media mt-3">
+      <div class="media-body mr-2">
+        <h4 class="chairperson text-right" id="three">Director's message</h4>
+        <hr class="w-100 mx-0 my-0 py-0.5 btn-dark" />
+        <p class="chairperson">
+          "One of the key strengths of this young Institute is its highly           qualified and committed faculty with expertise in a wide range of           areas of information technology and with PhDs and research as well as           industry experience from reputed institutes in India and abroad. As a           young institute, IIIT Dharwad has a unique opportunity to make a           difference not only to Indian IT industry and the academic research           community, but also the people of the entire region of North           Karnataka. The twin cities of Hubballi and Dharwad are already a           recognized centre for educational institutes of repute including           engineering, medical, law and other colleges, universities and an           Indian Institute of Technology. With this environment and rapidly           improving connectivity to the IT capital Bengaluru, IIIT Dharwad is           strategically positioned to develop into one of the best institutes of           national importance. I consider it my duty and privilege to place on           record the guidance, direction and support provided by the Board of           Governors. I also thank the faculty and staff for their continued           energy, enthusiasm and efforts in providing state of the art education           to our students for their overall growth. In conclusion, I deem it our           privilege to work in this fledgling institution."
+        </p>
+      </div>
+      <img
+        src="{% static 'iiitdsite/images/faculty/director.jpeg' %}"
+        class="align-self-top ml-1"
+        id="images"
+      />
+    </div>
+    {% endfor %}
+    <div class="jumbotron jumbotron-fluid pt-0 pb-0 mt-1 text-center">
+      <a
+        data-toggle="collapse"
+        data-target="#ourfamily"
+        class="btn-outline-warning mx-2"
+        id="family"
+      >
+        <i
+          class="fa fa-angle-double-right"
+          style="cursor: pointer"
+          aria-hidden="true"
+          >OUR FAMILY</i
+        ></a
+      >
+      <div id="ourfamily" class="collapse">
+        <div class="row mx-1" style="cursor: pointer">
+          {% for fam in ourfam %}
+          <div
+            class="col-lg-4 col-md-6 col-sm-6 col-12 text-center btn-outline-danger"
+            id="box"
+          >
+            <a href="/{{fam.link}}">{{fam.name}}</a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="gtco-testimonials">
+      <h2 id="h2">Testimonials</h2>
+      <div class="owl-carousel owl-carousel1 owl-theme">
+        {% for testi in testi %}
+        <div>
+          <div class="card text-center">
+            <img
+              class="card-img-top"
+              src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300"
+              alt=""
+            />
+            <div class="card-body">
+              <h5>
+                {{testi.name}} <br />
+                <span> {{testi.position}} </span>
+              </h5>
+              <p class="card-text">
+                {{testi.description}}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div> -->
+
+    <style>
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #343a40;
+        color: #ffffff;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+    </style>
+    <div class="container">
+      <br />
+      <div class="section-top-border">
+        <h2>About IIIT Dharwad</h2>
+        <p style="text-align: justify">
+          IIIT Dharwad is an Institute of National Importance set up in 2015 in
+          Public-Private-Partnership mode between the
+          <a target="blank" href="http://www.mhrd.gov.in/"
+            >Ministry of Education,</a
+          >
+          Government of India,
+          <a target="blank" href="http://itbtst.karnataka.gov.in/"
+            >Government of Karnataka</a
+          >
+          and industry partner
+          <a target="blank" href="http://www.keonics.in/">Keonics</a> under an
+          Act of Parliament (23 of 2017). The Institute offers BTech and PhD
+          programs and is about to move to its spacious permanent campus of 60
+          acres near Dharwad (between Oct and Dec 2020). As a not-for-profit
+          institute of higher learning in the area of Information Technology
+          (IT), the primary objective of IIIT Dharwad is to address the skill
+          gap in high-end information technology and thereby enable India to
+          retain its global leadership role in IT and allied areas. The
+          Institute’s Chairperson Smt. Sudha Murty, Board of Governors, and
+          Senate constitute highly eminent leaders from administration,
+          academia, and industry. They are instrumental in steering the
+          institute in the right direction. IIIT Dharwad is a self-sustaining
+          PPP Institute where all running expenses including salaries are met by
+          the tuition and other fees paid by students.
+        </p>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 3%">
+      <div class="section-top-border">
+        <h3 style="margin-bottom: 2%">Chairperson's message</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <img
+              src="{% static 'iiitdsite/images/sudhamurthy_new.jpeg' %}"
+              alt=""
+              class="img-fluid"
+              width="100%"
+            />
+          </div>
+          <div class="col-md-9 mt-sm-20 left-align-p">
+            <p style="text-align: justify">
+              “As the Chairperson of the Board of Governors of IIIT Dharwad, I
+              would like to share a slice of wisdom with the young generation
+              around us: Vision without action is merely a dream; action without
+              vision is merely passing time; but vision and action together can
+              change the world. We can give our children only two things in life
+              which are essential – strong roots and powerful wings. Afterwards,
+              they may fly anywhere and live independently; of all the luxuries
+              in life, the greatest one is getting freedom of the right kind. To
+              come up in life, the young generation requires talent, hard work,
+              drive, and ability to communicate genuinely with people. With my
+              experience in life, I feel that having good relationships,
+              compassion, and peace of mind is much more important than
+              achievements, awards, degrees, or money. Hence, we should always
+              have a definite aim in life which we must try to achieve while
+              being of help to others. I wish IIIT Dharwad great success in
+              shaping young minds into professionals with the best of skills
+              coupled with the highest of values.”<br />
+              <b
+                ><p style="text-align: right">
+                  - Smt. Sudha Murty, Chairperson of Board
+                </p></b
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-right" style="margin-top: 3%">
+        <h3 style="margin-bottom: 2%">Director's message</h3>
+        <div class="row">
+          <div class="col-md-9">
+            <p style="text-align: justify">
+              "One of the key strengths of this young Institute is its highly
+              qualified and committed faculty with expertise in a wide range of
+              areas of information technology and with PhDs and research as well
+              as industry experience from reputed institutes in India and
+              abroad. As a young institute, IIIT Dharwad has a unique
+              opportunity to make a difference not only to Indian IT industry
+              and the academic research community, but also the people of the
+              entire region of North Karnataka. The twin cities of Hubballi and
+              Dharwad are already a recognized centre for educational institutes
+              of repute including engineering, medical, law and other colleges,
+              universities and an Indian Institute of Technology. With this
+              environment and rapidly improving connectivity to the IT capital
+              Bengaluru, IIIT Dharwad is strategically positioned to develop
+              into one of the best institutes of national importance. I consider
+              it my duty and privilege to place on record the guidance,
+              direction and support provided by the Board of Governors. I also
+              thank the faculty and staff for their continued energy, enthusiasm
+              and efforts in providing state of the art education to our
+              students for their overall growth. In conclusion, I deem it our
+              privilege to work in this fledgling institution." <br /><b
+                ><p style="text-align: left">- Dr. Kavi Mahesh, Director</p></b
+              >
+            </p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="{% static 'iiitdsite/images/faculty/director.jpeg' %}"
+              alt=""
+              class="img-fluid"
+              width="100%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="container">
+      <div class="tab">
+        <button
+          class="tablinks active"
+          style="float: left; width: 50%; font-size: x-large"
+          onclick="openSec(event, 'Vision')"
+        >
+          Vision
+        </button>
+        <button
+          class="tablinks"
+          style="float: right; width: 50%; font-size: x-large"
+          onclick="openSec(event, 'Mission')"
+        >
+          Mission
+        </button>
+      </div>
+
+      <div id="Vision" class="tabcontent" style="display: block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <img
+                src="../../../static/iiitdsite/images/vision_clipart.jpg"
+                alt="Vision"
+                width="80%"
+              />
+            </div>
+            <div class="col">
+              <h3>Vision</h3>
+              <h5>
+                “To be a globally renowned academy of information technology for
+                societal development.”
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Mission" class="tabcontent">
+        <div class="row align-items-center">
+          <div class="col">
+            <img
+              src="../../../static/iiitdsite/images/mission_clipart.png"
+              alt="Vision"
+              width="80%"
+            />
+          </div>
+          <div class="col">
+            <h3>Mission</h3>
+            <p>
+              i. To produce globally competent information technology
+              professionals with the right mix of professional skills and
+              ethical, societal and environmental concerns.<br />
+              ii. To solve local problems using global technologies and solve
+              global problems using local technologies across disciplines.<br />
+              iii. To project the nation to the forefront of information
+              technology research and development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include 'iiitdsite/footer.html' %}
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        var carousels = function () {
+          $(".owl-carousel1").owlCarousel({
+            loop: true,
+            center: true,
+            margin: 0,
+            responsiveClass: true,
+            nav: false,
+            responsive: {
+              0: {
+                items: 1,
+                nav: false,
+              },
+              680: {
+                items: 2,
+                nav: false,
+                loop: false,
+              },
+              1000: {
+                items: 3,
+                nav: true,
+              },
+            },
+          });
+        };
+
+        (function ($) {
+          carousels();
+        })(jQuery);
+      })();
+    </script>
+    <script>
+      function openSec(evt, secName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(secName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+
+    <script>
+      (function ($) {
+        "use strict";
+
+        // Off Canvas Open close start
+        $(".off-canvas-btn").on("click", function () {
+          $("body").addClass("fix");
+          $(".off-canvas-wrapper").addClass("open");
+        });
+
+        $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+          $("body").removeClass("fix");
+          $(".off-canvas-wrapper").removeClass("open");
+        });
+
+        // slide effect dropdown
+        function dropdownAnimation() {
+          $(".dropdown").on("show.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideDown(500);
+          });
+
+          $(".dropdown").on("hide.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideUp(500);
+          });
+        }
+        dropdownAnimation();
+
+        //offcanvas mobile menu start
+        var $offCanvasNav = $(".mobile-menu"),
+          $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+        /Add Toggle Button With Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu
+          .parent()
+          .prepend('<span class="menu-expand"><i></i></span>');
+
+        /Close Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu.slideUp();
+
+        /Category Sub Menu Toggle/;
+        $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+          var $this = $(this);
+          if (
+            $this
+              .parent()
+              .attr("class")
+              .match(
+                /\b(menu-item-has-children|has-children|has-sub-menu)\b/
+              ) &&
+            ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+          ) {
+            e.preventDefault();
+            if ($this.siblings("ul:visible").length) {
+              $this.parent("li").removeClass("active");
+              $this.siblings("ul").slideUp();
+            } else {
+              $this.parent("li").addClass("active");
+              $this
+                .closest("li")
+                .siblings("li")
+                .removeClass("active")
+                .find("li")
+                .removeClass("active");
+              $this.closest("li").siblings("li").find("ul:visible").slideUp();
+              $this.siblings("ul").slideDown();
+            }
+          }
+        });
+
+        // tooltip active js
+        $('[data-toggle="tooltip"]').tooltip();
+      })(jQuery);
+    </script>
+    <!--ion icon cdn-->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  </body>
+</html>

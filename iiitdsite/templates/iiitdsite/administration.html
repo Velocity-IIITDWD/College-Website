@@ -1,0 +1,179 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Administration</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/favicon_nav.css' %}">
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/top_nav-scroll.css' %}">
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/faculty.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Start Header Area -->
+    {% include 'iiitdsite/nav_bar.html' %}
+    <script>
+      var a = document.querySelector('.desktop-menu').querySelectorAll('li');
+      a[29].className='active';
+    </script>
+    
+    
+    <!-- Start -->
+    <br>
+			<h1 class="text-center" style="font-size: 60px"><u>Administration</u></h1>
+    <div class="container row mt-4" style="margin: 0 auto;">
+      {% for admin in administration %}
+        <!-- card -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+          <div class="card shadow-sm border-0 rounded">
+            <div class="card-body p-0">
+              <figure>
+                <img
+                  src={{admin.image_link}}
+                  alt=""
+                  class="w-100 card-img-top"
+                />
+              </figure>
+            </div>
+            <div class="p-4">
+              <h5 class="mb-0" id="names_roboto">{{admin.name}}</h5>
+              <p class="desig_noto">
+                {{admin.position}}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    <!-- End -->
+        <!--------------footer-------------->
+
+        {% include 'iiitdsite/footer.html' %}
+    <!-------------footer ends---------->
+    <!-- end Header Area -->
+<!-- Nav bar js -->
+    <script>
+      //smooth scroll js
+
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 9000,
+        speedAsDuration: true,
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script>
+      (function ($) {
+        "use strict";
+
+        // Off Canvas Open close start
+        $(".off-canvas-btn").on("click", function () {
+          $("body").addClass("fix");
+          $(".off-canvas-wrapper").addClass("open");
+        });
+
+        $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+          $("body").removeClass("fix");
+          $(".off-canvas-wrapper").removeClass("open");
+        });
+
+        // slide effect dropdown
+        function dropdownAnimation() {
+          $(".dropdown").on("show.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideDown(500);
+          });
+
+          $(".dropdown").on("hide.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideUp(500);
+          });
+        }
+        dropdownAnimation();
+
+        //offcanvas mobile menu start
+        var $offCanvasNav = $(".mobile-menu"),
+          $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+        /Add Toggle Button With Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu
+          .parent()
+          .prepend('<span class="menu-expand"><i></i></span>');
+
+        /Close Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu.slideUp();
+
+        /Category Sub Menu Toggle/;
+        $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+          var $this = $(this);
+          if (
+            $this
+              .parent()
+              .attr("class")
+              .match(
+                /\b(menu-item-has-children|has-children|has-sub-menu)\b/
+              ) &&
+            ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+          ) {
+            e.preventDefault();
+            if ($this.siblings("ul:visible").length) {
+              $this.parent("li").removeClass("active");
+              $this.siblings("ul").slideUp();
+            } else {
+              $this.parent("li").addClass("active");
+              $this
+                .closest("li")
+                .siblings("li")
+                .removeClass("active")
+                .find("li")
+                .removeClass("active");
+              $this.closest("li").siblings("li").find("ul:visible").slideUp();
+              $this.siblings("ul").slideDown();
+            }
+          }
+        });
+
+        // tooltip active js
+        $('[data-toggle="tooltip"]').tooltip();
+      })(jQuery);
+    </script>
+    <!--ion icon cdn-->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- Nav bar js end-->
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'iiitdsite/base_template.html' %}
+{% load static %}
+{% block title %} Gallery {% endblock title %} 
+{% block main_content %}
+
+<style>
+    html {
+      scroll-behavior: smooth;
+      margin: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+</style>
+<style>
+	.gallery{
+		margin: 10px 50px;
+	}
+	.gallery img{
+		transition: 1s;
+		padding: 15px;
+		width: 200px;
+	}
+	.gallery img:hover{
+		filter: grayscale(100%);
+		transform: scale(1.1);
+	}
+</style>
+<div class="containe gallery">
+	{% for object in images %}
+	<a href="{{object.image.url}}" data-lightbox="gallery">
+		<img src="{{object.image.url}}" alt="" width="400px" height="400px">
+	</a>
+	{% endfor %}
+
+
+ </div>
+{% endblock main_content %}

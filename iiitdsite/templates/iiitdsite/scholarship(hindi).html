@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <title>Scholarshis_and_Bank-loan</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}" />
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/favicon_nav.css' %}" />
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/scholarship.css' %}">
+  <link rel="stylesheet" href="./top_nav-scroll.css">
+</head>
+
+<body>
+  <!-- Top Nav -->
+  <nav class="navbar navbar-expand-sm bg-dark justify-content-center" id="backtonav" style="position: fixed;left: 0;top:0;width: 100%; z-index: 100;">
+    <ul class="navbar-nav">
+      <div class="container">
+        <div class="row">
+          <section class="comsearch" style="margin-left: -3%">
+            <a href="#"><span style="font-size: 17px; color: #ffffff">PMRF&nbsp;|&nbsp;
+              </span></a>
+            <a href="#"><span style="font-size: 17px; color: white">ARIIA&nbsp;|&nbsp;
+              </span></a>
+            <a href="#"><span style="font-size: 17px; color: white">RTI&nbsp;|&nbsp;
+              </span></a>
+            <a href="#"><span style="font-size: 17px; color: white">IIIT PPP Act&nbsp;|&nbsp;
+              </span></a>
+            <a href="#"><span style="font-size: 17px; color: white">AIMS&nbsp;|&nbsp;
+              </span></a>
+            <a href="#"><span style="font-size: 17px; color: white">Webmail&nbsp;|&nbsp;
+              </span></a>
+            <a href="#"><span style="font-size: 17px; color: white">ICC</span></a>
+          </section>
+
+          <section class="information-wrapper" id="navScrollBlock" style="margin-top: 21px">
+            <div class="information d-none d-xl-block">
+              <div>
+                <span><a href="{% url 'home' %}" style="color:rgb(255, 205, 131)">English
+                  </a></span>
+              </div>
+              <div>
+                <span><a href="{% url 'kannada' %}" style="color:rgb(255, 205, 131)">ಕೆನಡಾ
+                  </a></span>
+              </div>
+              <div>
+                <span><a href="{% url 'hindi' %}" style="color:rgb(255, 205, 131)">हिन्दी
+                  </a></span>
+              </div>
+            </div>
+          </section>
+
+          <div>
+            <div class="search" style="margin-left: -4%; margin-top: 10px">
+              <script async src="https://cse.google.com/cse.js?cx=483075f18c137fb12"></script>
+              <div class="gcse-search"></div>
+            </div>
+          </div>
+        </div>
+        </section>
+      </div>
+      </div>
+      </div>
+    </ul>
+  </nav>
+  <!-- End Top Nav -->
+
+  <!-- Start Header Area -->
+  {% include 'iiitdsite/nav_bar(hindi).html' %}
+  <script>
+    var a = document.querySelector('.desktop-menu').querySelectorAll('li');
+    
+  </script>
+  <!-- end Header Area -->
+
+  <!-- off-canvas menu start -->
+  <aside class="off-canvas-wrapper">
+    <div class="off-canvas-overlay"></div>
+    <div class="off-canvas-inner-content">
+      <div class="btn-close-off-canvas">
+        <i class="fa fa-times"></i>
+      </div>
+
+      <div class="off-canvas-inner">
+        <!-- search box start -->
+        <div class="search-mobile">
+          <script async src="https://cse.google.com/cse.js?cx=483075f18c137fb12"></script>
+          <div class="gcse-search"></div>
+        </div>
+        <!-- search box end -->
+
+        <!-- mobile menu start -->
+        <div class="mobile-navigation">
+          <!-- mobile menu navigation start -->
+          <nav>
+            <ul class="mobile-menu" style="padding-bottom: 0px; margin-bottom: 0px;">
+              <li><a href="{% url 'hindi' %}">Home</a></li>
+              <li><a href="{% url 'about-hindi' %}">About</a></li>
+              <li class="menu-item-has-children">
+                <a href="{% url 'academics-hindi' %}">Academics</a>
+                <ul class="dropdown">
+                  <li><a href="#">Courses</a></li>
+                  <li><a href="{% url 'faculty-hindi' %}">Faculty</a></li>
+                  <li><a href="{% url 'research-hindi' %}">Research</a></li>
+                  <li class="menu-item-has-children"><a href="">Curriculum</a>
+                    <ul class="dropdown">
+                      <li><a href="{{currilink.cse_link}}">CSE</a></li>
+                       <li>
+                                  <a href="{% url 'academics-dsai' %}">
+                                    Data Science & AI (DSAI)</a
+                                  >
+                                </li>
+                      <li><a href={{currilink.cse_link}}>ECE</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="{% url 'admissions-hindi' %}">Admissions</a>
+                <ul class="dropdown">
+                  <li><a href="{% url 'ug-hindi' %}">Undergraduate</a></li>
+                  <li><a href="{% url 'phd-hindi' %}">Ph.D</a></li>
+                  <li><a href="">Finance+Aid</a></li>
+                </ul>
+              </li>
+              <li><a href="{% url 'events-hindi' %}">Events</a></li>
+<li><a href="{% url 'campus-hindi' %}">Campus</a></li><li><a href="{% url 'gallery-hindi' %}">Gallery</a></li>
+              <li><a href="{% url 'newstack-hindi' %}">News</a></li>
+              <li><a href="{% url 'contact-hindi' %}">Contact us</a></li>
+              <li><a href="{% url 'jobs-hindi' %}">Jobs</a></li>
+              <li><a href="{% url 'placements' %}">Placements</a></li>
+<!-- <li><a href="./aims.html">AIMS</a></li> -->
+            </ul>
+          </nav>
+          <!-- mobile menu navigation end -->
+        </div>
+        <!-- mobile menu end -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- offcanvas widget area start -->
+        <div class="offcanvas-widget-area">
+          <div class="off-canvas-contact-widget">
+            <ul>
+              <li>
+                <i class="fa fa-mobile"></i>
+                <a href="#">0123456789</a>
+              </li>
+              <li>
+                <i class="fa fa-envelope-o"></i>
+                <a href="#">info@yourdomain.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="off-canvas-social-widget">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+          </div>
+        </div>
+        <!-- offcanvas widget area end -->
+      </div>
+    </div>
+  </aside>
+  <!-- off-canvas menu end -->
+
+  <!-- Starting of the Scholarship page -->
+  <br>
+  <br>
+
+  <section class="page">
+    <div id="h" class="h1">Scholarships and Bank Loan</div>
+    <br>
+    <br>
+    <div id="h" class="h2">
+      <p>IIIT Dharwad is an Institute of National importance and its student are eligible for all the Scholarship
+        Schemes and
+        Bank loans on par with all other central Government funded Institutes like IITs, NITs, IIITs etc</p>
+    </div>
+    <br>
+    <br>
+    <div class="links">
+      <div id="link" class="link1">
+        <a href={{links.education_loan_application}}> Eduaction Loan Application </a>
+      </div>
+      <div>
+        <a id="link" href={{links.checklist}} class="link2"> Checklist for Education Loan Documents </a>
+      </div>
+    </div>
+  </section>
+
+  <!--------------footer-------------->
+
+  {% include 'iiitdsite/footer.html' %}
+
+  <!-------------footer ends---------->
+  <!-- Nav bar js -->
+  <script>
+    //smooth scroll js
+
+    var scroll = new SmoothScroll('a[href*="#"]');
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 9000,
+      speedAsDuration: true,
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  <script>
+    (function ($) {
+      "use strict";
+
+      // Off Canvas Open close start
+      $(".off-canvas-btn").on("click", function () {
+        $("body").addClass("fix");
+        $(".off-canvas-wrapper").addClass("open");
+      });
+
+      $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+        $("body").removeClass("fix");
+        $(".off-canvas-wrapper").removeClass("open");
+      });
+
+      // slide effect dropdown
+      function dropdownAnimation() {
+        $(".dropdown").on("show.bs.dropdown", function (e) {
+          $(this)
+            .find(".dropdown-menu")
+            .first()
+            .stop(true, true)
+            .slideDown(500);
+        });
+
+        $(".dropdown").on("hide.bs.dropdown", function (e) {
+          $(this)
+            .find(".dropdown-menu")
+            .first()
+            .stop(true, true)
+            .slideUp(500);
+        });
+      }
+      dropdownAnimation();
+
+      //offcanvas mobile menu start
+      var $offCanvasNav = $(".mobile-menu"),
+        $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+      /Add Toggle Button With Off Canvas Sub Menu/;
+      $offCanvasNavSubMenu
+        .parent()
+        .prepend('<span class="menu-expand"><i></i></span>');
+
+      /Close Off Canvas Sub Menu/;
+      $offCanvasNavSubMenu.slideUp();
+
+      /Category Sub Menu Toggle/;
+      $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+        var $this = $(this);
+        if (
+          $this
+            .parent()
+            .attr("class")
+            .match(
+              /\b(menu-item-has-children|has-children|has-sub-menu)\b/
+            ) &&
+          ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+        ) {
+          e.preventDefault();
+          if ($this.siblings("ul:visible").length) {
+            $this.parent("li").removeClass("active");
+            $this.siblings("ul").slideUp();
+          } else {
+            $this.parent("li").addClass("active");
+            $this
+              .closest("li")
+              .siblings("li")
+              .removeClass("active")
+              .find("li")
+              .removeClass("active");
+            $this.closest("li").siblings("li").find("ul:visible").slideUp();
+            $this.siblings("ul").slideDown();
+          }
+        }
+      });
+
+      // tooltip active js
+      $('[data-toggle="tooltip"]').tooltip();
+    })(jQuery);
+  </script>
+  <!--ion icon cdn-->
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <!-- Nav bar js end-->
+
+  <!-- Search box in top nav -->
+  <script>
+    //search box js
+
+    $(document).ready(function () {
+      $(".search1").each(function () {
+        var self = $(this);
+        var div = self.children("div");
+        var placeholder = div.children("input").attr("placeholder");
+        var placeholderArr = placeholder.split(/ +/);
+        if (placeholderArr.length) {
+          var spans = $("<div />");
+          $.each(placeholderArr, function (index, value) {
+            spans.append($("<span />").html(value + "&nbsp;"));
+          });
+          div.append(spans);
+        }
+        self.click(function () {
+          self.addClass("open");
+          setTimeout(function () {
+            self.find("input").focus();
+          }, 750);
+        });
+        $(document).click(function (e) {
+          if (!$(e.target).is(self) && !jQuery.contains(self[0], e.target)) {
+            self.removeClass("open");
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

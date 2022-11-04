@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	padding: 0px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* Main CSS */
+.grid-wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+}
+.grid-wrapper .wide {
+	grid-column: span 2;
+}
+.grid-wrapper .tall {
+	grid-row: span 2;
+}
+.grid-wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+
+/* Container holding the image and the text */
+.contr {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-height: 200px;
+  /* background-image: url("https://image.shutterstock.com/image-photo/long-straight-road-leading-towards-260nw-549537385.jpg");
+    background-size: cover; */
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.coming {
+  position: relative;
+  text-align: center;
+}
+
+.noimg {
+  filter: brightness(70%);
+  max-height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.top-right{
+  position: absolute;
+  /* top: 50px; */
+  text-align: left;
+  left: 30px;
+  top: 30px;
+  color: #eee;
+  font-size: 4.5vw;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #eee;
+  font-size: 2.5vw;
+  font-weight:400;
+  text-decoration: none;
+}
+
+.banner{
+  height: 70vh;
+}

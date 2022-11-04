@@ -1,0 +1,155 @@
+
+<footer class="footer-section">
+    <div class="container" style="padding-left: 50px;">
+      <div class="footer-cta pt-5 pb-5" style="position:relative;left: -38px;border-color: transparent;font-size:15px;">
+        <div class="row">
+          <div class="col-xl-3 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fa fa-map-marker" id="icons"></i>
+              <div class="cta-text" style="padding-left: 22px;">
+                <h4>Find us</h4>
+                <span
+                  >IIIT Dharwad Campus,<br />
+                  Ittigatti Road, <br />
+                  Near Satur Colony,<br/>
+                  Hubballi- 580009.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fa fa-phone" id="icons"></i>
+              <div class="cta-text">
+                <h4>Call us</h4>
+                <span>08362250879</br>9449732959</span>
+              </div>
+            </div>
+          </div>
+          <div class="weather col-xl-3 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fa fa-cloud" id="icons"></i>
+              <div class="weather cta-text">
+                <h4>{{temp_cel}}°C/ {{temp_fah}}°F</h4>
+                <span>Dharwad</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 mb-30">
+            <div class="single-cta">
+              <i class="fa fa-envelope-open" id="icons"></i>
+              <div class="cta-text">
+                <h4>Mail us</h4>
+                <span>contact@iiitdwd.ac.in</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 mb-50">
+            <div class="footer-widget" style="font-size: 15px;line-height: 25px;">
+              
+              <div class="footer-widget" style="width: 400px;margin-bottom: 30px;">
+                <div class="footer-widget-heading">
+                  <h3 style="margin-bottom: 25px;margin-top: 2px;">Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="{% url 'placements' %}">Placement Cell</a></li>
+                </ul>
+              </div>
+              <div class="footer-social-icon footer-widget-heading" style="margin-bottom: 10px;">
+                <h3>Follow us</h3>
+                <a href="#"><i class="fa fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fa fa-twitter twitter-bg"></i></a>
+                <a href="#"><i class="fa fa-google-plus google-bg"></i></a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+            <div class="footer-widget" style="font-size: 15px;line-height: 25px;">
+              <div class="footer-widget-heading">
+                <h3 style="margin-bottom: 25px">Clubs</h3>
+              </div>
+              <ul>
+                <li><a href="">E-Cell</a></li>
+                <li><a href="https://iris-iiitdwd.herokuapp.com/" target="_blank">Robotics</a></li>
+                <li><a href="https://return-0-winter-of-code.vercel.app/">Return_0</a></li>
+                <li><a href="https://dsai-react-code.herokuapp.com/">DSAI Society</a></li>
+              </ul>
+              
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+          <div class="footer-widget" style="font-size: 15px;line-height: 25px">
+            <div class="footer-widget-heading">
+              <h3 style="margin-bottom: 25px;">Other Clubs</h3>
+            </div>
+            <ul>
+              <li>Cultural Committe</li>
+              <li>Music Club</li>
+              <li>Literature Club</li>
+              <li>Photography Club</li>
+            </ul>
+          </div>
+        </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 mb-50">
+            <div class="footer-widget" style="font-size: 15px;line-height: 25px;">
+              <div class="footer-widget-heading">
+                <h3 style="margin-bottom: 25px;">Subscribe</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p style="font-size: 15px;">
+                  Don’t miss the IIIT Dharwad news letter, kindly fill the form
+                  below to get updated.
+                </p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  <input type="text" placeholder="Email Address" id="email"/>
+                  <button><i class="fa fa-paper-plane"></i></button>
+                </form>
+              </div>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>
+                Copyright &copy; 2020, All Right Reserved
+                <a href="#">IIIT Dharwad</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Tenders</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <style>
+    
+    @media(min-width:800px){
+      .footer-section > .container{
+        padding-left: 15px;
+      }
+    }
+  </style>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <link rel="icon" type="img/png" sizes="55x55" href="{% static 'iiitdsite/images/iiit-logo-small.png' %}" />
+  <!-- Font styles -->
+  <!-- Roboto Slab -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- Avro -->
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet" />
+
+  <!-- Noto Serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet" />
+  <!--back to top-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <title>Placements</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/placements.css' %}" />
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/favicon_nav.css' %}" />
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
+
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}" />
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/backtotop.css' %}" />
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/top_nav-scroll.css' %}" />
+</head>
+
+<body>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      margin: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+  </style>
+
+<style>
+  table,th,td{
+    border: 2px solid black;
+    padding: 2rem;
+  }
+  .wrapper{
+    display: grid;
+    border:1px solid black;
+    grid-template-columns: repeat(8,1fr);
+    grid-auto-columns: 40px;
+    grid-auto-rows: 100px;
+    
+  }
+  .wrapper div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+  .container ul li{
+   list-style-type: disc; 
+   
+  }
+</style>
+
+  <!-- Start Header Area -->
+  {% include 'iiitdsite/nav_bar.html' %}
+  <script>
+    var a = document.querySelector('.desktop-menu').querySelectorAll('li');
+    a[40].className = 'active';
+  </script>
+  <!-- end Header Area -->
+  <!-- body -->
+
+<section class="pt-2 pb-2 mt-3">
+  <div class="container">
+    <h3>Career Guidance Cell</h3>
+    <hr>
+    <p>The Career Guidance Cell at IIIT Dharwad is driven by the students and assisted by the students for career development of students. <br> The goals of CGC are-</p>
+  
+    <ul class="ml-3 ">
+      <li>To provide placement drives at IIIT</li>
+      <li>To provide training and assistance to students for better placement and internship opportunities</li>
+      <li>To hone soft skills and interview techniques</li>
+      <li>To organize workshops and invited talks to make students industry ready</li>
+      <li>To assist students with their plans for higher studies</li>
+      <li>To provide information about entrance exams and other opportunities for higher studies</li>
+    </ul>
+
+  </div>
+</section>
+
+  <section class="pt-2 pb-2 mt-2">
+    <div class="container">
+      <div>
+        <div>
+          <h3 class="mb-3">
+            Placement Statistics
+          </h3>
+        </div>
+        <div class="overflow-auto">
+          <table>
+            <thead>
+              <th>Batch</th>
+              <th>% of eligible students placed</th>
+              <th>Highest Package (Lakhs per annum)</th>
+              <th>Average Package (Lakhs per annum)</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2019</td>
+                <td>100%</td>
+                <td>10LPA</td>
+                <td>6 LPA</td>
+              </tr>
+              <tr>
+                <td>2020</td>
+                <td>100%</td>
+                <td>11 LPA</td>
+                <td>7 LPA</td>
+              </tr>
+              <tr>
+                <td>2021</td>
+                <td>100%</td>
+                <td>25 LPA</td>
+                <td>7.3 LPA</td>
+              </tr>
+              <tr>
+                <td>2022</td>
+                <td>92%</td>
+                <td>25 LPA</td>
+                <td>8 LPA</td>
+              </tr>
+              <tr>
+                <td>2023</td>
+                <td>OnGoing</td>
+                <td>22.7 LPA</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- carousel -->
+  <section class="pt-2 pb-2 mt-3">
+    <hr class="col-8 mb-5">
+    <div class="container">
+      <div>
+        <div>
+          <h3 class="mb-3">Past Recruiters
+            (on campus, off campus or online)</h3>
+        </div>
+        
+        <div class="wrapper overflow-auto">
+    
+          <div>Actyv</div>
+          <div>AllGoVision</div>
+          <div>Adverb Technologies</div>
+          <div>AllGoVision Technologies</div>
+          <div>Amazon</div>
+          <div>Bentley Motors Limited</div>
+          <div>Capgemini</div>
+          <div>Cisco System Inc</div>
+          <div>Conditions Systems</div>
+
+          <div>CGI</div>
+          <div>Comviva</div>
+          <div>Cognizant</div>
+          <div>Cogoport</div>
+          <div>Deloitte</div>
+          <div>Elseem Innovations <br>Private Limited</div>
+          <div>Ericsson Global R&D</div>
+          <div>FIS</div>
+        
+          <div>Good Work Labs</div>
+          <div>Govivace</div>
+          <div>Greendeck</div>
+          <div>Granite River Labs <br> Technology Pvt Ltd</div>
+          <div>gnani.ai</div>
+          <div>IBM</div>
+          <div>Increff</div>
+          <div>IndiaMart</div>
+
+          <div>Infosys</div>
+          <div>Intellect Design <br> Arena Ltd</div>
+          <div>Intel</div>
+          <div>Infix healthcare</div>
+          <div>Knowledge Foundry</div>
+          <div>Leoforce</div>
+          <div>Maven Hive</div>
+          <div>Mercedes-Benz Research <br>& Development India</div>
+
+          <div>Mindtree</div>
+          <div>Merkle Sokrati</div>
+          <div>Nagarro</div>
+          <div>Newgen Software <br> Technology Limited</div>
+          <div>NVIDIA</div>
+          <div>PathPartner Technology <br> Privated Limited</div>
+          <div>Principal Finance Group</div>
+          <div>Publicis Sapient</div>
+
+          <div>RBL Technology</div>
+          <div>Robert Bosch</div>
+          <div>Samsung Group</div>
+          <div>Samsung Data Systems</div>
+          <div>Synapse Design</div>
+          <div>SpringML</div>
+          <div>Subex</div>
+          <div>Shipx</div>
+
+          <div>Salesforce</div>
+          <div>Saankhya Labs Private Ltd</div>
+          <div>ShareChat</div>
+          <div>Tata Consultancy Services</div>
+          <div>Tavant</div>
+          <div>Techurate</div>
+          <div>Traveloka</div>
+          <div>Thrillophilia</div>
+
+          <div>Virtusa</div>
+          <div>Wells Fargo</div>
+          <div>Wipro</div>
+          <div>Zensar</div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section>
+    
+
+    <hr style="margin-top: 3%;" class="container col-8 breakline" />
+    <div class="justify-content-center text mb-5 mt-3">
+      <h3 class="mb-3 mt-3" style="text-align: center;"><b>Contact Details</b></h3>
+      <div class="col-lg-12 mt-5">
+        <div class="row-grid justify-content-center row">
+          <div class="col-lg-4">
+            <div class="card-lift--hover shadow border-0 card">
+              <div class="py-5 card-body">
+                <h3 style="margin-bottom: 2%;">CGC Chaiman</h3>
+                <h6 class="text-uppercase"> <b>Dr.Rajendra Hegadi</b><br></h6>
+                
+                <h6 class="mb-2 mt-2"><a href="mailto:cgc@iiitdwd.ac.in"><i class="fa fa-envelope mr-2"></i>cgc@iiitdwd.ac.in</a></h6>
+                <h6><a href="tel:+91 88273 82264"><i class="fa fa-phone-square mr-2"></i>+91 88273 82264</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card-lift--hover shadow border-0 card">
+              <div class="py-5 card-body">
+                <h3 style="margin-bottom: 2%;">Placement Co-ordinator</h3>
+                <h6 class="text-uppercase"> <b>Mr. Ujwal Doddamani</b><br></h6>
+                
+                <h6 class="mb-2 mt-2"><a href="mailto:cgc@iiitdwd.ac.in"><i class="fa fa-envelope mr-2"></i>cgc@iiitdwd.ac.in</a></h6>
+                <h6><a href="tel:+91 88273 82264"><i class="fa fa-phone-square mr-2"></i>+91 88273 82264</a></h6>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+        
+      </div>
+      <div class="row justify-content-center row-grid">
+        <div class="col-lg-8">
+          <div class="card-lift--hover shadow border-0 card">
+            <div class="py-5 card-body">
+              <h3 style="margin-bottom: 2%;text-align: center;">Student Co-ordinators</h3>
+              <div class="row row-grid justify-content-between px-5">
+                <ul>
+                  <li>Aparna Kholia<h6 class="mb-2 mt-2"><a href="mailto:19bcs116@iiitdwd.ac.in"><i class="fa fa-envelope mr-2"></i>19bcs116@iiitdwd.ac.in</a></h6></li>
+                  <li>Ayaan Khan<h6 class="mb-2 mt-2"><a href="mailto:19bcs013@iiitdwd.ac.in"><i class="fa fa-envelope mr-2"></i>19bcs013@iiitdwd.ac.in</a></h6></li>
+                  
+                </ul>
+                <ul>
+                  <li>Gourba Chakraborty<h6 class="mb-2 mt-2"><a href="mailto:19bcs118@iiitdwd.ac.in"><i class="fa fa-envelope mr-2"></i>19bcs118@iiitdwd.ac.in</a></h6></li>
+                  <li>G. Chetan Pai<h6 class="mb-2 mt-2"><a href="mailto:19bec013@iiitdwd.ac.in"><i class="fa fa-envelope mr-2"></i>19bec013@iiitdwd.ac.in</a></h6></li>
+                  
+                </ul>
+                <ul>
+                  <li>Anany Talwad<h6 class="mb-2 mt-2"><a href="mailto:19bec004@iiitdwd.ac.in"><i class="fa fa-envelope mr-2"></i>19bec004@iiitdwd.ac.in</a></h6></li>
+                  <li>Abhishek Singh Kushwaha<h6 class="mb-2 mt-2"><a href="mailto:19bec001@iiitdwd.ac.in"><i class="fa fa-envelope mr-2"></i>19bec001@iiitdwd.ac.in</a></h6></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <hr style="margin-top: 3%;" class="container col-8 breakline" />
+
+    <h3 style="margin-top: 2%; text-align: center; margin-bottom: 2%;">Recruitment forms</h3>
+    <div class="row justify-content-center ">
+      <a class="btn btn-dark btn-lg" href="https://iiitdwd.ac.in/docs/SRF-without-intership.docx"
+          role="button">Campus Recruitment form (Without Internship)</a>
+        <a class="btn btn-dark btn-lg" href="https://iiitdwd.ac.in/docs/SRF-with-intership.docx"
+          role="button">Campus Recruitment form (With Internship)</a>
+        <a class="btn btn-dark btn-lg"  href="#" role="button">Placement Registration Form</a>
+    </div>
+    <style>
+      .btn{
+        margin:10px;
+      }
+    </style>
+
+  </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script>
+    google.load("visualization", "1", { packages: ["corechart"] });
+    google.setOnLoadCallback(drawCharts);
+    function drawCharts() {
+      // actual bar chart data
+      var barData = google.visualization.arrayToDataTable([
+        ["Year", "Highest Package", "Lowest Package", "Avg"],
+        ["2019", 11, 5, 7],
+        ["2020", 10, 4.8, 6],
+        ["2021", 25, 00, 7.3],
+      ]);
+      // set bar chart options
+      var barOptions = {
+        focusTarget: "category",
+        backgroundColor: "transparent",
+        colors: ["cornflowerblue", "tomato", "green"],
+        fontName: "Open Sans",
+        chartArea: {
+          left: 50,
+          top: 10,
+          width: "100%",
+          height: "70%",
+        },
+        bar: {
+          groupWidth: "80%",
+        },
+        hAxis: {
+          textStyle: {
+            fontSize: 11,
+          },
+        },
+        vAxis: {
+          minValue: 0,
+          maxValue: 15,
+          baselineColor: "#DDD",
+          gridlines: {
+            color: "#DDD",
+            count: 4,
+          },
+          textStyle: {
+            fontSize: 11,
+          },
+        },
+        legend: {
+          position: "bottom",
+          textStyle: {
+            fontSize: 12,
+          },
+        },
+        animation: {
+          duration: 1200,
+          easing: "out",
+          startup: true,
+        },
+      };
+      // draw bar chart twice so it animates
+      var barChart = new google.visualization.ColumnChart(
+        document.getElementById("bar-chart")
+      );
+      //barChart.draw(barZeroData, barOptions);
+      barChart.draw(barData, barOptions);
+    }
+  </script>
+  <!-- end body -->
+
+  <!--------------footer-------------->
+  {% include 'iiitdsite/footer.html' %}
+  <!-------------footer ends---------->
+
+  
+
+  <!-- Nav bar js -->
+  <script>
+    //smooth scroll js
+
+    var scroll = new SmoothScroll('a[href*="#"]');
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 9000,
+      speedAsDuration: true,
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  <script>
+    (function ($) {
+      "use strict";
+
+      // Off Canvas Open close start
+      $(".off-canvas-btn").on("click", function () {
+        $("body").addClass("fix");
+        $(".off-canvas-wrapper").addClass("open");
+      });
+
+      $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+        $("body").removeClass("fix");
+        $(".off-canvas-wrapper").removeClass("open");
+      });
+
+      // slide effect dropdown
+      function dropdownAnimation() {
+        $(".dropdown").on("show.bs.dropdown", function (e) {
+          $(this)
+            .find(".dropdown-menu")
+            .first()
+            .stop(true, true)
+            .slideDown(500);
+        });
+
+        $(".dropdown").on("hide.bs.dropdown", function (e) {
+          $(this)
+            .find(".dropdown-menu")
+            .first()
+            .stop(true, true)
+            .slideUp(500);
+        });
+      }
+      dropdownAnimation();
+
+      //offcanvas mobile menu start
+      var $offCanvasNav = $(".mobile-menu"),
+        $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+      /Add Toggle Button With Off Canvas Sub Menu/;
+      $offCanvasNavSubMenu
+        .parent()
+        .prepend('<span class="menu-expand"><i></i></span>');
+
+      /Close Off Canvas Sub Menu/;
+      $offCanvasNavSubMenu.slideUp();
+
+      /Category Sub Menu Toggle/;
+      $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+        var $this = $(this);
+        if (
+          $this
+            .parent()
+            .attr("class")
+            .match(
+              /\b(menu-item-has-children|has-children|has-sub-menu)\b/
+            ) &&
+          ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+        ) {
+          e.preventDefault();
+          if ($this.siblings("ul:visible").length) {
+            $this.parent("li").removeClass("active");
+            $this.siblings("ul").slideUp();
+          } else {
+            $this.parent("li").addClass("active");
+            $this
+              .closest("li")
+              .siblings("li")
+              .removeClass("active")
+              .find("li")
+              .removeClass("active");
+            $this.closest("li").siblings("li").find("ul:visible").slideUp();
+            $this.siblings("ul").slideDown();
+          }
+        }
+      });
+
+      // tooltip active js
+      $('[data-toggle="tooltip"]').tooltip();
+    })(jQuery);
+  </script>
+  <!--ion icon cdn-->
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <!-- Nav bar js end-->
+
+  <script type="text/javascript">
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 2000, // values from 0 to 3000, with step 50ms
+      easing: "ease", // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+  </script>
+
+  <script>
+    //back to top js
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $("#back-to-top").fadeIn();
+        } else {
+          $("#back-to-top").fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $("#back-to-top").click(function () {
+        $("#back-to-top").tooltip("hide");
+        $("body,html").animate(
+          {
+            scrollTop: 0,
+          },
+          800
+        );
+        return false;
+      });
+
+      $("#back-to-top").tooltip("show");
+    });
+  </script>
+  <script>
+    //search box js
+
+    $(document).ready(function () {
+      $(".search1").each(function () {
+        var self = $(this);
+        var div = self.children("div");
+        var placeholder = div.children("input").attr("placeholder");
+        var placeholderArr = placeholder.split(/ +/);
+        if (placeholderArr.length) {
+          var spans = $("<div />");
+          $.each(placeholderArr, function (index, value) {
+            spans.append($("<span />").html(value + "&nbsp;"));
+          });
+          div.append(spans);
+        }
+        self.click(function () {
+          self.addClass("open");
+          setTimeout(function () {
+            self.find("input").focus();
+          }, 750);
+        });
+        $(document).click(function (e) {
+          if (!$(e.target).is(self) && !jQuery.contains(self[0], e.target)) {
+            self.removeClass("open");
+          }
+        });
+      });
+    });
+  </script>
+  <script>
+    //smooth scroll js
+
+    var scroll = new SmoothScroll('a[href*="#"]');
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 300,
+      speedAsDuration: true,
+    });
+  </script>
+</body>
+
+</html>

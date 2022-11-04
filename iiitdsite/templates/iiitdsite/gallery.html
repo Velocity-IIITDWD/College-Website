@@ -1,0 +1,51 @@
+{% extends 'iiitdsite/base_template.html' %}
+{% load static %}
+{% block title %} Gallery {% endblock title %}
+{% block main_content %}
+<style>
+  html {
+    scroll-behavior: smooth;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+</style>
+
+<script>
+  var a = document.querySelector(".desktop-menu").querySelectorAll("li");
+</script>
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <h1>Gallery</h1>
+  </div>
+
+  <section class="mt-5 ">
+    <div class="row row-grid">
+      {% for event in object_list %} 
+    <div class="m-3">
+      <a href="{{event.get_absolute_url}}">
+        <div class="card shadow p-3 mb-5 rounded" style="width: 300px;" id="{{event.event_name}}">
+          <img src="{{event.cover.url}}" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <h4 class="card-title">{{event.event_name}}</h4>
+            <p class="card-text"><small class="text-muted">{{event.date}}</small></p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %} 
+    </div>
+  </section>
+
+
+</div>
+<!-- end Header Area -->
+
+
+
+
+
+<div style="height: 20vh;"></div> -->
+
+{% endblock main_content %}

@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Title -->
+    <title>IIIT Dharwad - Home</title>
+    <!--back to top-->
+    
+    <!-- Favicon -->
+     <link
+      rel="stylesheet"
+      href="{% static 'iiitdsite/css/favicon_nav.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'iiitdsite/css/top_nav-scroll.css' %}"
+    />
+    <!-- <link rel="stylesheet" href="./aos.css" /> -->
+    <!--CDN for material icons in chatbot-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="55x55"
+      href="{% static 'iiitdsite/images/iiit-logo-small.png' %}"
+    />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+    />
+    <!--Font Awesome-->
+    
+    <link
+      rel="stylesheet"
+      href="{% static 'iiitdsite/css/top_nav-scroll.css' %}"
+    />
+    <!-- <link rel="stylesheet" href="./aos.css" /> -->
+    <!--CDN for material icons in chatbot-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script
+      src="{% static 'iiitdsite/js/jssor.slider-28.0.0.min.js' %}"
+      type="text/javascript"
+    ></script>
+    <!--Google tag Manager
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154417742-1"></script>-->
+    <!--Loading Script--
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/backtotop.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/chatbox.css' %}" />
+
+    <!-- Font styles -->
+    <!-- Roboto Slab -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Avro -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Noto Serif -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Avro -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Noto Serif -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="icon"
+    type="img/png"
+    sizes="55x55"
+    href="{% static 'iiitdsite/images/iiit-logo-small.png' %}"
+  />
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}" />
+  
+  <link
+    rel="stylesheet"
+    href="{% static 'iiitdsite/css/top_nav-scroll.css' %}"
+  />
+  <script
+      src="{% static 'iiitdsite/js/jssor.slider-28.0.0.min.js' %}"
+      type="text/javascript"
+    ></script>
+    <!-- preloader css -->
+    <style>
+      html{
+        scroll-behavior: smooth;
+        margin: 0;
+        height: 100%;
+        overflow-x: hidden;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      .Announcements {
+        width: 50%; /* The width is 20%, by default */
+        padding: 20px;
+        float: left;
+      }
+
+      .Latest-Updates {
+        width: 50%; /* The width is 20%, by default */
+        padding: 20px;
+        float: right;
+      }
+
+      /* Use a media query to add a break point at 800px: */
+      @media screen and (max-width: 800px) {
+        .Announcements,
+        .Latest-Updates {
+          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+      }
+
+      /* The Mission and Vision Section Start */
+      /* Style the tab */
+      
+      /* The Mission and Vision Section end */
+ /*preloader css */
+
+.loader {
+  /* background: #003366; */
+  position: fixed;
+  background:white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:100000000000000000;
+}
+
+
+
+/* .loader div{
+    background:#fff;
+    width:16px;
+    height:32px;
+    margin-left:10px;
+    animation: loader 1.2s infinite;
+} */
+
+@keyframes I1 {
+  0% {
+    height: 0px;
+  }
+  25% {
+    height: 45px;
+  }
+}
+@keyframes I2 {
+  0% {
+    height: 0px;
+  }
+  25%{
+    height: 0px;
+  }
+  50% {
+    height: 65px;
+  }
+}
+
+@keyframes Tbar {
+  0% {
+    height: 0px;
+  }
+  25%{
+    height: 0px;
+  }
+  50% {
+    height: 85px;
+  }
+}
+
+@keyframes I3 {
+    0% {
+      height: 0px;
+      
+    }
+    50%{
+      height:0px;
+    }
+    75% {
+      height: 85px;
+    }
+  }
+
+  @keyframes T {
+    0% {
+      height: 0px;
+      
+    }
+    75%{
+      height:0px;
+    }
+    100% {
+      height: 85px;
+    }
+  }
+
+  @keyframes box {
+    0% {
+      height: 0px;
+      
+    }
+    75%{
+      height:0px;
+    }
+    100% {
+      height: 22px;
+    }
+  }  
+
+.I1 {
+  background: #003366;
+  width: 22px;
+  height: 45px;
+  margin-left: 15px;
+  animation: I1 1s;
+}
+
+.I2 {
+  background: #003366;
+  width: 22px;
+  height: 65px;
+  margin-left: 15px;
+  animation: I2 1s;
+  margin-bottom: 21px;
+}
+
+.I3 {
+    background: #003366;
+    width: 22px;
+    height: 85px;
+    margin-left: 15px;
+    animation: I3 1s;
+    margin-bottom: 42px
+  }
+
+  .T {
+    background: #003366;
+    width: 22px;
+    height: 85px;
+    margin-left: 22px;
+    animation: T 1s;
+    margin-bottom: 42px
+  }  
+
+  .Tbar{
+      transform: rotate(90deg);
+      background: #003366;
+      width: 22px;
+      height: 60px;
+      margin-left: -19px;
+      animation: Tbar 1s;
+      margin-bottom: 170px
+
+  }
+
+
+
+.dharwad{
+    font-size:20px;
+    color:white;
+    background:#003366;
+    margin-top: 95px;
+    position:absolute;
+    margin-right: -30px;
+    animation: text 1.2s ;
+    font-family: 'Poppins', sans-serif;
+    padding-right: 7px;
+    padding-left: 7px;
+    margin-right: -20px;
+  
+}
+.vikas{
+  font-size:20px;
+  color:#003366;
+  margin-top: 160px;
+  position:absolute;
+  margin-right: -30px;
+  animation: vikas 1.2s ;
+  font-family: 'Poppins', sans-serif;
+
+  margin-right: -15px;
+}
+
+
+@keyframes text {
+    0% {
+      font-size: 0px;
+      
+    }
+    85% {
+      font-size: 0px;
+    }
+    100% {
+      font-size: 20px;
+    }
+  }  
+
+  @keyframes vikas {
+    0% {
+      font-size: 0px;
+      
+    }
+    85% {
+      font-size: 0px;
+    }
+    100% {
+      font-size: 20px;
+    }
+  } 
+
+.box1 {
+    background: #003366;
+    width: 22px;
+    height: 22px;
+    margin-left: -4px;
+    animation: box 1s;
+    margin-bottom: 88px;
+    position:absolute;
+    margin-right:102px;
+  } 
+
+  .box2 {
+    background: #003366;
+    width: 22px;
+    height: 22px;
+    margin-left: 3px;
+    animation: box 1s;
+    margin-bottom: 130px;
+    position:absolute;
+    margin-right:35px;
+  } 
+
+  .box3 {
+    background: #003366;
+    width: 22px;
+    height: 22px;
+    margin-left: 19px;
+    animation: box 1s;
+    margin-bottom: 170px;
+    position:absolute;
+    margin-right:-23px;
+  } 
+
+
+  @media screen and (max-width: 500px) {
+    .loader {
+    /* background: #003366; */
+    position: fixed;
+    background:white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000000000;
+  }
+  
+  
+  
+  /* .loader div{
+      background:#fff;
+      width:16px;
+      height:32px;
+      margin-left:10px;
+      animation: loader 1.2s infinite;
+  } */
+  
+  @keyframes I1 {
+    0% {
+      height: 0px;
+    }
+    25% {
+      height: 30px;
+    }
+  }
+  @keyframes I2 {
+    0% {
+      height: 0px;
+    }
+    25%{
+      height: 0px;
+    }
+    50% {
+      height: 40px;
+    }
+  }
+  
+  @keyframes I3 {
+      0% {
+        height: 0px;
+        
+      }
+      50%{
+        height:0px;
+      }
+      75% {
+        height: 50px;
+      }
+    }
+  
+    @keyframes T {
+      0% {
+        height: 0px;
+        
+      }
+      75%{
+        height:0px;
+      }
+      100% {
+        height: 50px;
+      }
+    }
+  
+    @keyframes box {
+      0% {
+        height: 0px;
+        
+      }
+      75%{
+        height:0px;
+      }
+      100% {
+        height: 16px;
+      }
+    }  
+  
+  .I1 {
+    background: #003366;
+    width: 16px;
+    height: 30px;
+    margin-left: 13px;
+    animation: I1 1s;
+  }
+  
+  .I2 {
+    background: #003366;
+    width: 16px;
+    height: 40px;
+    margin-left: 13px;
+    animation: I2 1s;
+    margin-bottom: 9px;
+  }
+  
+  .I3 {
+      background: #003366;
+      width: 16px;
+      height: 50px;
+      margin-left: 13px;
+      animation: I3 1s;
+      margin-bottom: 19px
+    }
+  
+    .T {
+      background: #003366;
+      width: 16px;
+      height: 50px;
+      margin-left: 15px;
+      animation: T 1s;
+      margin-bottom: 19px
+    }  
+  
+    .Tbar{
+        transform: rotate(90deg);
+        background: #003366;
+        width: 16px;
+        height: 35px;
+        margin-left: -15px;
+        animation: I2 1s;
+        margin-bottom: 105px
+  
+    }
+  
+  
+
+  .dharwad{
+      font-size:15px;
+      color:white;
+      background:#003366;
+      margin-top: 80px;
+      position:absolute;
+      margin-right: -30px;
+      animation: text 1.2s ;
+      font-family: 'Poppins', sans-serif;
+      padding-right: 7px;
+      padding-left: 7px;
+      margin-right: -20px;
+      /* animation-delay: 2s; */
+  }
+  .vikas{
+    font-size:15px;
+    color:#003366;
+    margin-top: 130px;
+    position:absolute;
+    margin-right: -30px;
+    animation: vikas 1.2s ;
+    font-family: 'Poppins', sans-serif;
+    /* animation-delay: 2s; */
+    margin-right: -15px;
+  }
+  
+    
+  @keyframes text {
+      0% {
+        font-size: 0px;
+        
+      }
+      85% {
+        font-size: 0px;
+      }
+      100% {
+        font-size: 15px;
+      }
+    }  
+  
+    @keyframes vikas {
+      0% {
+        font-size: 0px;
+        
+      }
+      85% {
+        font-size: 0px;
+      }
+      100% {
+        font-size: 15px;
+      }
+    } 
+  
+  .box1 {
+      background: #003366;
+      width: 16px;
+      height: 16px;
+      margin-left: 15px;
+      animation: box 1s;
+      margin-bottom: 67px;
+      position:absolute;
+      margin-right:93px;
+    } 
+  
+    .box2 {
+      background: #003366;
+      width: 16px;
+      height: 16px;
+      margin-left: 15px;
+      animation: box 1s;
+      margin-bottom: 83px;
+      position:absolute;
+      margin-right:35px;
+    } 
+  
+    .box3 {
+      background: #003366;
+      width: 16px;
+      height: 16px;
+      margin-left: 15px;
+      animation: box 1s;
+      margin-bottom: 104px;
+      position:absolute;
+      margin-right:-23px;
+    } 
+  
+  }
+  /*preloader css end */
+      #News{
+        width: 100%;
+      }
+      .mainevents {
+        display: flex;
+        width: 71%;
+        /* height: 100px; */
+        margin: 0 auto;
+        position: relative;
+        padding: 30px 0 0 0;
+      }
+
+      .mainevents .eventheader {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        /* padding: 10px; */
+        justify-content: space-between;
+        border-bottom: 2px solid #ddd;
+      }
+      .eventheader .p p.nextn,
+      .eventheader .p p.prevp {
+        font-size: 60px;
+        margin: 0px;
+        cursor: pointer;
+        background: #003366;
+        color: whitesmoke;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 3px;
+        transition: 0.15s;
+      }
+      .eventheader .p p.nextn:hover,
+      .eventheader .p p.prevp:hover {
+        background: #222;
+        color: white;
+        transform: scale(1.1);
+      }
+      .eventcontainer {
+        /* width: 85%; */
+        height: 500px;
+        display: flex;
+        /* /background: red;/ */
+        margin: 10px auto 10px;
+        position: relative;
+        padding: 5px 0;
+      }
+      .productrow {
+        width: 98%;
+        height: 100%;
+        /* /background: red;/ */
+        /* margin: 0 20px; */
+        display: flex;
+        align-items: center;
+        /* overflow-x: auto; */
+      }
+      .productrow::-webkit-scrollbar {
+        display: none;
+      }
+      .productrow .card1 {
+        min-width: 33.3%;
+        height: 100%;
+
+        position: relative;
+        left: 0;
+
+        transition: 0.5s;
+      }
+
+      .eventdetail {
+        width: 90%;
+
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        font-size: 20px;
+        color: #444;
+      }
+      small {
+        color: #555;
+      }
+      .slick-list {
+        position: relative;
+        height: 90%;
+      }
+      .slick-slide {
+        /* position: relative; */
+        height: 420px;
+        margin: 5px 10px;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        border: 1px solid rgba(204, 204, 204, 0.589);
+      }
+      .slick-slide img {
+        border-radius: 5px;
+        height: 250px;
+        width: 100%;
+      }
+      @media (max-width: 1281px) {
+        .mainevents {
+          width: 85%;
+        }
+      }
+      @media (max-width: 1025px) {
+        .mainevents {
+          width: 90%;
+        }
+      }
+      @media (max-width: 992px) {
+        .mainevents {
+          width: 75%;
+        }
+      }
+      @media (max-width: 768px) {
+        .mainevents {
+          width: 90%;
+        }
+        .eventheader h1 {
+          font-size: 25px;
+        }
+        .eventheader .p p.nextn,
+        .eventheader .p p.prevp {
+          font-size: 30px;
+          margin: 0 15px;
+        }
+
+        .eventdetail {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 515px) {
+        .eventheader .p p.nextn,
+        .eventheader .p p.prevp {
+          font-size: 30px;
+          margin: 0 5px;
+
+          width: 30px;
+          height: 30px;
+
+          line-height: 30px;
+        }
+        .productrow{
+          margin: 0 5px;
+        }
+        .productrow .card1 {
+          min-width: 100%;
+          margin: 0 10px 0 0;
+        }
+      }
+      @media (max-width: 281px) {
+        .eventheader h1 {
+          font-size: 18px;
+        }
+        .eventheader .p p.nextn,
+        .eventheader .p p.prevp {
+          font-size: 25px;
+          margin: 0 5px;
+
+          width: 25px;
+          height: 25px;
+
+          line-height: 25px;
+        }
+        .productrow .card1 {
+          min-width: 100%;
+          margin: 0 10px 0 0;
+        }
+      }
+      @media(min-width:550px){
+        .title-welcome{
+          transform: scale(1.2);
+          padding-top: 50px;
+        }
+        .title-welcome .show{
+          height: 500px;
+        }
+        
+      }
+      .show{
+        height: 180px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dontload">
+      <div class="loader">
+        <div class="I1"></div>
+        <div class="I2"></div>
+        <div class="I3"></div>
+        <div class="T"></div>
+        <div class="Tbar"></div>
+        <div class="dharwad">D H A R W A D</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="vikas">ज्ञानेन विकास:</div>
+    </div>
+    </div>
+
+    <!-- Start Header Area -->
+  
+<header class="header-area" style="width: 100%;">
+  <!-- main header start -->
+
+  <div class="main-header d-none d-lg-block">
+    <!-- header middle area start -->
+    <div class="header-main-area sticky" style="border-bottom:0px">
+      <div class="container-fluid">
+        <div class="row align-items-center position-relative">
+          <!-- start logo area -->
+          <div class="col-lg-1">
+            <div class="logo">
+              <a style="padding-left: 50px;" href="{% url 'home' %}">
+                <img src="{% static 'iiitdsite/images/IIIT_Dharwad Main Logo.png' %}" alt="IIIT Dharwad"
+                  style="transform: scale(1.8);" />
+              </a>
+            </div>
+          </div>
+         
+          <!-- start logo area -->
+
+          <!-- main menu area start -->
+          <div class="col-lg-11 position-static">
+            <div class="main-menu-area">
+              <div class="main-menu">
+                <!-- main menu navbar start -->
+                <nav class="desktop-menu">
+                  <ul>
+                    <li class="static">
+                      <a class="mainNav" href="{% url 'home' %}">Home </a>
+                    </li>
+                    <li class="static">
+                      <a class="mainNav" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="static">
+                      <a class="mainNav" href="{% url 'academics' %}">Academics <i class="fa fa-angle-down"></i></a>
+                      <ul class="megamenu dropdown">
+                        <li class="mega-title" style="padding-left: 0px; margin-left: 0px;">
+                          <a href="#">Courses</a>
+                          <ul>
+                            <li>
+                              <a href="./academics">
+                                Computer Science & Engineering (CSE)</a>
+                            </li>
+                            <li>
+                              <a href="./academics">
+                                Data Science & AI (DSAI)</a>
+                            </li>
+                            <li>
+                              <a href="./academics">
+                                Electronics & Communication Engineering(ECE)
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="mega-title">
+                          <a href="">Academic Information</a>
+                          <ul>
+                            <li><a href={{acad_link.acad_link}}>Academic Calendar</a></li>
+                            <li>
+                              <a href="{% url 'faculty' %}">Faculty</a>
+                            </li>
+                            <li>
+                              <a href="{% url 'research' %}">Research</a>
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li class="mega-title">
+                          <img
+                            src="https://img.collegedekhocdn.com/media/img/institute/crawled_images/None/GDHGHGDDF.jpeg?tr=w-250,h-150"
+                            alt="" />
+                        </li>
+
+                        <li class="mega-title">
+                          <a href="#">Curriculum</a>
+                          <ul>
+                            <li>
+                              <a href={{currilink.cse_link}}>Computer Science & Engineering (CSE)</a>
+                            </li>
+                            <li>
+                              <a href={{currilink.ece_link}}>Electronics & Communication Engineering(ECE)
+                              </a>
+                            </li>
+                            <li>
+                              <a href={{currilink.ece_link}}>Data Science & AI (DSAI)
+                            </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="mainNav">Admissions <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown">
+                        <li>
+                          <a href="{% url 'fees' %}"> Fees </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'admission_procedure' %}"> Procedure </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'scholarships' %}"> Scholarships </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'faq' %}"> FAQs </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'phd' %}"> Phds </a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a class="mainNav">Administration <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown">
+
+                        <li>
+                          <a href="{% url 'bog' %}"> Board of Governors </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'senate' %}"> Senate </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'ficommit' %}"> Financial Committee </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'faculty' %}"> Faculty </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'staff' %}"> Staff </a>
+                        </li>
+
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a class="mainNav" href="{% url 'campus' %}">Campus <i class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown">
+                        <li><a href="{% url 'magazine' %}">Magazine</a></li>
+                        <li><a href="{% url 'placements' %}">Placements</a></li>
+                        
+                        <li>
+                          <a href="{% url 'events' %}"> Events </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'gallery' %}"> Gallery </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'clubs' %}"> Clubs </a>
+                        </li>
+                        
+                      </ul>
+                    </li>
+                    <li class="static"><a class="mainNav" href="{% url 'jobs' %}">Jobs</a></li>
+                    
+                    <li><a class="mainNav tenders" href="{% url 'tenders' %}">Tenders</a></li>
+                    <!-- <li>
+                        <a href="#">AIMS <i class="fa fa-user"></i></a>
+                      </li> -->
+                  </ul>
+                </nav>
+                <!-- main menu navbar end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header middle area end -->
+  </div>
+  <!-- main header start -->
+
+  <!-- mobile header start -->
+  <div class="mobile-header d-lg-none d-md-block sticky">
+    <!--mobile header top start -->
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12">
+          <div class="mobile-main-header">
+            <div class="mobile-logo">
+              <a href="{% url 'home' %}">
+                <img src="{% static 'iiitdsite/images/IIIT_Dharwad Main Logo.png' %}" alt="IIIT Dharwad" />
+                <!--mobile menu logo-->
+              </a>
+            </div>
+            <div class="mobile-menu-toggler">
+              <div class="mobile-menu-btn">
+                <div class="off-canvas-btn">
+                  <ion-icon name="grid"></ion-icon>
+                  <!--menu icon for mobile menu-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile header top start -->
+  </div>
+  <!-- mobile header end -->
+</header>
+
+    <!-- off-canvas menu start -->
+    <aside class="off-canvas-wrapper">
+      <div class="off-canvas-overlay"></div>
+      <div class="off-canvas-inner-content">
+        <div class="btn-close-off-canvas">
+          <i class="fa fa-times"></i>
+        </div>
+
+        <div class="off-canvas-inner">
+          
+          <!-- mobile menu start -->
+          <div>
+            <!-- mobile menu navigation start -->
+            <nav>
+              <ul
+                class="mobile-menu"
+                style="padding-bottom: 0px; margin-bottom: 0px;"
+              >
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li class="menu-item-has-children">
+                  <a href="{% url 'academics' %}">Academics</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="{% url 'faculty' %}">Faculty</a></li>
+                    <li><a href="{% url 'academics' %}">Research</a></li>
+                    <li class="menu-item-has-children"><a href="">Curriculum</a>
+                    <ul class="dropdown">
+                      <li><a href="{{currilink.cse_link}}">CSE</a></li>
+                       <li>
+                                  <a href="{% url 'academics-dsai' %}">
+                                    Data Science & AI (DSAI)</a
+                                  >
+                                </li>
+                      <li><a href={{currilink.cse_link}}>ECE</a></li>
+                  </ul>
+                </li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a>Admissions</a>
+                  <ul class="dropdown">
+                    <li><a href="{% url 'fees' %}">Fees</a></li>
+                    <li><a href="{% url 'admission_procedure' %}">Procedure</a></li>
+                    <li><a href="{% url 'scholarships' %}">Scholarships</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a>Administration</a>
+                  <ul class="dropdown">
+                    <li><a href="{% url 'bog' %}">Board of Governors</a></li>
+                    <li><a href="{% url 'senate' %}">Senate</a></li>
+                    <li><a href="{% url 'ficommit' %}">Financial Committee</a></li>
+                    <li><a href="{% url 'faculty' %}">Faculty</a></li>
+                    <li><a href="{% url 'staff' %}">Staff</a></li>
+                    
+                  </ul>
+                </li>
+                <li><a href="{% url 'campus' %}">Campus</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a href="{% url 'placements' %}">Placements</a></li>
+                <li><a href="{% url 'clubs' %}">Clubs</a></li>
+                <li><a href="{% url 'magazine' %}">Magazine</a></li>
+                <li><a href="{% url 'jobs' %}">Jobs</a></li>
+                <li><a href="{% url 'tenders' %}">Tenders</a></li>
+<!-- <li><a href="./aims.html">AIMS</a></li> -->
+              </ul>
+            </nav>
+            <!-- mobile menu navigation end -->
+          </div>
+          <!-- mobile menu end -->
+
+          <!-- offcanvas widget area start -->
+          <div class="offcanvas-widget-area">
+            <div class="off-canvas-contact-widget">
+              <ul>
+                <li>
+                  <i class="fa fa-mobile"></i>
+                  <a href="#">9449732959</a>
+                </li>
+                <li>
+                  <i class="fa fa-envelope-o"></i>
+                  <a href="#">contact@iiitdwd.ac.in</a>
+                </li>
+              </ul>
+            </div>
+            <div class="off-canvas-social-widget">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+          </div>
+          <!-- offcanvas widget area end -->
+        </div>
+      </div>
+    </aside>
+
+<style>
+  .scrolling-active{
+    background-color: white;
+    color:black;
+  }
+  @media(min-width:900px){
+    .header-area{
+      position:fixed;top:0px;z-index: 21;
+    }
+    
+  }
+  </style>
+  <script>
+  window.addEventListener('DOMContentLoaded',()=>{
+    $('.header-area').css('display','none');
+  })
+
+  // NavBar Magic
+  window.addEventListener('scroll',function(){
+  $('.header-area').css('display','block');
+  let header = document.querySelector('header');
+  let windowPosition = window.scrollY>400;
+  let windowSize = $(window).width();
+  header.classList.toggle('scrolling-active',windowPosition);
+  if(window.scrollY>400){
+    $('.mainNav').css('color','#000');
+    $('.mainNav').css('margin-right','10px');
+    $('.mainNav').css('padding-bottom','32px');
+    $('.header-area').css('border-bottom','1px solid #EAEAEA')
+
+
+    // Ipad Pro configurations
+    if(windowSize>=1100){
+      $('.logo').css('display','block');
+    }
+    if(windowSize<=1100){
+      $('.col-lg-11').addClass('col-12');
+      $('.col-lg-11').removeClass('col-lg-11');
+      $('.desktop-menu').css('margin-left','5px');
+      $('.mainNav').css('margin-right','0px');
+    }
+    }
+  else{
+    $('.mainNav').css('color','#fff');
+    $('.mainNav').css('margin-right','30px');
+    $('.mainNav').css('padding-bottom','5px');
+    $('.logo').css('display','none');
+    $('.header-area').css('border-bottom','1px solid transparent')
+    }
+
+    });
+
+    
+
+    function Myfunction(id){
+      window.location.href = `./academics#${id}`;
+      var headEle = document.getElementById(`${id}`);
+      headEle.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth',
+      }); 
+    }
+  </script>
+    <!-- end Header Area -->
+    <div style="width: 100%; position: relative;">
+      <video width="100%" playsinline autoplay muted="true" preload="metadata">
+        <!-- the video file is not available int the repo, however it will work, since its present in server -->
+        <source src="static/iiitdsite/videos/Video.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay">
+        <div class="overlay-2"></div>
+        <div class="text-title container" style="text-align: center;">
+          <span>Welcome to</span>
+          <br>
+          <span>Indian Institute of Information Technology<br>Dharwad</span>
+        </div>
+        <br>
+        <a href="{% url 'campus' %}" class="btn" id="tour">     
+          <!-- still have to enable this video -->
+          TAKE A TOUR       
+        </a>
+      </div>
+    </div>
+      
+    
+   
+    
+    <!-- Css Styling for responsiveness of the video element -->
+    <style>
+      
+      .overlay{
+        position:absolute;
+        width:100%;
+        height: 100%;
+        top:0px;
+        background-color:black;
+        opacity: 70%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text-title{
+        position:absolute;
+        z-index: 2;
+       text-align: center;
+        color:white;
+        font-size: 2em;
+      }
+      #tour{
+        position: absolute;
+        text-align: center;
+        z-index: 2;
+        width: 170px;
+        border-radius: 40px;
+        color:white;
+        border:4px solid white;
+        padding:10px;
+        top:72%;
+        transition: transform 0.5s;
+      }
+      
+      @media(max-width:500px){
+
+       .overlay{
+         background-image:url('static/iiitdsite/images/pics/building.jpeg') ;
+         background-position: center;
+         height: 820px;
+         background-color:black;
+         opacity: 1;
+       }
+       .overlay-2{
+        position:absolute;
+        width:100%;
+        height: 100%;
+        top:0px;
+        background-color:black;
+        opacity: 70%;
+        z-index: 1;
+       }
+       .Announcements{
+          margin-top: 560px;
+        }
+      }
+      @media(min-width:1200px){
+        .text-title{
+          font-size:60px;
+        }
+      }
+      
+    </style>
+  
+
+  
+ 
+    <!-- Welcome Section End -->
+    <!------Announcements and Updates start------->
+    
+    <div class="container mt-2">
+      <div class="Announcements">
+        <h3
+          style="
+            color: #000000;
+            text-align: center;
+            margin-top: 10px;
+            padding: 20px;
+          "
+        >
+         <u> Announcements</u>
+        </h3>
+        <div
+          id="cc-homepage-announcements"
+          style="
+            background-color: #ffffff;
+            border: 1px solid #343a40;
+            padding: 6px;
+            text-align: left;
+            border-radius: 15px;
+          "
+        >
+          <div style="overflow-x: hidden; overflow-y: auto; height: 300px">
+            <ul>
+              {% for announcement in announcements %}
+              <li>
+                <a
+                  style="color: black"
+                  href="./announcements#{{announcement.title}}"
+                >
+                  <div style="margin-bottom: 5px" class="card">
+                    <div class="card-body">
+                      <p class="card-title">{{announcement.title}}</p>
+                      <p class="card-text fs-6">
+                        <small>Posted on {{announcement.date}}</small>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="Latest-Updates">
+        <h3
+          style="
+            color: #000000;
+            text-align: center;
+            margin-top: 10px;
+            padding: 20px;
+          "
+        >
+          <u> Latest-Updates</u>
+        </h3>
+        <div
+          id="cc-homepage-announcements"
+          style="
+            background-color: #ffffff;
+            border: 1px solid #343a40;
+            padding: 6px;
+            text-align: left;
+            border-radius: 15px;
+          "
+        >
+          <div style="overflow-x: hidden; overflow-y: auto; height: 300px">
+            <ul>
+              {% for update in updates %}
+              <li>
+                <a style="color: black" href="./updates#{{update.title}}">
+                  <div style="margin-bottom: 5px" class="card">
+                    <div class="card-body">
+                      <p class="card-title">{{update.title}}</p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------Announcements and Updates End------->
+    <br />
+    <br />
+
+    <!----------News start------->
+    <!-- <div id="News" class=""> -->
+      <div class="mainevents">
+        <div class="eventheader">
+          <h1>Recent Events</h1>
+          <div class="p">
+            <p class="prevp">&#139;</p>
+            <p class="nextn">&#155;</p>
+          </div>
+        </div>
+      </div>
+      <div class="container eventcontainer">
+        <div class="productrow slider">
+          {% for event in events %}
+          <ul>
+            <li>
+              <a style="color: black" href="./events#{{event.event_name}}">
+                <div class="card1">
+                  <div>
+                    <img src="{{event.image.url}}" alt="..." />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{event.event_name}}</h5>
+                    <p class="card-text">{{event.description|slice:":50"}}....</p>
+                    <p>{{event.date}}</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!----------News end------->
+
+    <!-----Mission And Vision start------>
+    
+    <!-----Mission And Vision end------>
+
+    <!--------------footer-------------->
+
+    {% include 'iiitdsite/footer.html' %}
+    <!-------------footer ends---------->
+
+    <!--Back to top-->
+    <!-- <a id="back-to-top" href="#backtonav" class="btn btn-primary btn-lg back-to-top mr-auto" role="button"
+    data-toggle="tooltip" data-placement="left">
+    <span class="fa fa-arrow-up"></span>
+  </a> -->
+    <!-- End -->
+
+    <!-- Chatbot -->
+    <!-- <a id="chatbot" href="{% url 'chatbot' %}" class="btn btn-primary btn-lg chatbot ml-auto" role="button"
+    data-toggle="tooltip" data-placement="left" target="_blank">
+    <span class="fa fa-comments-o" aria-hidden="true"></span>
+  </a> -->
+    <!-- End -->
+
+    <!--Jquery js-->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="{% static 'iiitdsite/js/smooth-scroll.js' %}"></script>
+    <script src="{% static 'iiitdsite/js/bootstrap.min.js' %}"></script>
+
+    <script>
+      $(".slider").slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $(".prevp"),
+        nextArrow: $(".nextn"),
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 515,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      });
+    </script>
+
+    <script>
+      //SLIDER JS
+      $(document).ready(function () {
+        var $slider = $(".slider"),
+          $slideBGs = $(".slide__bg"),
+          diff = 0,
+          curSlide = 0,
+          numOfSlides = $(".slide").length - 1,
+          animating = false,
+          animTime = 500,
+          autoSlideTimeout,
+          autoSlideDelay = 6000,
+          $pagination = $(".slider-pagi");
+        function createBullets() {
+          for (var i = 0; i < numOfSlides + 1; i++) {
+            var $li = $("<li class='slider-pagi__elem'></li > ");
+            $li.addClass("slider-pagi__elem-" + i).data("page", i);
+            if (!i) $li.addClass("active");
+            $pagination.append($li);
+          }
+        }
+
+        createBullets();
+
+        function manageControls() {
+          $(".slider-control").removeClass("inactive");
+          if (!curSlide) $(".slider-control.left").addClass("inactive");
+          if (curSlide === numOfSlides)
+            $(".slider-control.right").addClass("inactive");
+        }
+
+        function autoSlide() {
+          autoSlideTimeout = setTimeout(function () {
+            curSlide++;
+            if (curSlide > numOfSlides) curSlide = 0;
+            changeSlides();
+          }, autoSlideDelay);
+        }
+
+        autoSlide();
+
+        function changeSlides(instant) {
+          if (!instant) {
+            animating = true;
+            manageControls();
+            $slider.addClass("animating");
+            $slider.css("top");
+            $(".slide").removeClass("active");
+            $(".slide-" + curSlide).addClass("active");
+            setTimeout(function () {
+              $slider.removeClass("animating");
+              animating = false;
+            }, animTime);
+          }
+          window.clearTimeout(autoSlideTimeout);
+          $(".slider-pagi__elem").removeClass("active");
+          $(".slider-pagi__elem-" + curSlide).addClass("active");
+          $slider.css("transform", "translate3d(" + -curSlide * 100 + "%,0,0)");
+          $slideBGs.css("transform", "translate3d(" + curSlide * 50 + "%,0,0)");
+          diff = 0;
+          autoSlide();
+        }
+
+        function navigateLeft() {
+          if (animating) return;
+          if (curSlide > 0) curSlide--;
+          changeSlides();
+        }
+
+        function navigateRight() {
+          if (animating) return;
+          if (curSlide < numOfSlides) curSlide++;
+          changeSlides();
+        }
+
+        $(document).on("mousedown touchstart", ".slider", function (e) {
+          if (animating) return;
+          window.clearTimeout(autoSlideTimeout);
+          var startX = e.pageX || e.originalEvent.touches[0].pageX,
+            winW = $(window).width();
+          diff = 0;
+
+          $(document).on("mousemove touchmove", function (e) {
+            var x = e.pageX || e.originalEvent.touches[0].pageX;
+            diff = ((startX - x) / winW) * 70;
+            if (
+              (!curSlide && diff < 0) ||
+              (curSlide === numOfSlides && diff > 0)
+            )
+              diff /= 2;
+            $slider.css(
+              "transform",
+              "translate3d(" + (-curSlide * 100 - diff) + "%,0,0)"
+            );
+            $slideBGs.css(
+              "transform",
+              "translate3d(" + (curSlide * 50 + diff / 2) + "%,0,0)"
+            );
+          });
+        });
+
+        $(document).on("mouseup touchend", function (e) {
+          $(document).off("mousemove touchmove");
+          if (animating) return;
+          if (!diff) {
+            changeSlides(true);
+            return;
+          }
+          if (diff > -8 && diff < 8) {
+            changeSlides();
+            return;
+          }
+          if (diff <= -8) {
+            navigateLeft();
+          }
+          if (diff >= 8) {
+            navigateRight();
+          }
+        });
+
+        $(document).on("click", ".slider-control", function () {
+          if ($(this).hasClass("left")) {
+            navigateLeft();
+          } else {
+            navigateRight();
+          }
+        });
+
+        $(document).on("click", ".slider-pagi__elem", function () {
+          curSlide = $(this).data("page");
+          changeSlides();
+        });
+      });
+
+    </script>
+    <script>
+      (function ($) {
+        "use strict";
+
+        // Off Canvas Open close start
+        $(".off-canvas-btn").on("click", function () {
+          $("body").addClass("fix");
+          $(".off-canvas-wrapper").addClass("open");
+        });
+
+        $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+          $("body").removeClass("fix");
+          $(".off-canvas-wrapper").removeClass("open");
+        });
+
+        // slide effect dropdown
+        function dropdownAnimation() {
+          $(".dropdown").on("show.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideDown(500);
+          });
+
+          $(".dropdown").on("hide.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideUp(500);
+          });
+        }
+        dropdownAnimation();
+
+        //offcanvas mobile menu start
+        var $offCanvasNav = $(".mobile-menu"),
+          $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+        /Add Toggle Button With Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu
+          .parent()
+          .prepend('<span class="menu-expand"><i></i></span>');
+
+        /Close Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu.slideUp();
+
+        /Category Sub Menu Toggle/;
+        $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+          var $this = $(this);
+          if (
+            $this
+              .parent()
+              .attr("class")
+              .match(
+                /\b(menu-item-has-children|has-children|has-sub-menu)\b/
+              ) &&
+            ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+          ) {
+            e.preventDefault();
+            if ($this.siblings("ul:visible").length) {
+              $this.parent("li").removeClass("active");
+              $this.siblings("ul").slideUp();
+            } else {
+              $this.parent("li").addClass("active");
+              $this
+                .closest("li")
+                .siblings("li")
+                .removeClass("active")
+                .find("li")
+                .removeClass("active");
+              $this.closest("li").siblings("li").find("ul:visible").slideUp();
+              $this.siblings("ul").slideDown();
+            }
+          }
+        });
+        // tooltip active js
+        $('[data-toggle="tooltip"]').tooltip();
+      })(jQuery);
+    </script>
+    <script>
+      //smooth scroll js
+
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 300,
+        speedAsDuration: true,
+      });
+    </script>
+    <script>
+      $(window).load(function() {
+  if (sessionStorage.getItem('dontLoad') == null)
+    {
+      $(".loader").delay(800).fadeOut("slow");
+      sessionStorage.setItem('dontLoad', 'true');
+    }
+  else{
+    $(".loader").hide();
+  }
+});
+
+    </script>
+  </body>
+</html>

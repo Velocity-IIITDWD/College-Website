@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>FAQ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="55x55"
+      href="{% static 'iiitdsite/images/iiit-logo-small.png' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/FAQ.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/favicon_nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/top_nav-scroll.css' %}">
+  </head>
+  <body>
+    <!-- Start Header Area -->
+    {% include 'iiitdsite/nav_bar.html' %}
+    <script>
+      var a = document.querySelector('.desktop-menu').querySelectorAll('li');
+      
+    </script>
+
+    <div class="container-fluid">
+      <br>
+      <h1 class="text-center" style="font-size: 60px;text-underline-offset: 7px;"><u>FAQs</u></h1>
+      <div class="information1">
+        <h4>Where is IIIT-Dharwad located?</h4>
+        <p>The Institute is located at IIIT Dharwad Campus, Ittigatti Road, Near Sattur Colony, Dharwad – 580009. It is a 60 acre campus close to the two cities of Hubballi and Dharwad. It is very well connected by National Highways, railways and the Hubballi Airport (HBX).</p>
+      </div>
+      <div class="information1">
+        <h4>How to reach IIIT Dharwad?</h4>
+        <p>You can come to Sattur stop on the Hubballi-Dharwad Bus Rapid Transit System (BRTS) from where a shuttle service is arranged to the IIIT Dharwad campus. The Hubballi-Dharwad BRTS frequently operates from both Hubballi and Dharwad cities. Click here for the Google maps location of the campus.</p>
+      </div>
+      <div class="information1">
+        <h4>What is the admission process at IIIT Dharwad?</h4>
+        <p>Admission to the Indian Institute of Information Technology Dharwad is through Central Seat Allocation Board (CSAB). All interested candidates are requested to follow the admissions criteria explained on the CSAB web site. Seat allocation for various categories of students will be as per CSAB norms. The Institute does not make any decisions in the seat allocation process.
+        </p>
+      </div>
+      <div class="information1">
+        <h4>How many BTech programs are currently offered?</h4>
+        <p>Currently, IIIT Dharwad offers three programs viz., Computer Science and Engineering (CSE), Data Science and Artificial Intelligence (DSAI), and Electronics and Communication Engineering (ECE). The details of the programs can be found at at this <a href="{% url 'academics' %}">page</a>
+        </p>
+      </div>
+      <div class="information1">
+        <h4>How are the faculty at IIIT Dharwad?</h4>
+        <p>Faculty at IIIT Dharwad are highly qualified with PhDs and Postdocs from institutes of repute in India and abroad and have the right blend of teaching, research, and industry experience. The Director has ample experience in both academia and industry in India as well as USA. With energy and commitment, faculty are working on setting high standards in both teaching/learning, and R&D. Faculty profiles can be found here.
+        </p>
+      </div>
+      <div class="information1">
+        <h4>How are the placements opportunities at IIIT Dharwad?</h4>
+        <p>Placement and training is through the Career Guidance Cell (CGC). The CGC consists of student members and a faculty Coordinator. Two batches have graduated from the Institute; the majority of the eligible students are well placed. Placement information can be found here.</p>
+      </div>
+      <div class="information1">
+        <h4>What type of curriculum is followed in IIIT Dharwad</h4>
+        <p>B.Tech curricula are designed in the Outcome Based Education framework with well-defined program objectives. Each B.Tech program has an ideal mix of foundational theory and core subjects (30%), Breadth in engineering, mathematics, and sciences (25%), soft skills and humanities (10%), contemporary elective subjects in applied areas (25%), and project-based learning through a series of mini and major projects (10%). Most elective subjects are kept open for any student in any program to take the specialized courses of their choice. The eighth semester has no coursework to enable students to carry out the major project and pursue a full-semester internship in the industry or other reputed institutes.</p>
+      </div>
+      <div class="information1">
+        <h4>What is the fee structure of the upcoming batch?</h4>
+        <p>The fee structure and details can be found <a href="{% url 'fees' %}">here.</a> 
+        </p>
+      </div>
+      <div class="information1">
+        <h4>Does the Institute provide any financial assistance/scholarships to students?
+        </h4>
+        <p>The Institute facilitates the students and parents to apply for study loans from the State Bank of India (SBI) and other banks. Also, the Institute facilitates the National and State scholarships wherever available. The Institute provides no financial assistance or scholarships of its own.</p>
+        </p>
+      </div>
+      <div class="information1">
+        <h4>What about hostels? How many students are accommodated in a room?</h4>
+        <p>A Boys Hostel with about 200 rooms spread over 6 floors with a spacious Dining Hall and a Common Room for reading, games, activities, etc. Both the Dining Hall and the Common Room are of double height to give them excellent light and ventilation apart from a grand look. All rooms will be equipped with new furniture. The Infosys Girls Hostel with about 100 rooms and all the same features as the Boys Hostel, if not better! Infosys Foundation has built this building for IIIT Dharwad as a part of its CSR initiatives. Well-equipped modern kitchen to prepare food hygienically for both hostels. Hostel rooms are 3 or 4 occupancy.  </p>
+        
+      </div>
+      <div class="information1">
+        <h4>How to make fee payment?</h4>
+        <p>The easiest way to make fee payments is through SBI Collect online mode. Institute does not accept any cash payments.</p>
+      
+      </div>
+      <div class="information1">
+        <h4>Does the Institute support entrepreneurship?</h4>
+        <p>Institute has an MoU with Deshpande Startups Hubballi for nurturing students who are inclined to take up the entrepreneurial journey. Deshpande startup is one of the largest incubation setups in India. Many faculty are actively engaged with other premier institutes like IISc, IITs, IIITs, and industries as consultants and collaborators for research and development activities.
+        </p>
+      </div>
+      <div class="information1">
+        <h4>Can students have their vehicles inside the campus?</h4>
+        <p>Students are not allowed to have any motor vehicles in the campus.</p>
+      </div>
+      <div class="information1">
+        <h4>Is the campus friendly for differently enabled?</h4>
+        <p>The Institute provides easy access for differently enabled people to all academic and hostel buildings in the campus.</p>
+        
+      </div>
+      <div class="information1">
+        <h4>What is the medium of instruction?</h4>
+        <p>The medium of instruction is English and all subjects are taught in English.</p>
+      
+      </div>
+      <div class="information1">
+        <h4>What about ragging?</h4>
+        <p>The Institute has zero tolerance policy to ragging.</p>
+      </div>
+      <div class="information1">
+        <h4>What about security arrangements for the girls’ hostel?</h4>
+        <p>The girls’ hostel will have 24/7 security including a lady security guard in addition to CCTV cameras. The girls hostel is also located in an exclusive building away from the other buildings.</p>
+      </div>
+      <div class="information1">
+        <h4>What if we have any additional questions regarding the Institute?</h4>
+        <p>Both prospective students and their parents can ask questions directly to our faculty at askfaculty@iiitdwd.ac.in</p>
+      </div>
+    </div>
+    <!--------------footer-------------->
+
+    {% include 'iiitdsite/footer.html' %}
+    <!-------------footer ends---------->
+    <!-- Nav bar js -->
+    <script>
+      //smooth scroll js
+
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 9000,
+        speedAsDuration: true,
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script>
+      (function ($) {
+        "use strict";
+
+        // Off Canvas Open close start
+        $(".off-canvas-btn").on("click", function () {
+          $("body").addClass("fix");
+          $(".off-canvas-wrapper").addClass("open");
+        });
+
+        $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+          $("body").removeClass("fix");
+          $(".off-canvas-wrapper").removeClass("open");
+        });
+
+        // slide effect dropdown
+        function dropdownAnimation() {
+          $(".dropdown").on("show.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideDown(500);
+          });
+
+          $(".dropdown").on("hide.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideUp(500);
+          });
+        }
+        dropdownAnimation();
+
+        //offcanvas mobile menu start
+        var $offCanvasNav = $(".mobile-menu"),
+          $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+        /Add Toggle Button With Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu
+          .parent()
+          .prepend('<span class="menu-expand"><i></i></span>');
+
+        /Close Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu.slideUp();
+
+        /Category Sub Menu Toggle/;
+        $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+          var $this = $(this);
+          if (
+            $this
+              .parent()
+              .attr("class")
+              .match(
+                /\b(menu-item-has-children|has-children|has-sub-menu)\b/
+              ) &&
+            ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+          ) {
+            e.preventDefault();
+            if ($this.siblings("ul:visible").length) {
+              $this.parent("li").removeClass("active");
+              $this.siblings("ul").slideUp();
+            } else {
+              $this.parent("li").addClass("active");
+              $this
+                .closest("li")
+                .siblings("li")
+                .removeClass("active")
+                .find("li")
+                .removeClass("active");
+              $this.closest("li").siblings("li").find("ul:visible").slideUp();
+              $this.siblings("ul").slideDown();
+            }
+          }
+        });
+
+        // tooltip active js
+        $('[data-toggle="tooltip"]').tooltip();
+      })(jQuery);
+    </script>
+    <!--ion icon cdn-->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- Nav bar js end-->
+
+    <!-- Search box in top nav -->
+    <script>
+      //search box js
+
+      $(document).ready(function () {
+        $(".search1").each(function () {
+          var self = $(this);
+          var div = self.children("div");
+          var placeholder = div.children("input").attr("placeholder");
+          var placeholderArr = placeholder.split(/ +/);
+          if (placeholderArr.length) {
+            var spans = $("<div />");
+            $.each(placeholderArr, function (index, value) {
+              spans.append($("<span />").html(value + "&nbsp;"));
+            });
+            div.append(spans);
+          }
+          self.click(function () {
+            self.addClass("open");
+            setTimeout(function () {
+              self.find("input").focus();
+            }, 750);
+          });
+          $(document).click(function (e) {
+            if (!$(e.target).is(self) && !jQuery.contains(self[0], e.target)) {
+              self.removeClass("open");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

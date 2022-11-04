@@ -1,0 +1,57 @@
+ @media (max-width: 576px) {  
+    .xs {color:red;font-weight:bold;}
+  }
+  
+  @media (min-width: 576px) and (max-width:768px) {  
+    .sm {color:red;font-weight:bold;}
+  }
+   
+  @media (min-width: 768px) and (max-width:992px) {  
+   .md {color:red;font-weight:bold;}
+  }
+   
+  @media (min-width: 992px) and (max-width:1200px) { 
+   .lg {color:red;font-weight:bold;}
+  }
+   
+  @media (min-width: 1200px) {  
+      .xl {color:red;font-weight:bold;}
+  } 
+
+.card{
+  margin: 20px 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  overflow: hidden
+}
+
+.card:hover {
+  color: #fff;
+  transform: scale(1.025);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+}
+
+.card-img-top {
+  width:264px;
+  height:264px;
+  margin: 4% auto;
+  object-fit: cover;
+}
+
+.card-title {
+  color:black;
+  font-size: 26px;
+  line-height: 1.54;
+}
+
+.card:hover .card-title{
+  color:green;
+}
+
+.card a{
+  color: inherit; 
+}

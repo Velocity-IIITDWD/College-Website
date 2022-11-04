@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Academics</title>
+    <!-- Required meta tags -->
+    <!-- Font styles -->
+    <!-- Roboto Slab -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Avro -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Noto Serif -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="55x55"
+      href="{% static 'iiitdsite/images/iiit-logo-small.png' %}"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/admission.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/favicon_nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/top_nav-scroll.css' %}">
+  </head>
+  <body>
+    <!-- Start Header Area -->
+    {% include 'iiitdsite/nav_bar.html' %}
+    <script>
+      var a = document.querySelector('.desktop-menu').querySelectorAll('li');
+      
+    </script>
+    <div id='container' style="margin-left: 30px;margin-right: 50px;">
+      <div class="row align-items-start">
+
+        <div class="col-2 sidebar">
+          <button type="button" id = '0' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >CSE</button>
+          <button type="button" id = '1' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >DSAI</button>
+          <button type="button" id = '2' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >ECE</button>
+          <button type="button" id = '3' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >Research</button>
+          <button type="button" class="btn btn-dark btn-lg" >Academic Calender</button>
+          <button type="button" class="btn btn-dark btn-lg" >Faculty Info</button>
+        
+
+
+        </div>
+
+        <style>
+          html{
+            scroll-behavior: smooth;
+          }
+          @media(max-width:1200px){
+            .sidebar{
+              display: none;
+            }
+            .right-column{
+              width: 90vw;
+              margin-left: 0px;
+              margin-right: 30px;
+              padding-right: 10px;
+              padding-left: 0;
+            }
+          }
+          .right-column{
+            font-size: 4vw;
+    
+          }
+          .trigger{
+            font-size:20px;
+            border:2px solid black;
+            border-radius: 50%;
+            width:40px;height: 40px;
+
+          }
+          .sidebar{
+            position:sticky;
+            top: 120px;
+            max-height: calc(100vh - 100px);
+          }
+
+          .sidebar button{
+            display: block;
+            padding: 15px;
+            margin:10px;
+            margin-bottom: 22px;
+            width: 180px;
+            text-align: center;
+            background-color: #353A3F;
+            opacity: 90%;
+          }
+          #academics{
+            width:95vw;
+            height: 300px;
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("{% static 'iiitdsite/images/student.jpeg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          @media(min-width:900px){
+            #academics{
+              width: 80vw;
+              height: 400px;
+            }
+            .right-column{
+              font-size:2vw;
+            }
+          }
+          @media(max-width:500px){
+            .right-column h4{
+              font-size: 30px;
+              width: 300px;
+            }
+          }
+        </style>
+        <br>
+        <div class="right-column col-lg-10 col-sm">
+            <div id="academics">
+              <h1 style="font-size: 8vh; font-family: Georgia, 'Times New Roman', Times, serif;">Academics</h1>
+            </div>
+          </br>
+            <h1><b><u>B.tech Programmes</u></b></h1>
+
+          </br>
+          <div>
+            <div style="display:flex;justify-content: space-between;">
+              <h4 id="cseHead"><a name="cse"></a> COMPUTER SCIENCE AND ENGINEERING</h4>
+              <button  id = '0' onclick='Myfunction(this.id)' class="trigger">V</button>
+              
+            </div>
+
+            <div  class="content" style="display:none">
+              {% include 'iiitdsite/acad_cse.html' %}
+            </div>
+
+          </div>
+            
+            </br>
+            <div>
+              <div style="display:flex;justify-content: space-between;">
+                <h4 id="dsaiHead">DATA SCIENCE AND ARTIFICIAL INTELLIGENCE</h4>
+                <button id ='1' onclick='Myfunction(this.id)' class="trigger">V</button>
+                
+              </div>
+  
+              <div  class="content" style="display:none">
+              {% include 'iiitdsite/acad_dsai.html' %}
+              </div>
+
+            </div>
+
+          </br>
+          
+          <div>
+            <div style="display:flex;justify-content: space-between;">
+              <h4 id="eceHead">ELECTRONICS AND COMMUNICATION ENGINEERING</h4>
+              <button id = '2' onclick='Myfunction(this.id)' class="trigger">V</button>
+              
+            </div>
+            <div  class="content" style="display:none">
+              {% include 'iiitdsite/acad_ece.html' %}
+            </div>
+
+          </div>
+          </br>
+          <div id="curriculum">
+            <h1><u>Curriculum</u></h1>
+            <br>
+            <p>BTech curricula are designed in the Outcome Based Education framework with well-defined program objectives. Each BTech program has an ideal mix of foundational theory and core subjects (30%), Breadth in engineering, mathematics and sciences (25%), soft skills and humanities (10%), contemporary elective subjects in applied areas (25%) and project-based learning through a series of mini and major projects (10%). Most elective subjects are kept open for any student in any program to take the specialised courses of their choice. The eighth semester has no coursework to enable students to carry out the major project and also pursue a full-semester internship in the industry or in other reputed institutes.</p>
+            <br>
+            <p>IIIT Dharwad, being an Institute of National Importance, has full academic autonomy with its own Academic Senate with professors from other reputed institutes and industry members. The Institute follows a credit-based system for each student to make self-paced progress. Assessment is through a relative grading system with emphasis on continuous assessment and a grade-point system.
+            </p><br>
+            <p>The Institute has not hesitated to break out of outdated conventions and has introduced an IT-focused curriculum from the first semester (e.g., no chemistry) with elective subjects offered in areas such as data science, AI, machine learning, IoT, cloud computing and Blockchain to name a few. Ample opportunities are provided to learn these cutting-edge areas practically through mini and major projects and events like hackathons.</p>
+            <br>
+          </div>
+          <br>
+          <div>
+            <div style="display:flex;justify-content: space-between;">
+              <h1 id="researchHead"><b>Research</b></h1>
+              <button id = '3' onclick='Myfunction(this.id)' class="trigger">V</button>
+              
+            </div>
+        
+            <div class="content" style="display:none">
+              {% include 'iiitdsite/research.html' %}
+            </div>
+            <style>
+              #r{
+                display: list-item;
+                list-style-type: disc;
+                list-style-position: inside;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var headingIndex = ["cseHead","dsaiHead","eceHead","researchHead"];
+
+      var hashedTarget = window.location.hash;
+			window.location.hash = "";
+
+
+			$(function(){
+
+				if(hashedTarget)
+				{
+					scroll(0,0);
+					setTimeout(function(){
+						scroll(0,0);
+					},1);
+				}
+				
+				if(hashedTarget)
+				{
+					var hashedString = hashedTarget;
+					var elementId = decodeURI(hashedString).substring(1);
+					// console.log(hashedString.substring(1).replace("%20",' '));
+					console.log(elementId);
+					var annoucementEle = document.getElementById(headingIndex[parseInt(elementId)]);
+					setTimeout(function(){
+						annoucementEle.scrollIntoView({
+							block: 'center',
+							behavior: 'smooth',
+						});
+					},1000);
+          Myfunction1(elementId);
+				}
+
+			});
+
+
+    </script>
+
+    <script>
+      // document.querySelectorAll('.trigger').forEach(function(button){
+      //   button.onclick = function(){
+      //     var ID = 
+      //     var a  = document.querySelector('.content').querySelector(`#${ID}`).style;
+      //     if(a.display=='none'){
+      //       a.display = 'block';
+      //     }
+      //     else{
+      //       a.display = 'none';
+      //     }
+      //   }
+      // });
+
+      
+
+      function Myfunction(id){
+        var a = document.querySelectorAll('.content')[id].style;
+        var b = document.querySelectorAll('.trigger')[id];
+        if(a.display == 'none'){
+          a.display = 'block';
+          b.innerHTML = `^`;
+        }
+        else {
+          a.display = 'none';
+          b.innerHTML = `V`;
+        }
+        
+      }
+      function Myfunction1(id){
+      var a = document.querySelectorAll('.content')[id];
+      var b = document.querySelectorAll('.trigger')[id];
+      b.innerHTML = `^`;
+      a.style.display = 'block';
+
+      var headEle = document.getElementById(headingIndex[id]);
+      console.log(headEle);
+      headEle.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth',
+      });
+        
+      }
+
+        
+    </script>
+    <!--------------footer-------------->
+
+    {% include 'iiitdsite/footer.html' %}
+    <!-------------footer ends---------->
+    <!-- Nav bar js -->
+    <script>
+      //smooth scroll js
+
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 9000,
+        speedAsDuration: true,
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script>
+      (function ($) {
+        "use strict";
+
+        // Off Canvas Open close start
+        $(".off-canvas-btn").on("click", function () {
+          $("body").addClass("fix");
+          $(".off-canvas-wrapper").addClass("open");
+        });
+
+        $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+          $("body").removeClass("fix");
+          $(".off-canvas-wrapper").removeClass("open");
+        });
+
+        // slide effect dropdown
+        function dropdownAnimation() {
+          $(".dropdown").on("show.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideDown(500);
+          });
+
+          $(".dropdown").on("hide.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideUp(500);
+          });
+        }
+        dropdownAnimation();
+
+        //offcanvas mobile menu start
+        var $offCanvasNav = $(".mobile-menu"),
+          $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+        /Add Toggle Button With Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu
+          .parent()
+          .prepend('<span class="menu-expand"><i></i></span>');
+
+        /Close Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu.slideUp();
+
+        /Category Sub Menu Toggle/;
+        $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+          var $this = $(this);
+          if (
+            $this
+              .parent()
+              .attr("class")
+              .match(
+                /\b(menu-item-has-children|has-children|has-sub-menu)\b/
+              ) &&
+            ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+          ) {
+            e.preventDefault();
+            if ($this.siblings("ul:visible").length) {
+              $this.parent("li").removeClass("active");
+              $this.siblings("ul").slideUp();
+            } else {
+              $this.parent("li").addClass("active");
+              $this
+                .closest("li")
+                .siblings("li")
+                .removeClass("active")
+                .find("li")
+                .removeClass("active");
+              $this.closest("li").siblings("li").find("ul:visible").slideUp();
+              $this.siblings("ul").slideDown();
+            }
+          }
+        });
+
+        // tooltip active js
+        $('[data-toggle="tooltip"]').tooltip();
+      })(jQuery);
+    </script>
+    <!--ion icon cdn-->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- Nav bar js end-->
+
+    <!-- Search box in top nav -->
+    <script>
+      //search box js
+
+      $(document).ready(function () {
+        $(".search1").each(function () {
+          var self = $(this);
+          var div = self.children("div");
+          var placeholder = div.children("input").attr("placeholder");
+          var placeholderArr = placeholder.split(/ +/);
+          if (placeholderArr.length) {
+            var spans = $("<div />");
+            $.each(placeholderArr, function (index, value) {
+              spans.append($("<span />").html(value + "&nbsp;"));
+            });
+            div.append(spans);
+          }
+          self.click(function () {
+            self.addClass("open");
+            setTimeout(function () {
+              self.find("input").focus();
+            }, 750);
+          });
+          $(document).click(function (e) {
+            if (!$(e.target).is(self) && !jQuery.contains(self[0], e.target)) {
+              self.removeClass("open");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="55x55"
+      href="{% static 'iiitdsite/images/iiit-logo-small.png' %}"
+    />
+    <script
+      src="https://kit.fontawesome.com/99cf976e53.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font styles -->
+    <!-- Roboto Slab -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Avro -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Noto Serif -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!--back to top-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>Clubs</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'iiitdsite/css/favicon_nav.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/Clubs.css' %}" />
+   
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'iiitdsite/css/backtotop.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'iiitdsite/css/top_nav-scroll.css' %}"
+    />
+
+    <!-- From here we gonna add fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Start Header Area -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+        margin: 0;
+        height: 100%;
+        overflow-x: hidden;
+      }
+    </style>
+
+    {% include 'iiitdsite/nav_bar.html' %}
+    <script>
+      var a = document.querySelector(".desktop-menu").querySelectorAll("li");
+    </script>
+    <!-- end Header Area -->
+    <br>
+    <h1 class="text-center" style="font-size: 60px;"><u>Clubs</u></h1>
+    <div class="container" >  
+    <div class="row">
+      {% for i in s %}
+      <div class="col-lg-4">
+        <div class="card rounded shadow">
+          {% if i.Logo %}
+          <img src="{{i.Logo.url}}" class="card-img-top rounded-circle" alt="...">
+          {% endif %}
+          <div class="card-body text-center">
+            {% if i.Website %}
+            <h4 class="card-title"><a href="{{i.Website}}">{{ i.NameofClub }}</a></h4>
+            {% else %}
+            <h4 class="card-title">{{ i.NameofClub }}</h4>
+            {% endif %}
+            <div class="text-center">
+              {% if i.Instalink %}
+              <span style="font-size: 2em; color: black" class="px-2">
+                <a href="{{i.Instalink}}"><i class="fab fa-instagram-square"></i></a>
+              </span>
+              {% endif %}
+              {% if i.LinkedIn %}
+              <span style="font-size: 2em; color: black" class="px-2">
+               <a href="{{ i.LinkedIn }}"><i class="fab fa-linkedin"></i></a></span>
+              {% endif %}
+              {% if i.Facebook %}
+                <span style="font-size: 2em; color: black" class="px-2">
+                <a href="{{ i.Facebook }}"><i class="fab fa-facebook"></i></a>
+              </span>
+              {% endif %}
+              {% if i.Mail %}
+                <span style="font-size: 2em; color: black" class="px-2">
+                <a href="{{ i.Mail }}"><i class="fas fa-envelope"></i></a>
+              </span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div> 
+    </div>
+    <!--------------footer-------------->
+
+    {% include 'iiitdsite/footer.html' %}
+
+    <!-------------footer ends---------->
+
+    <!--Back to top-->
+    <a
+      id="back-to-top"
+      href="#backtonav"
+      class="btn btn-primary btn-lg back-to-top"
+      role="button"
+      data-toggle="tooltip"
+      data-placement="left"
+    >
+      <span class="fa fa-arrow-up"></span>
+    </a>
+    <!-- End -->
+
+    <!-- Nav bar js -->
+    <script>
+      //smooth scroll js
+
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 9000,
+        speedAsDuration: true,
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="{% static 'iiitdsite/js/owl.carosuel.min.js' %}"></script>
+
+    <script>
+      (function ($) {
+        "use strict";
+
+        // Off Canvas Open close start
+        $(".off-canvas-btn").on("click", function () {
+          $("body").addClass("fix");
+          $(".off-canvas-wrapper").addClass("open");
+        });
+
+        $(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+          $("body").removeClass("fix");
+          $(".off-canvas-wrapper").removeClass("open");
+        });
+
+        // slide effect dropdown
+        function dropdownAnimation() {
+          $(".dropdown").on("show.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideDown(500);
+          });
+
+          $(".dropdown").on("hide.bs.dropdown", function (e) {
+            $(this)
+              .find(".dropdown-menu")
+              .first()
+              .stop(true, true)
+              .slideUp(500);
+          });
+        }
+        dropdownAnimation();
+
+        //offcanvas mobile menu start
+        var $offCanvasNav = $(".mobile-menu"),
+          $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+        /Add Toggle Button With Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu
+          .parent()
+          .prepend('<span class="menu-expand"><i></i></span>');
+
+        /Close Off Canvas Sub Menu/;
+        $offCanvasNavSubMenu.slideUp();
+
+        /Category Sub Menu Toggle/;
+        $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+          var $this = $(this);
+          if (
+            $this
+              .parent()
+              .attr("class")
+              .match(
+                /\b(menu-item-has-children|has-children|has-sub-menu)\b/
+              ) &&
+            ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+          ) {
+            e.preventDefault();
+            if ($this.siblings("ul:visible").length) {
+              $this.parent("li").removeClass("active");
+              $this.siblings("ul").slideUp();
+            } else {
+              $this.parent("li").addClass("active");
+              $this
+                .closest("li")
+                .siblings("li")
+                .removeClass("active")
+                .find("li")
+                .removeClass("active");
+              $this.closest("li").siblings("li").find("ul:visible").slideUp();
+              $this.siblings("ul").slideDown();
+            }
+          }
+        });
+
+        // tooltip active js
+        $('[data-toggle="tooltip"]').tooltip();
+      })(jQuery);
+    </script>
+    <!--ion icon cdn-->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- Nav bar js end-->
+
+    <script>
+      //back to top js
+
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            $("#back-to-top").fadeIn();
+          } else {
+            $("#back-to-top").fadeOut();
+          }
+        });
+        // scroll body to 0px on click
+        $("#back-to-top").click(function () {
+          $("#back-to-top").tooltip("hide");
+          $("body,html").animate(
+            {
+              scrollTop: 0,
+            },
+            800
+          );
+          return false;
+        });
+
+        $("#back-to-top").tooltip("show");
+      });
+    </script>
+    <script>
+      //search box js
+
+      $(document).ready(function () {
+        $(".search1").each(function () {
+          var self = $(this);
+          var div = self.children("div");
+          var placeholder = div.children("input").attr("placeholder");
+          var placeholderArr = placeholder.split(/ +/);
+          if (placeholderArr.length) {
+            var spans = $("<div />");
+            $.each(placeholderArr, function (index, value) {
+              spans.append($("<span />").html(value + "&nbsp;"));
+            });
+            div.append(spans);
+          }
+          self.click(function () {
+            self.addClass("open");
+            setTimeout(function () {
+              self.find("input").focus();
+            }, 750);
+          });
+          $(document).click(function (e) {
+            if (!$(e.target).is(self) && !jQuery.contains(self[0], e.target)) {
+              self.removeClass("open");
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      //smooth scroll js
+
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 300,
+        speedAsDuration: true,
+      });
+    </script>
+  </body>
+</html>

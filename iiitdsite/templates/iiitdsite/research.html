@@ -1,0 +1,29 @@
+<p style="font-size: 20px;"><b>Faculty at IIIT-Dharwad have a wide range of research expertise and experience covering many areas of Information Technology including:</b></p>
+  <p id='r'>Data analytics, machine learning, and social network analysis.</p>
+  <p id='r'>Computer networks and security.</p>
+  <p id ='r'>Knowledge management, information retrieval, ontology and semantic web technologies.</p>
+  <p id ='r'>Digital signal processing and speech technologies.</p>
+  <p id ='r'>Embedded systems, sensors, MEMS, nano technology and VLSI.</p>
+  <p id ='r'>Robotics, unmanned vehicles, control and communication technologies.</p>
+  <p id ='r'>Power electronics and alternative energy systems.</p>
+  <p id ='r'>Power electronics and alternative energy systems.</p>
+  <p id ='r'>Social sciences, including women studies and communication.</p>
+  <p id ='r'>Algorithms, Computational Geometry</p>
+<br>
+<p style="font-size: 20px;"><b><u>Research Scholars:</u></b></p>
+<div class="d-flex" style="flex-wrap: wrap;">
+  {% for member in students %}
+  <div class="card m-3 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+    <img src="{{member.image.url}}" class="card-img-top" alt="...">
+    <p class="card-text pt-2" style="text-align: center; font-size: 20px;"><b>{{member.name}}</b></p>
+  </div>
+  {% endfor %}
+</div>
+<style>
+  .card{
+    transition: transform 0.5s
+  }
+  .card:hover{
+    transform: scale(1.1);
+  }
+</style>
