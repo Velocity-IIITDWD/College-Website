@@ -81,8 +81,13 @@ WSGI_APPLICATION = 'collegesite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd2tv7lcvmp1d1b',
+        'USER': 'lpbjrhvltzdxed',
+        'PASSWORD': '8ee6389b364469b6d61c2b101e0e4a332c121be687dbcdc72224fc1210fd558e',
+        'URL': 'postgres://mmbtokbureafez:8ee6389b364469b6d61c2b101e0e4a332c121be687dbcdc72224fc1210fd558e@ec2-52-200-5-135.compute-1.amazonaws.com:5432/d2tv7lcvmp1d1b',
+        'HOST': 'ec2-52-200-5-135.compute-1.amazonaws.com',
+        "PORT": '5432'
     }
 }
 
@@ -131,7 +136,13 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -144,3 +155,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'dummyforemailveri@gmail.com'
 EMAIL_HOST_PASSWORD = 'dummy@123'
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
