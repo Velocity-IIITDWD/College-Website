@@ -1,6 +1,6 @@
 from email.mime import image
-from tkinter import CASCADE
-from turtle import shape
+
+
 from django.db import models
 from django.db.models.fields import EmailField
 from django.urls import reverse
