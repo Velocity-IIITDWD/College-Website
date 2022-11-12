@@ -14,14 +14,11 @@ def home(request):
     alert = Alert.objects.last()
     announcements=Announcements.objects.all()[::-1]
     updates=Updates.objects.all()[::-1]
-    links = ugcselinks.objects.last()
     events = Events.objects.all()[::-1]
     main_event = Events.objects.last()
     upcoming_events = HomePageUpcomingEvents.objects.all()[::-1]
-    acad_link = AcademicCalLink.objects.get(id=1)
     main_news = NewsPage.objects.last()
     news = NewsPage.objects.all()[2:6:-1]
-    currilink = CurriculumLink.objects.get(id=1)
     gallery = HomePageGallery.objects.all()[::-1]
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -29,7 +26,7 @@ def home(request):
         NewsLetterEmail.save(emailid)
         return redirect('')
     return render(request, 'iiitdsite/index.html', {'alert': alert, 'main_event': main_event, 'events': events,
-                                                    'gallery': gallery, 'images': EventsImages, 'upcoming_events': upcoming_events, 'main_news': main_news, 'acad_link': acad_link, 'news': news, 'currilink': currilink, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,'announcements':announcements,'updates':updates})
+                                                    'gallery': gallery, 'images': EventsImages, 'upcoming_events': upcoming_events, 'main_news': main_news, 'news': news, 'temp_cel': temp_cel, 'temp_fah': temp_fah,'announcements':announcements,'updates':updates})
 
 
 def homehindi(request):
@@ -41,7 +38,6 @@ def homehindi(request):
     acad_link = AcademicCalLink.objects.get(id=1)
     main_news = NewsPage.objects.last()
     news = NewsPage.objects.all()[2:6:-1]
-    currilink = CurriculumLink.objects.get(id=1)
     event = Events.objects.last()
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -59,7 +55,6 @@ def homekannada(request):
     acad_link = AcademicCalLink.objects.get(id=1)
     main_news = NewsPage.objects.last()
     news = NewsPage.objects.all()[2:6:-1]
-    currilink = CurriculumLink.objects.get(id=1)
     event = Events.objects.last()
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -103,8 +98,6 @@ def eventskannada(request):
 
 def aboutus(request):
     links = ugcselinks.objects.last()
-    acad_link = AcademicCalLink.objects.get(id=1)
-    currilink = CurriculumLink.objects.get(id=1)
     about = About.objects.all()
     ourfam = OurFamilyLink.objects.all()
     testi = AboutUsTestimonial.objects.all()
@@ -113,7 +106,7 @@ def aboutus(request):
         emailid = NewsLetterEmail.objects.create(email_id=email)
         NewsLetterEmail.save(emailid)
         return redirect('/about')
-    return render(request, 'iiitdsite/about_us.html', {'acad_link': acad_link, 'currilink': currilink,'about': about, 'ourfam': ourfam,
+    return render(request, 'iiitdsite/about_us.html', {'about': about, 'ourfam': ourfam,
                                                        'testi': testi,'temp_cel': temp_cel,
                                                        'temp_fah': temp_fah, 'links': links,})
 
