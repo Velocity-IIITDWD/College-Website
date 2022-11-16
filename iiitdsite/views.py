@@ -2,10 +2,10 @@ from unicodedata import category
 from django.views.generic import ListView,DetailView, TemplateView
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
-from .models import Faculty, Images,Magazine_Issues, Magazine_Team, NewsLetterEmail, Events, EventsImages, About, AboutUsTestimonial, Tenders, Updates, Gallery_categories
+from .models import Faculty, Image,Magazine_Issues, Magazine_Team, NewsLetterEmail, Events, EventsImages, About, AboutUsTestimonial, Tenders, Updates
 from .models import OurFamilyLink, AcademicsECE, AcademicsCSE, AcademicsDSAI, Academics, ResearchPoints, ResearchStudents
 from .models import CurriculumLink, NewsPage, AcademicCalLink, HomePageUpcomingEvents, Administration, Staff, Senate, Financial_Committee,BOG 
-from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, Gallery, CampusPageDetails, Clubs
+from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, CampusPageDetails, Clubs,Image_category
 from .weather import temp_cel, temp_fah
 UserModel = get_user_model()
 
@@ -881,7 +881,8 @@ def magazine_team(request):
     membersEditor = Magazine_Team.objects.filter(tag="Faculty")
     membersDesign = Magazine_Team.objects.filter(tag="Design")
     membersMC = Magazine_Team.objects.filter(tag="Magazine Coordinator")
-    return render(request,'iiitdsite/magazine-team.html',{'membersEditor':membersEditor,'membersCS':membersCS,'membersDesign':membersDesign,'membersMC':membersMC})
+    membersSM = Magazine_Team.objects.filter(tag="Student Mentor")
+    return render(request,'iiitdsite/magazine-team.html',{'membersEditor':membersEditor,'membersCS':membersCS,'membersDesign':membersDesign,'membersMC':membersMC,'membersSM':membersSM})
 
 def financeCommittee(request):
     membersCP = Financial_Committee.objects.filter(tag="Chairperson")
@@ -947,7 +948,7 @@ class FacultyDetailPage(DetailView):
     
 
 class GalleryCategories(ListView):
-    model = Gallery_categories
+    model = Image_category
     template_name = 'iiitdsite/gallery.html'
 
 def gallery(request, cat_id):
