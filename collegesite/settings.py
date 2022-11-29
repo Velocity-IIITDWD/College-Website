@@ -79,18 +79,23 @@ WSGI_APPLICATION = 'collegesite.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd2tv7lcvmp1d1b',
+#         'USER': 'mmbtokbureafez',
+#         'PASSWORD': '8ee6389b364469b6d61c2b101e0e4a332c121be687dbcdc72224fc1210fd558e',
+#         'URL': 'postgres://mmbtokbureafez:8ee6389b364469b6d61c2b101e0e4a332c121be687dbcdc72224fc1210fd558e@ec2-52-200-5-135.compute-1.amazonaws.com:5432/d2tv7lcvmp1d1b',
+#         'HOST': 'ec2-52-200-5-135.compute-1.amazonaws.com',
+#         "PORT": '5432'
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd2tv7lcvmp1d1b',
-        'USER': 'mmbtokbureafez',
-        'PASSWORD': '8ee6389b364469b6d61c2b101e0e4a332c121be687dbcdc72224fc1210fd558e',
-        'URL': 'postgres://mmbtokbureafez:8ee6389b364469b6d61c2b101e0e4a332c121be687dbcdc72224fc1210fd558e@ec2-52-200-5-135.compute-1.amazonaws.com:5432/d2tv7lcvmp1d1b',
-        'HOST': 'ec2-52-200-5-135.compute-1.amazonaws.com',
-        "PORT": '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 #db_from_env = dj_database_url.config(conn_max_age=600)
 #DATABASES['default'].update(db_from_env)
 
