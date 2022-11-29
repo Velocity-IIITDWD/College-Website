@@ -112,9 +112,10 @@
                   </div>
 				{% endfor %}
                 </div>
-                <h3 style="padding-left: 20px;"><b>Faculty Advisor</b></h3>
+                
+                <h3 style="padding-left: 20px;"><b>Design Team</b></h3>
                 <div class="d-flex" style="flex-wrap: wrap;">
-                    {% for member in membersEditor %}
+                    {% for member in membersDesign %}
                     <div class="card m-3 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
                         <img src="{{member.image.url}}" class="card-img-top" alt="...">
                         <p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
@@ -122,9 +123,10 @@
                       </div>
                     {% endfor %}
                 </div>
-                <h3 style="padding-left: 20px;"><b>Design Team</b></h3>
+				
+                <h3 style="padding-left: 20px;"><b>Magazine Coordinators</b></h3>
                 <div class="d-flex" style="flex-wrap: wrap;">
-                    {% for member in membersDesign %}
+                    {% for member in membersMC %}
                     <div class="card m-3 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
                         <img src="{{member.image.url}}" class="card-img-top" alt="...">
                         <p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
@@ -142,9 +144,9 @@
                       </div>
                     {% endfor %}
                 </div>
-                <h3 style="padding-left: 20px;"><b>Magazine Coordinators</b></h3>
+				<h3 style="padding-left: 20px;"><b>Faculty Advisor</b></h3>
                 <div class="d-flex" style="flex-wrap: wrap;">
-                    {% for member in membersMC %}
+                    {% for member in membersEditor %}
                     <div class="card m-3 shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
                         <img src="{{member.image.url}}" class="card-img-top" alt="...">
                         <p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
