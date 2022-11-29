@@ -264,6 +264,7 @@ def academicsdsaikannada(request):
 def academics(request):
     links = ugcselinks.objects.last()
     acad_link = AcademicCalLink.objects.get(id=1)
+    acad_link_first = AcademicCalLink.objects.get(id=2)
     academics = Academics.objects.all()
     students = ResearchStudents.objects.all()
     if request.method == 'POST':
@@ -271,7 +272,7 @@ def academics(request):
         emailid = NewsLetterEmail.objects.create(email_id=email)
         NewsLetterEmail.save(emailid)
         return redirect('/academics')
-    return render(request, 'iiitdsite/academics.html', {'acad_link': acad_link,'academics': academics, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,'students':students})
+    return render(request, 'iiitdsite/academics.html', {'acad_link_first':acad_link_first,'acad_link': acad_link,'academics': academics, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,'students':students})
 
 
 def academicshindi(request):
