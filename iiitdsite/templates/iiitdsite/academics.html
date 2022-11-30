@@ -80,8 +80,9 @@
           <button type="button" id = '1' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >DSAI</button>
           <button type="button" id = '2' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >ECE</button>
           <button type="button" id = '3' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >Research</button>
-          <button type="button" class="btn btn-dark btn-lg" >Academic Calender</button>
-          <button type="button" class="btn btn-dark btn-lg" >Faculty Info</button>
+          <a href="{{ acad_link.acad_cal.url }}"><button type="button" class="btn btn-dark btn-lg" >Academic Calender</button></a>
+          <a href="{{ acad_link_first.acad_cal.url }}"><button type="button" class="btn btn-dark btn-lg" >Academic Calender For First Year</button></a>
+          <a href="{% url 'faculty' %}"><button type="button" class="btn btn-dark btn-lg" >Faculty Info</button></a>
         
 
 
@@ -168,8 +169,12 @@
           </br>
           <div>
             <div style="display:flex;justify-content: space-between;">
-              <h4 id="cseHead"><a name="cse"></a> COMPUTER SCIENCE AND ENGINEERING</h4>
+              <div><h4 id="cseHead"><a name="cse"></a> COMPUTER SCIENCE AND ENGINEERING</h4>
+              <p>(Institute Code 316 and Program Code 4110)</p>
+              </div>
+
               <button  id = '0' onclick='Myfunction(this.id)' class="trigger">V</button>
+
               
             </div>
 
@@ -182,7 +187,10 @@
             </br>
             <div>
               <div style="display:flex;justify-content: space-between;">
-                <h4 id="dsaiHead">DATA SCIENCE AND ARTIFICIAL INTELLIGENCE</h4>
+                <div>
+                  <h4 id="dsaiHead">DATA SCIENCE AND ARTIFICIAL INTELLIGENCE</h4>
+                <p>(Institute Code 316 and Program Code 4181)</p>
+                </div>
                 <button id ='1' onclick='Myfunction(this.id)' class="trigger">V</button>
                 
               </div>
@@ -197,7 +205,8 @@
           
           <div>
             <div style="display:flex;justify-content: space-between;">
-              <h4 id="eceHead">ELECTRONICS AND COMMUNICATION ENGINEERING</h4>
+              <div><h4 id="eceHead">ELECTRONICS AND COMMUNICATION ENGINEERING</h4>
+                <p>(Institute Code 316 and Program Code 4114)</p></div>
               <button id = '2' onclick='Myfunction(this.id)' class="trigger">V</button>
               
             </div>
@@ -211,11 +220,11 @@
             <h1><u>Curriculum</u></h1>
             <br>
             <p>BTech curricula are designed in the Outcome Based Education framework with well-defined program objectives. Each BTech program has an ideal mix of foundational theory and core subjects (30%), Breadth in engineering, mathematics and sciences (25%), soft skills and humanities (10%), contemporary elective subjects in applied areas (25%) and project-based learning through a series of mini and major projects (10%). Most elective subjects are kept open for any student in any program to take the specialised courses of their choice. The eighth semester has no coursework to enable students to carry out the major project and also pursue a full-semester internship in the industry or in other reputed institutes.</p>
-            <br>
-            <p>IIIT Dharwad, being an Institute of National Importance, has full academic autonomy with its own Academic Senate with professors from other reputed institutes and industry members. The Institute follows a credit-based system for each student to make self-paced progress. Assessment is through a relative grading system with emphasis on continuous assessment and a grade-point system.
-            </p><br>
-            <p>The Institute has not hesitated to break out of outdated conventions and has introduced an IT-focused curriculum from the first semester (e.g., no chemistry) with elective subjects offered in areas such as data science, AI, machine learning, IoT, cloud computing and Blockchain to name a few. Ample opportunities are provided to learn these cutting-edge areas practically through mini and major projects and events like hackathons.</p>
-            <br>
+       
+            <p class="mt-3">IIIT Dharwad, being an Institute of National Importance, has full academic autonomy with its own Academic Senate with professors from other reputed institutes and industry members. The Institute follows a credit-based system for each student to make self-paced progress. Assessment is through a relative grading system with emphasis on continuous assessment and a grade-point system.
+            </p>
+            <p class="mt-3">The Institute has not hesitated to break out of outdated conventions and has introduced an IT-focused curriculum from the first semester (e.g., no chemistry) with elective subjects offered in areas such as data science, AI, machine learning, IoT, cloud computing and Blockchain to name a few. Ample opportunities are provided to learn these cutting-edge areas practically through mini and major projects and events like hackathons.</p>
+
           </div>
           <br>
           <div>

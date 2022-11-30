@@ -1,6 +1,6 @@
 from email.mime import image
-from tkinter import CASCADE
-from turtle import shape
+
+
 from django.db import models
 from django.db.models.fields import EmailField
 from django.urls import reverse
@@ -185,7 +185,11 @@ class Placements(models.Model):
 
 
 class AcademicCalLink(models.Model):
-    acad_link = models.CharField(max_length=200, blank=True)
+    acad_cal = models.FileField(upload_to='Docs/',blank=True)
+    acad_cal_name = models.CharField(max_length=500,blank=True)
+
+    def __str__(self):
+        return self.acad_cal_name
 
 
 class Administration(models.Model):
@@ -234,7 +238,7 @@ class Alert(models.Model):
 
 class Jobs(models.Model):
     job_title = models.CharField(max_length=200)
-    description= models.CharField(max_length=200, null=True)
+    description= models.CharField(max_length=100000, null=True)
     date = models.DateField()
     form= models.CharField(max_length=200,blank=True, null=True)
     instructions = models.FileField(upload_to='Jobs/', blank=True, null=True)
@@ -294,6 +298,8 @@ class Clubs(models.Model):
     LinkedIn = models.CharField(max_length=200, blank=True)
     Facebook = models.CharField(max_length=200, blank=True)
     Mail = models.CharField(max_length=200, blank=True)
+    def __str__(self): 
+         return self.NameofClub[:50]
 
 class Senate(models.Model):
     name = models.CharField(max_length=200,null=True)
@@ -329,13 +335,9 @@ class Staff(models.Model):
 
 #Configuring the Gallery Page
 
-class Gallery(models.Model):
-    class Meta:
-        verbose_name_plural = "Gallery"
-    image = models.ImageField(upload_to='Gallery/', blank=True, null=True)
-    shape = models.CharField(max_length=200, null=True, blank=True)
 
-class Gallery_categories(models.Model):
+
+class Image_category(models.Model):
     event_name = models.CharField(max_length=500)
     event_date = models.DateTimeField()
     cover = models.ImageField(upload_to = 'Gallery/')
@@ -346,8 +348,8 @@ class Gallery_categories(models.Model):
     def get_absolute_url(self):
         return reverse('galleryDetail',args=[str(self.id)])
 
-class Images(models.Model):
-    category = models.ForeignKey(to=Gallery_categories, on_delete=models.CASCADE, null=True)
+class Image(models.Model):
+    category = models.ForeignKey(to=Image_category, on_delete=models.CASCADE, null=True)
     image = models.ImageField(upload_to='Images/')
     shape = models.CharField(max_length=200)  
 
