@@ -2,10 +2,10 @@ from unicodedata import category
 from django.views.generic import ListView,DetailView, TemplateView
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
-from .models import Faculty, Images,Magazine_Issues, Magazine_Team, NewsLetterEmail, Events, EventsImages, About, AboutUsTestimonial, Tenders, Updates, Gallery_categories
+from .models import Faculty, Image,Magazine_Issues, Magazine_Team, NewsLetterEmail, Events, EventsImages, About, AboutUsTestimonial, Tenders, Updates
 from .models import OurFamilyLink, AcademicsECE, AcademicsCSE, AcademicsDSAI, Academics, ResearchPoints, ResearchStudents
 from .models import CurriculumLink, NewsPage, AcademicCalLink, HomePageUpcomingEvents, Administration, Staff, Senate, Financial_Committee,BOG 
-from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, Gallery, CampusPageDetails, Clubs
+from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, CampusPageDetails, Clubs,Image_category
 from .weather import temp_cel, temp_fah
 UserModel = get_user_model()
 
@@ -14,22 +14,25 @@ def home(request):
     alert = Alert.objects.last()
     announcements=Announcements.objects.all()[::-1]
     updates=Updates.objects.all()[::-1]
-    links = ugcselinks.objects.last()
     events = Events.objects.all()[::-1]
     main_event = Events.objects.last()
     upcoming_events = HomePageUpcomingEvents.objects.all()[::-1]
-    acad_link = AcademicCalLink.objects.get(id=1)
     main_news = NewsPage.objects.last()
     news = NewsPage.objects.all()[2:6:-1]
-    currilink = CurriculumLink.objects.get(id=1)
     gallery = HomePageGallery.objects.all()[::-1]
+    acad_link = AcademicCalLink.objects.get(id=2)
+    acad_link_first = AcademicCalLink.objects.get(id=3)
+    curr_cse = AcademicsCSE.objects.get(id=1).curriculum_link
+    curr_dsai = AcademicsDSAI.objects.get(id=1).curriculum_link
+    curr_ece = AcademicsECE.objects.get(id=1).curriculum_link
+    context =  {'alert': alert, 'main_event': main_event, 'events': events,
+                                                    'gallery': gallery, 'images': EventsImages, 'upcoming_events': upcoming_events, 'main_news': main_news, 'news': news, 'temp_cel': temp_cel, 'temp_fah': temp_fah,'announcements':announcements,'updates':updates,'curr_cse':curr_cse,'curr_dsai':curr_dsai,'curr_ece':curr_ece,'acad_link':acad_link}
     if request.method == 'POST':
         email = request.POST.get('email')
         emailid = NewsLetterEmail.objects.create(email_id=email)
         NewsLetterEmail.save(emailid)
         return redirect('')
-    return render(request, 'iiitdsite/index.html', {'alert': alert, 'main_event': main_event, 'events': events,
-                                                    'gallery': gallery, 'images': EventsImages, 'upcoming_events': upcoming_events, 'main_news': main_news, 'acad_link': acad_link, 'news': news, 'currilink': currilink, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,'announcements':announcements,'updates':updates})
+    return render(request, 'iiitdsite/index.html',context)
 
 
 def homehindi(request):
@@ -41,7 +44,6 @@ def homehindi(request):
     acad_link = AcademicCalLink.objects.get(id=1)
     main_news = NewsPage.objects.last()
     news = NewsPage.objects.all()[2:6:-1]
-    currilink = CurriculumLink.objects.get(id=1)
     event = Events.objects.last()
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -59,7 +61,6 @@ def homekannada(request):
     acad_link = AcademicCalLink.objects.get(id=1)
     main_news = NewsPage.objects.last()
     news = NewsPage.objects.all()[2:6:-1]
-    currilink = CurriculumLink.objects.get(id=1)
     event = Events.objects.last()
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -103,8 +104,6 @@ def eventskannada(request):
 
 def aboutus(request):
     links = ugcselinks.objects.last()
-    acad_link = AcademicCalLink.objects.get(id=1)
-    currilink = CurriculumLink.objects.get(id=1)
     about = About.objects.all()
     ourfam = OurFamilyLink.objects.all()
     testi = AboutUsTestimonial.objects.all()
@@ -113,7 +112,7 @@ def aboutus(request):
         emailid = NewsLetterEmail.objects.create(email_id=email)
         NewsLetterEmail.save(emailid)
         return redirect('/about')
-    return render(request, 'iiitdsite/about_us.html', {'acad_link': acad_link, 'currilink': currilink,'about': about, 'ourfam': ourfam,
+    return render(request, 'iiitdsite/about_us.html', {'about': about, 'ourfam': ourfam,
                                                        'testi': testi,'temp_cel': temp_cel,
                                                        'temp_fah': temp_fah, 'links': links,})
 
@@ -270,16 +269,20 @@ def academicsdsaikannada(request):
 
 def academics(request):
     links = ugcselinks.objects.last()
-    acad_link = AcademicCalLink.objects.get(id=1)
+    acad_link = AcademicCalLink.objects.get(id=2)
+    acad_link_first = AcademicCalLink.objects.get(id=3)
+    curr_cse = AcademicsCSE.objects.get(id=1).curriculum_link
+    curr_dsai = AcademicsDSAI.objects.get(id=1).curriculum_link
+    curr_ece = AcademicsECE.objects.get(id=1).curriculum_link
     academics = Academics.objects.all()
-    currilink = CurriculumLink.objects.get(id=1)
     students = ResearchStudents.objects.all()
     if request.method == 'POST':
         email = request.POST.get('email')
         emailid = NewsLetterEmail.objects.create(email_id=email)
         NewsLetterEmail.save(emailid)
         return redirect('/academics')
-    return render(request, 'iiitdsite/academics.html', {'acad_link': acad_link, 'currilink': currilink,'academics': academics, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,'students':students})
+    context = {'acad_link_first':acad_link_first,'acad_link': acad_link,'academics': academics, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,'students':students, 'curr_cse':curr_cse,'curr_dsai':curr_dsai,'curr_ece':curr_ece}
+    return render(request, 'iiitdsite/academics.html',context )
 
 
 def academicshindi(request):
@@ -888,7 +891,8 @@ def magazine_team(request):
     membersEditor = Magazine_Team.objects.filter(tag="Faculty")
     membersDesign = Magazine_Team.objects.filter(tag="Design")
     membersMC = Magazine_Team.objects.filter(tag="Magazine Coordinator")
-    return render(request,'iiitdsite/magazine-team.html',{'membersEditor':membersEditor,'membersCS':membersCS,'membersDesign':membersDesign,'membersMC':membersMC})
+    membersSM = Magazine_Team.objects.filter(tag="Student Mentor")
+    return render(request,'iiitdsite/magazine-team.html',{'membersEditor':membersEditor,'membersCS':membersCS,'membersDesign':membersDesign,'membersMC':membersMC,'membersSM':membersSM})
 
 def financeCommittee(request):
     membersCP = Financial_Committee.objects.filter(tag="Chairperson")
@@ -954,12 +958,13 @@ class FacultyDetailPage(DetailView):
     
 
 class GalleryCategories(ListView):
-    model = Gallery_categories
+    model = Image_category
     template_name = 'iiitdsite/gallery.html'
 
 def gallery(request, cat_id):
-    images = Images.objects.all().filter(category_id=cat_id)
+    images = Image.objects.all().filter(category_id=cat_id)
     context = {
         "images": images
     }
     return render(request,'iiitdsite/galleryDetail.html',context)
+

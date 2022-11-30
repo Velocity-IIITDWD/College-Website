@@ -914,20 +914,20 @@
                     </li>
                     <li class="static">
                       <a class="mainNav" href="{% url 'academics' %}">Academics <i class="fa fa-angle-down"></i></a>
-                      <ul class="megamenu dropdown">
-                        <li class="mega-title" style="padding-left: 0px; margin-left: 0px;">
+                      <ul class="megamenu dropdown" style="transform: translateY(-1rem);">
+                        <li class="mega-title">
                           <a href="#">Courses</a>
                           <ul>
                             <li>
-                              <a href="./academics">
+                              <a href="./academics#0">
                                 Computer Science & Engineering (CSE)</a>
                             </li>
                             <li>
-                              <a href="./academics">
+                              <a href="./academics#1">
                                 Data Science & AI (DSAI)</a>
                             </li>
                             <li>
-                              <a href="./academics">
+                              <a href="./academics#2">
                                 Electronics & Communication Engineering(ECE)
                               </a>
                             </li>
@@ -936,35 +936,30 @@
                         <li class="mega-title">
                           <a href="">Academic Information</a>
                           <ul>
-                            <li><a href={{acad_link.acad_link}}>Academic Calendar</a></li>
+                            <li><a href={{acad_link.acad_cal.url}}>Academic Calendar</a></li>
                             <li>
                               <a href="{% url 'faculty' %}">Faculty</a>
                             </li>
                             <li>
-                              <a href="{% url 'research' %}">Research</a>
+                              <a href="./academics#3">Research</a>
                             </li>
                           </ul>
-                        </li>
-
-                        <li class="mega-title">
-                          <img
-                            src="https://img.collegedekhocdn.com/media/img/institute/crawled_images/None/GDHGHGDDF.jpeg?tr=w-250,h-150"
-                            alt="" />
                         </li>
 
                         <li class="mega-title">
                           <a href="#">Curriculum</a>
                           <ul>
                             <li>
-                              <a href={{currilink.cse_link}}>Computer Science & Engineering (CSE)</a>
+                              <a href={{curr_cse}}>Computer Science & Engineering (CSE)</a>
                             </li>
                             <li>
-                              <a href={{currilink.ece_link}}>Electronics & Communication Engineering(ECE)
+                              <a href={{curr_dsai}}>Data Science & AI (DSAI)
+                            </a>
+                            <li>
+                              <a href={{curr_ece}}>Electronics & Communication Engineering(ECE)
                               </a>
                             </li>
-                            <li>
-                              <a href={{currilink.ece_link}}>Data Science & AI (DSAI)
-                            </a>
+                            
                             </li>
                           </ul>
                         </li>
@@ -986,7 +981,7 @@
                           <a href="{% url 'faq' %}"> FAQs </a>
                         </li>
                         <li>
-                          <a href="{% url 'phd' %}"> Phds </a>
+                          <a href="{% url 'phd' %}"> PhDs </a>
                         </li>
                       </ul>
                     </li>
@@ -1104,18 +1099,19 @@
                 <li class="menu-item-has-children">
                   <a href="{% url 'academics' %}">Academics</a>
                   <ul class="dropdown">
-                    <li><a href="#">Courses</a></li>
+                    
+                    <li><a href="{{acad_link.acad_cal}}">Academic Calendar</a></li>
                     <li><a href="{% url 'faculty' %}">Faculty</a></li>
-                    <li><a href="{% url 'academics' %}">Research</a></li>
+                    <li><a href="./academics#3">Research</a></li>
                     <li class="menu-item-has-children"><a href="">Curriculum</a>
                     <ul class="dropdown">
-                      <li><a href="{{currilink.cse_link}}">CSE</a></li>
+                      <li><a href="{{curr_cse}}">CSE</a></li>
                        <li>
-                                  <a href="{% url 'academics-dsai' %}">
-                                    Data Science & AI (DSAI)</a
+                                  <a href="{{curr_dsai}}">
+                                    DSAI</a
                                   >
                                 </li>
-                      <li><a href={{currilink.cse_link}}>ECE</a></li>
+                      <li><a href={{curr_ece}}>ECE</a></li>
                   </ul>
                 </li>
                   </ul>
@@ -1248,7 +1244,7 @@
     <div style="width: 100%; position: relative;">
       <video width="100%" playsinline autoplay muted="true" preload="metadata">
         <!-- the video file is not available int the repo, however it will work, since its present in server -->
-        <source src="static/iiitdsite/videos/IIIT.mp4" type="video/mp4">
+        <source src="{% static 'iiitdsite/videos/IIIT.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="overlay">
@@ -1449,8 +1445,8 @@
                   <div>
                     <img src="{{event.image.url}}" alt="..." />
                   </div>
-                  <div class="card-body">
-                    <h5 class="card-title">{{event.event_name}}</h5>
+                  <div class="card-body" style="height: 10rem;">
+                    <h5 class="card-title">{{event.event_name|slice:":30"}}</h5>
                     <p class="card-text">{{event.description|slice:":50"}}....</p>
                     <p>{{event.date}}</p>
                   </div>

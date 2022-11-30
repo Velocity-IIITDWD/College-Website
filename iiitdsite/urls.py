@@ -73,7 +73,7 @@ urlpatterns = [
     path('campus-hindi', views.campushindi, name='campus-hindi'),
     path('campus-kannada', views.campuskannada, name='campus-kannada'),
     path('magazine',views.magazine,name='magazine'),
-    path('magazine',views.clubs,name='clubs'),
+    
     path('fees',views.fees,name='fees'),
     path('admission_procedure',views.admissionProcedure,name='admission_procedure'),
     path('announcements',views.AnnouncementsListView.as_view(),name='announcements'),
