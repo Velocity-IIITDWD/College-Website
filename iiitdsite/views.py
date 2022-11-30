@@ -20,13 +20,19 @@ def home(request):
     main_news = NewsPage.objects.last()
     news = NewsPage.objects.all()[2:6:-1]
     gallery = HomePageGallery.objects.all()[::-1]
+    acad_link = AcademicCalLink.objects.get(id=2)
+    acad_link_first = AcademicCalLink.objects.get(id=3)
+    curr_cse = AcademicsCSE.objects.get(id=1).curriculum_link
+    curr_dsai = AcademicsDSAI.objects.get(id=1).curriculum_link
+    curr_ece = AcademicsECE.objects.get(id=1).curriculum_link
+    context =  {'alert': alert, 'main_event': main_event, 'events': events,
+                                                    'gallery': gallery, 'images': EventsImages, 'upcoming_events': upcoming_events, 'main_news': main_news, 'news': news, 'temp_cel': temp_cel, 'temp_fah': temp_fah,'announcements':announcements,'updates':updates,'curr_cse':curr_cse,'curr_dsai':curr_dsai,'curr_ece':curr_ece,'acad_link':acad_link}
     if request.method == 'POST':
         email = request.POST.get('email')
         emailid = NewsLetterEmail.objects.create(email_id=email)
         NewsLetterEmail.save(emailid)
         return redirect('')
-    return render(request, 'iiitdsite/index.html', {'alert': alert, 'main_event': main_event, 'events': events,
-                                                    'gallery': gallery, 'images': EventsImages, 'upcoming_events': upcoming_events, 'main_news': main_news, 'news': news, 'temp_cel': temp_cel, 'temp_fah': temp_fah,'announcements':announcements,'updates':updates})
+    return render(request, 'iiitdsite/index.html',context)
 
 
 def homehindi(request):
@@ -263,8 +269,11 @@ def academicsdsaikannada(request):
 
 def academics(request):
     links = ugcselinks.objects.last()
-    acad_link = AcademicCalLink.objects.get(id=1)
-    acad_link_first = AcademicCalLink.objects.get(id=2)
+    acad_link = AcademicCalLink.objects.get(id=2)
+    acad_link_first = AcademicCalLink.objects.get(id=3)
+    curr_cse = AcademicsCSE.objects.get(id=1).curriculum_link
+    curr_dsai = AcademicsDSAI.objects.get(id=1).curriculum_link
+    curr_ece = AcademicsECE.objects.get(id=1).curriculum_link
     academics = Academics.objects.all()
     students = ResearchStudents.objects.all()
     if request.method == 'POST':
@@ -272,7 +281,8 @@ def academics(request):
         emailid = NewsLetterEmail.objects.create(email_id=email)
         NewsLetterEmail.save(emailid)
         return redirect('/academics')
-    return render(request, 'iiitdsite/academics.html', {'acad_link_first':acad_link_first,'acad_link': acad_link,'academics': academics, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,'students':students})
+    context = {'acad_link_first':acad_link_first,'acad_link': acad_link,'academics': academics, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,'students':students, 'curr_cse':curr_cse,'curr_dsai':curr_dsai,'curr_ece':curr_ece}
+    return render(request, 'iiitdsite/academics.html',context )
 
 
 def academicshindi(request):
@@ -952,8 +962,9 @@ class GalleryCategories(ListView):
     template_name = 'iiitdsite/gallery.html'
 
 def gallery(request, cat_id):
-    images = Images.objects.all().filter(category_id=cat_id)
+    images = Image.objects.all().filter(category_id=cat_id)
     context = {
         "images": images
     }
     return render(request,'iiitdsite/galleryDetail.html',context)
+

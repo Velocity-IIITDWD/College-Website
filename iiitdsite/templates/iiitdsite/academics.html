@@ -80,7 +80,8 @@
           <button type="button" id = '1' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >DSAI</button>
           <button type="button" id = '2' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >ECE</button>
           <button type="button" id = '3' onclick=Myfunction1(this.id) class="btn btn-dark btn-lg" >Research</button>
-          <button type="button" class="btn btn-dark btn-lg" >Academic Calender</button>
+          <a href="{{ acad_link.acad_cal.url }}"><button type="button" class="btn btn-dark btn-lg" >Academic Calender</button></a>
+          <a href="{{ acad_link_first.acad_cal.url }}"><button type="button" class="btn btn-dark btn-lg" >Academic Calender For First Year</button></a>
           <a href="{% url 'faculty' %}"><button type="button" class="btn btn-dark btn-lg" >Faculty Info</button></a>
         
 
