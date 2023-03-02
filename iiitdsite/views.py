@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from .models import Faculty, Image,Magazine_Issues, Magazine_Team, NewsLetterEmail, Events, EventsImages, About, AboutUsTestimonial, Tenders, Updates
 from .models import OurFamilyLink, AcademicsECE, AcademicsCSE, AcademicsDSAI, Academics, ResearchPoints, ResearchStudents
 from .models import CurriculumLink, NewsPage, AcademicCalLink, HomePageUpcomingEvents, Administration, Staff, Senate, Financial_Committee,BOG 
-from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, CampusPageDetails, Clubs,Image_category
+from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, CampusPageDetails, Clubs,Image_category, Nirf
 from .weather import temp_cel, temp_fah
 UserModel = get_user_model()
 
@@ -968,3 +968,13 @@ def gallery(request, cat_id):
     }
     return render(request,'iiitdsite/galleryDetail.html',context)
 
+
+def DSAI_Curr(request):
+    return render(request,'iiitdsite/DSAI_curr.html')
+
+def nirf(request):
+    nirf = Nirf.objects.all()
+    context={
+        "nirf": nirf
+    }
+    return render(request,'iiitdsite/nirf.html',context)

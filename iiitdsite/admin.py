@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from .models import AcademicsDSAI, Announcements, Faculty, Image_category,Image, Magazine_Issues, Magazine_Team, NewsPage, NewsLetterEmail, Events, EventsImages, AboutUsTestimonial, Tenders, Updates
 from .models import OurFamilyLink, About, AcademicsCSE, AcademicsECE, Academics, ResearchPoints, ResearchStudents
 from .models import CurriculumLink, AcademicCalLink, HomePageUpcomingEvents,Senate,BOG,Financial_Committee, Administration, Staff
-from .models import ugcselinks, phdlinks, Scholarship, Alert, Jobs, HomePageGallery, Placements, CampusPageDetails, Clubs
+from .models import ugcselinks, phdlinks, Scholarship, Alert, Jobs, HomePageGallery, Placements, CampusPageDetails, Clubs,Nirf
 
 admin.site.site_header = 'Admin Panel'
 
@@ -45,5 +45,6 @@ admin.site.register(Magazine_Team)
 admin.site.register(Clubs)
 admin.site.register(Image_category)
 admin.site.register(Image)
+admin.site.register(Nirf)
 
 list_display = ['image_tag']

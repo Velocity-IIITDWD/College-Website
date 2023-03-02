@@ -355,8 +355,13 @@ class Image(models.Model):
 
     def __str__(self):
         return str(self.category)
+    
+class Nirf(models.Model):
+    title = models.CharField(max_length=1000,null=True)
+    report = models.FileField(upload_to='NIRF/Reports',null=True,blank=True)
             
-        
+    def __str__(self):
+        return str(self.title)
 
 
 

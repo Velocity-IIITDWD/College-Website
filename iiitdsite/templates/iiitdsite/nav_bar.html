@@ -103,8 +103,8 @@ id="backtonav"
           <div class="col-lg-1">
             <div class="logo">
               <a style="padding-left: 50px;" href="{% url 'home' %}">
-                <img src="{% static 'iiitdsite/images/IIIT_Dharwad Main Logo.png' %}" alt="IIIT Dharwad"
-                  style="transform: scale(1.8);" />
+                <img src="{% static 'iiitdsite/images/IIIT_LOGO.jpg' %}" alt="IIIT Dharwad"
+                  style="transform: scale(1.7); border: none;" />
               </a>
             </div>
           </div>
@@ -176,7 +176,7 @@ id="backtonav"
                               </a>
                             </li>
                             <li>
-                              <a href={{currilink.ece_link}}>Data Science & AI (DSAI)
+                              <a href="{% url 'DSAI_curr' %}">Data Science & AI (DSAI)
                             </a>
                             </li>
                           </ul>
@@ -272,6 +272,9 @@ id="backtonav"
                         </li>
                         <li>
                           <a href="{% url 'clubs' %}"> Clubs </a>
+                        </li>
+                        <li>
+                          <a href="{% url 'nirf' %}"> NIRF </a>
                         </li>
                         
                       </ul>

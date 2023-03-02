@@ -265,6 +265,71 @@ body {
         </p>
       </div>
     </div>
+    <div class="container mt-3">
+      <div class="tab">
+        <button
+          class="tablinks active"
+          style="float: left; width: 50%; font-size: x-large"
+          onclick="openSec(event, 'Vision')"
+        >
+          Vision
+        </button>
+        <button
+          class="tablinks"
+          style="float: right; width: 50%; font-size: x-large"
+          onclick="openSec(event, 'Mission')"
+        >
+          Mission
+        </button>
+      </div>
+
+      <div id="Vision" class="tabcontent" style="display: block">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- <div class="col">
+              <img
+                src="../../../static/iiitdsite/images/vision_clipart.jpg"
+                alt="Vision"
+                width="80%"
+              />
+            </div> -->
+            <div class="col">
+              <h5>
+                To be a globally renowned academy of information technology for
+                societal development
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Mission" class="tabcontent">
+        <div class="row align-items-center">
+          <!-- <div class="col">
+            <img
+              src="../../../static/iiitdsite/images/mission_clipart.png"
+              alt="Vision"
+              width="80%"
+            />
+          </div> -->
+          <div class="col">
+            <p>
+             <h5>
+              >To produce globally competent information technology
+              professionals with the right mix of professional skills and
+              ethical, societal and environmental concerns.<br />
+              <br>
+              >To solve local problems using global technologies and solve
+              global problems using local technologies across disciplines.<br />
+              <br>
+              >To project the nation to the forefront of information
+              technology research and development.
+             </h5>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container" style="margin-top: 3%">
       <div class="section-top-border">
@@ -348,69 +413,7 @@ body {
     </div>
     <br />
 
-    <div class="container">
-      <div class="tab">
-        <button
-          class="tablinks active"
-          style="float: left; width: 50%; font-size: x-large"
-          onclick="openSec(event, 'Vision')"
-        >
-          Vision
-        </button>
-        <button
-          class="tablinks"
-          style="float: right; width: 50%; font-size: x-large"
-          onclick="openSec(event, 'Mission')"
-        >
-          Mission
-        </button>
-      </div>
-
-      <div id="Vision" class="tabcontent" style="display: block">
-        <div class="container">
-          <div class="row align-items-center">
-            <!-- <div class="col">
-              <img
-                src="../../../static/iiitdsite/images/vision_clipart.jpg"
-                alt="Vision"
-                width="80%"
-              />
-            </div> -->
-            <div class="col">
-              <h5>
-                “To be a globally renowned academy of information technology for
-                societal development.”
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="Mission" class="tabcontent">
-        <div class="row align-items-center">
-          <!-- <div class="col">
-            <img
-              src="../../../static/iiitdsite/images/mission_clipart.png"
-              alt="Vision"
-              width="80%"
-            />
-          </div> -->
-          <div class="col">
-            <p>
-             <b>
-               i. To produce globally competent information technology
-              professionals with the right mix of professional skills and
-              ethical, societal and environmental concerns.<br />
-              ii. To solve local problems using global technologies and solve
-              global problems using local technologies across disciplines.<br />
-              iii. To project the nation to the forefront of information
-              technology research and development.
-             </b>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     {% include 'iiitdsite/footer.html' %}
 

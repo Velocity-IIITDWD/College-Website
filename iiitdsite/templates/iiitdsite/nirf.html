@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
 	<head>
-		<title>Jobs</title>
+		<title>NIRF</title>
 		<!-- Required meta tags -->
 		<!-- Font styles -->
 		<!-- Roboto Slab -->
@@ -101,25 +101,27 @@
 			<h1 class="text-center" style="font-size: 60px"><u>NIRF</u></h1>
 			<br /><br />
 			<section>
-				{% for job in object_list %}
+				
 				<div
 					class="card w-100 shadow p-3 mb-5 bg-body rounded"
 				>
 					<div class="card-body">
-						<h3 class="card-title" style="font-weight: bold;">{{ job.job_title }}</h3>
-						<p class="card-text">{{ job.description }}</p>
+						<h3 class="card-title" style="font-weight: bold;">National Institutional Ranking Framework</h3>
+						<p class="card-text">The National Institutional Ranking Framework (NIRF) was approved by the MHRD and launched by Honourable Minister of Human Resource Development on 29th September 2015.
+
+                            This framework outlines a methodology to rank institutions across the country. The methodology draws from the overall recommendations broad understanding arrived at by a Core Committee set up by MHRD, to identify the broad parameters for ranking various universities and institutions. The parameters broadly cover 'Teaching, Learning and Resources,' 'Research and Professional Practices,' 'Graduation Outcomes,' 'Outreach and Inclusivity,' and 'Perception'.</p>
 						<br />
-						<div class="d-flex">
-              <a href="{{job.instructions.url}}" style="margin-right: 20px;">General Instructions</a>
-              <a href="{{job.form}}" target="_blank">Application Form</a>
-            </div>
+                        
+						<div class="d-flex"> 
+                            {% for nir in nirf %}
+                            <a href="{{nir.report.url}}" style="margin-right: 20px;">{{nir.title}}</a>
+                            {% endfor %}
+                        </div>
+                        
 						<br />
-						<p class="card-text fs-6 text-end fw-lighter">
-							Last date to apply {{ job.date}}
-						</p>
 					</div>
 				</div>
-				{% endfor %}
+				
 			</section>
 		</div>
 
