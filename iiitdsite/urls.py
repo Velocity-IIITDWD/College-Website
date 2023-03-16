@@ -83,4 +83,6 @@ urlpatterns = [
     path('magazine-team',views.magazine_team,name='magazine-team'),
     path('nirf',views.nirf,name="nirf"),
     path('BTechDSAI',views.DSAI_Curr,name="DSAI_curr"),
+    path('BTechCSE',views.CSE_Curr,name="CSE_curr"),
+    path('BTechECE',views.ECE_Curr,name="ECE_curr"),
     ]

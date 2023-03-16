@@ -972,6 +972,12 @@ def gallery(request, cat_id):
 def DSAI_Curr(request):
     return render(request,'iiitdsite/DSAI_curr.html')
 
+def CSE_Curr(request):
+    return render(request,'iiitdsite/CSE_curr.html')
+
+def ECE_Curr(request):
+    return render(request,'iiitdsite/ECE_curr.html')
+
 def nirf(request):
     nirf = Nirf.objects.all()
     context={
