@@ -35,12 +35,37 @@
      a[29].className='active';
    </script>
     <!-- Start Header Area -->
-    <br>
-    <div class="container-fluid" style="margin-left:45px">
-			<h1 class="text-center" style="font-size: 60px;margin-right: 5.5rem;text-decoration: underline;text-underline-offset: 6px;">Faculty</h1>
-			<br /><br />
-      <div class="d-flex" style="flex-wrap: wrap;">
+   
+
+<!-- To show the department for filtration -->
+				<!-- Departments:
+				
+				Computer Science and Engineering
+				Computer Science & Engineering
+
+				Electronics and Communication Engineering
+				Electronics & Communication Engineering
+
+				Data Science and Intelligent Systems
+
+				Humanities and Science (Mathematics)
+				Humanities & Science (Mathematics)
+				Humanities & Science (English)
+				Humanities & Science
+				Humanities and Science
+				Humanities & Science (Physics)
+				 -->
+				<!-- 33 faculty for now -->
+				 <br>
+				 <div class="container-fluid" style="margin-left:45px">
+						 <h1 class="text-center" style="font-size: 60px;margin-right: 5.5rem;text-decoration: underline;text-underline-offset: 6px;  padding-bottom: 3rem;">Faculty</h1>
+						 <h1 class="text-center" style="font-size: 30px;margin-right: 5.5rem;text-decoration: underline;text-underline-offset: 6px;">Computer Science and Engineering</h1>
+				
+						 <br /><br />
+				   <div class="d-flex" style="flex-wrap: wrap;">
+				 
           {% for member in members %}
+		  {% if member.department == "Computer Science and Engineering" %}
           
             <a href="{{member.get_absolute_url}}" style="color: #333333;">
               <div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
@@ -48,8 +73,200 @@
                 <br>
                 <p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
                 <p class="card-text" style="text-align: center;">{{member.designation}}</p>
+				<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+				
+				
+
               </div>
-              
+			</a>
+			{% endif %}
+
+
+			{% if member.department == "Computer Science & Engineering" %}
+          
+            <a href="{{member.get_absolute_url}}" style="color: #333333;">
+              <div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+                <img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+                <br>
+                <p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+                <p class="card-text" style="text-align: center;">{{member.designation}}</p>
+				<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+				
+				
+
+              </div>
+			</a>
+			{% endif %}
+          {% endfor %}
+
+      </div>
+		</div>
+
+
+
+
+		<br>
+		<div class="container-fluid" style="margin-left:45px">
+				<h1 class="text-center" style="font-size: 30px;margin-right: 5.5rem;text-decoration: underline;text-underline-offset: 6px;">Electronics and Communication Engineering</h1>
+				<br /><br />
+		  <div class="d-flex" style="flex-wrap: wrap;">
+		
+ {% for member in members %}
+ {% if member.department == "Electronics and Communication Engineering" %}
+ 
+   <a href="{{member.get_absolute_url}}" style="color: #333333;">
+	 <div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+	   <img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+	   <br>
+	   <p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+	   <p class="card-text" style="text-align: center;">{{member.designation}}</p>
+	   <p class="card-text" style="text-align: center;">{{member.department}}</p>  
+	 </div>
+   </a>
+   {% endif %}
+
+
+   {% if member.department == "Electronics & Communication Engineering" %}
+ 
+   <a href="{{member.get_absolute_url}}" style="color: #333333;">
+	 <div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+	   <img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+	   <br>
+	   <p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+	   <p class="card-text" style="text-align: center;">{{member.designation}}</p>
+	   <p class="card-text" style="text-align: center;">{{member.department}}</p>  
+	 </div>
+   </a>
+   {% endif %}
+ {% endfor %}
+
+</div>
+</div>
+
+
+
+<br>
+<div class="container-fluid" style="margin-left:45px">
+		<h1 class="text-center" style="font-size: 30px;margin-right: 5.5rem;text-decoration: underline;text-underline-offset: 6px;">Data Science and Intelligent Systems</h1>
+		<br /><br />
+  <div class="d-flex" style="flex-wrap: wrap;">
+
+{% for member in members %}
+{% if member.department == "Data Science and Intelligent Systems" %}
+<a href="{{member.get_absolute_url}}" style="color: #333333;">
+<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+<img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+<br>
+<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+</div>
+</a>
+{% endif %}
+{% endfor %}
+
+</div>
+</div>
+
+
+
+
+<br>
+<div class="container-fluid" style="margin-left:45px">
+		<h1 class="text-center" style="font-size: 30px;margin-right: 5.5rem;text-decoration: underline;text-underline-offset: 6px;">Humanities & Science</h1>
+		<br /><br />
+  <div class="d-flex" style="flex-wrap: wrap;">
+
+{% for member in members %}
+{% if member.department == "Humanities & Science" %}
+
+<a href="{{member.get_absolute_url}}" style="color: #333333;">
+<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+<img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+<br>
+<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+</div>
+</a>
+{% endif %}
+
+{% if member.department == "Humanities and Science" %}
+
+<a href="{{member.get_absolute_url}}" style="color: #333333;">
+<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+<img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+<br>
+<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+</div>
+</a>
+{% endif %}
+
+
+{% if member.department == "Humanities & Science (English)" %}
+<a href="{{member.get_absolute_url}}" style="color: #333333;">
+<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+<img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+<br>
+<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+</div>
+</a>
+{% endif %}
+
+
+
+{% if member.department == "Humanities & Science (Mathematics)" %}
+
+<a href="{{member.get_absolute_url}}" style="color: #333333;">
+<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+<img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+<br>
+<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+</div>
+</a>
+{% endif %}
+
+
+{% if member.department == "Humanities and Science (Mathematics)" %}
+
+<a href="{{member.get_absolute_url}}" style="color: #333333;">
+<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+<img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+<br>
+<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+</div>
+</a>
+{% endif %}
+
+
+{% if member.department == "Humanities & Science (Physics)" %}
+
+<a href="{{member.get_absolute_url}}" style="color: #333333;">
+<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
+<img src="{{member.image.url}}" style="height: 10rem;" class="card-img-top" alt="...">
+<br>
+<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+<p class="card-text" style="text-align: center;">{{member.department}}</p>  
+</div>
+</a>
+{% endif %}
+{% endfor %}
+
+
+
+
+
+
+
 
               <!-- <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" style="transform:scale(0.8);">
                 <div class="card shadow-sm border-0 rounded">
@@ -82,10 +299,7 @@
                 </div>
               </div> -->
 
-            </a>
-          {% endfor %}
-      </div>
-		</div>
+          
         <style>
             .card{
                 transition:transform 0.5s;
