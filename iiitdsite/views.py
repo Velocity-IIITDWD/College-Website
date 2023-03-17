@@ -70,8 +70,11 @@ def homekannada(request):
     return render(request, 'iiitdsite/index(kannada).html', {'alert': alert, 'main_event': main_event, 'events': events, 'event': event, 'images': EventsImages, 'upcoming_events': upcoming_events, 'main_news': main_news, 'acad_link': acad_link, 'news': news, 'currilink': currilink, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,})
 
 def faculty(request):
-    members = Faculty.objects.all()
-    return render(request, 'iiitdsite/faculty.html', {'members':members})
+    humanitiesmembers = Faculty.objects.filter(department__icontains='Humanities')
+    ecemembers = Faculty.objects.filter(department__icontains='Electronics')
+    csemembers = Faculty.objects.filter(department__icontains='Computer')
+    dsaimembers = Faculty.objects.filter(department__icontains='Data')
+    return render(request, 'iiitdsite/faculty.html', {'ecemembers':ecemembers,'csemembers':csemembers,'dsaimembers':dsaimembers,'humanitiesmembers':humanitiesmembers})
 
 
 def eventshindi(request):
@@ -971,6 +974,12 @@ def gallery(request, cat_id):
 
 def DSAI_Curr(request):
     return render(request,'iiitdsite/DSAI_curr.html')
+
+def CSE_Curr(request):
+    return render(request,'iiitdsite/CSE_curr.html')
+
+def ECE_Curr(request):
+    return render(request,'iiitdsite/ECE_curr.html')
 
 def nirf(request):
     nirf = Nirf.objects.all()
