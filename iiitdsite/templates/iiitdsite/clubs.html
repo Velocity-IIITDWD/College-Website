@@ -47,6 +47,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <link
       rel="stylesheet"
       href="{% static 'iiitdsite/css/favicon_nav.css' %}"
@@ -111,7 +114,7 @@
     <div class="row">
       {% for i in s %}
       <div class="col-lg-4">
-        <div class="card rounded shadow">
+        <div class="card rounded shadow" data-bs-toggle="modal" data-bs-target="#{{i.identifier}}">
           {% if i.Logo %}
           <img src="{{i.Logo.url}}" class="card-img-top rounded-circle" alt="...">
           {% endif %}
@@ -148,6 +151,28 @@
       {% endfor %}
     </div> 
     </div>
+
+    <!-- Modal -->
+{% for i in s %}
+<div class="modal modal-dialog-scrollable fade" id="{{i.identifier}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div style="width: 50rem; left: -7rem;" class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{i.NameofClub}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate culpa perferendis eveniet labore maxime ducimus doloribus totam sint. Cumque sint illum aperiam deleniti nobis ab perspiciatis aspernatur nulla ratione atque dolorum reiciendis obcaecati, quaerat sit? Cupiditate, earum sit cumque sequi similique quibusdam dolor laboriosam reiciendis temporibus, dicta rem culpa, sunt voluptatum. Consequuntur fugit saepe minus, perspiciatis dolorem amet fugiat non eum nesciunt facere natus recusandae incidunt eveniet quas voluptate asperiores, fuga cupiditate optio quibusdam similique deserunt ipsa aperiam? Accusantium recusandae atque mollitia iusto excepturi ipsam facere nostrum aut nesciunt officiis perferendis ad quasi unde nihil fugit quibusdam non rerum, quisquam laborum doloremque voluptatem! Dolorem ipsam iste excepturi perspiciatis dignissimos alias mollitia maxime reprehenderit vitae explicabo optio dolor architecto facere, totam aut tempora saepe eum pariatur consectetur blanditiis, porro cupiditate! Iste, nam doloremque, velit voluptatem possimus facere sit ut aliquid vel, nulla nemo at. Iusto minus nesciunt, magni ea, asperiores dolorum, fugit quo nisi optio sed doloribus iste nostrum in culpa tempore. Dicta repellendus accusantium error temporibus nostrum officia aliquam, blanditiis minima dolores? Aut nam rem neque dolorum, voluptatum commodi ducimus qui voluptatibus dicta! Labore eum neque, reprehenderit ad error modi inventore incidunt perferendis exercitationem explicabo consectetur aliquid dignissimos deleniti nisi obcaecati eveniet fugiat. Culpa dolorem aspernatur deleniti quod quas quis ab a quaerat perspiciatis magni similique iure rerum error nostrum, fugiat, aut eaque cum quam amet ullam rem repellat. Esse deleniti modi consequatur quidem vero, doloremque asperiores tempora autem quod dolore ab repudiandae. Quo quisquam culpa enim saepe accusamus, corporis nisi assumenda. Delectus ducimus vitae consequuntur in facilis. Repellat asperiores maiores illum eum ipsum a ab consequatur magni quos quisquam enim modi sequi, suscipit temporibus tenetur, eligendi quibusdam! Inventore a nemo doloribus obcaecati itaque fugiat illum quam, saepe libero minus repellat sunt ratione doloremque voluptate. Obcaecati quidem labore ducimus architecto saepe optio deserunt, perferendis cupiditate omnis non harum doloribus nesciunt laborum consectetur asperiores corporis. Blanditiis repellat nobis sint magnam accusamus. Non consequatur dolor nam, adipisci provident molestias voluptate repudiandae perspiciatis eaque enim tenetur reprehenderit perferendis ipsum possimus quo minima illo? Architecto cum repellendus quisquam blanditiis enim quod suscipit veniam eaque ut saepe optio, illo et velit, provident quasi consequatur, autem iusto? Eaque eius aperiam dolorum beatae explicabo minima, consequatur, excepturi repudiandae, dolorem voluptates eveniet blanditiis alias! Sequi praesentium suscipit fugiat! Consectetur modi nihil esse nemo excepturi sapiente dolore culpa impedit in optio nulla atque recusandae ullam eaque est molestiae soluta error exercitationem facere inventore deleniti, maxime laboriosam quibusdam rerum. Veniam, repellat quos eius architecto vitae dolorum dolore illo impedit alias maxime, earum, ab modi placeat vel corporis expedita eveniet dicta aperiam. Saepe veniam alias sint porro voluptate, harum neque dolorum nisi id deleniti perferendis ea quam eaque temporibus architecto, vel blanditiis quia autem. Ut, reiciendis fugiat consequatur omnis sit cupiditate inventore deserunt recusandae beatae quibusdam? Consectetur quasi dolor provident error hic ad velit asperiores pariatur deserunt doloremque voluptates sit alias atque odio magnam ratione aut quam, eum laboriosam ex voluptatum! Adipisci possimus debitis corporis animi qui! Non, nobis illum!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
     <!--------------footer-------------->
 
     {% include 'iiitdsite/footer.html' %}
@@ -177,6 +202,11 @@
         speedAsDuration: true,
       });
     </script>
+
+    {% comment %} Bootstrap JS {% endcomment %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
