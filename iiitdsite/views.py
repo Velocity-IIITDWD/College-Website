@@ -922,8 +922,8 @@ def campus(request):
 
 def clubs(request):
     s = Clubs.objects.all()
-    memb=Club_Members.objects.all()
-    return render(request,'iiitdsite/clubs.html', {'s':s})
+    memb = Club_Members.objects.all()
+    return render(request,'iiitdsite/clubs.html', {'s':s,'memb':memb})
 
 def admissionProcedure(request):
     return render(request,'iiitdsite/admission_procedure.html')

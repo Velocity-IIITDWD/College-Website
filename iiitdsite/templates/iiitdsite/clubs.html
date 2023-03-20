@@ -101,6 +101,88 @@
         height: 100%;
         overflow-x: hidden;
       }
+      body {
+        padding-right: 0 !important;
+      }
+      .modal-body {
+        height: 80vh;
+        overflow-y:auto;
+      }
+      .modal-open .modal{
+        overflow-y: hidden;
+      }
+      @media only screen and (max-width: 768px) {
+        .modal_header{
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .modal_description{
+          width:100%;
+          padding:0 1rem;
+          text-align: justify;
+          text-justify: inter-word;
+          display:flex;
+          height:100%;
+          align-items: center;
+        }
+        .modal_important{
+          display:flex;
+          flex-direction: column;
+          width:100%;
+          padding:2rem 1rem;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .modal_header{
+          display:flex;
+          justify-content: space-between;
+        }
+        .modal_important{
+          display:flex;
+          padding:2rem 1rem;
+          width:100%;
+          justify-content: space-between;
+        }
+        .modal_description{
+          padding:0 1rem;
+          width:50%;
+          text-align: justify;
+          text-justify: inter-word;
+          display:flex;
+          height:100%;
+          align-items: center;
+        }
+      }
+      .modal-dialog{
+        display:flex;
+        max-width:100%;
+        justify-content: center;
+        align-items: center;
+        height:100%;
+        margin:0;
+        padding:1rem;
+      }
+      .modal-content{
+        width:min(50rem,100%);
+      }
+      .roles{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h3{
+        font-size: 20px;
+        font-weight: 500;
+      }
+      h4{font-size: 18px;}
+      .members{
+        display:flex;
+        flex-wrap: wrap;
+        width:100%;
+        padding:1rem;
+        gap:2rem;
+      }
     </style>
 
     {% include 'iiitdsite/nav_bar.html' %}
@@ -120,7 +202,7 @@
           {% endif %}
           <div class="card-body text-center">
             {% if i.Website %}
-            <h4 class="card-title"><a href="{{i.Website}}">{{ i.NameofClub }}</a></h4>
+            <h4 class="card-title"><a style="text-decoration: none;" href="{{i.Website}}">{{ i.NameofClub }}</a></h4>
             {% else %}
             <h4 class="card-title">{{ i.NameofClub }}</h4>
             {% endif %}
@@ -154,19 +236,65 @@
 
     <!-- Modal -->
 {% for i in s %}
-<div class="modal modal-dialog-scrollable fade" id="{{i.identifier}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="{{i.identifier}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div style="width: 50rem; left: -7rem;" class="modal-content">
+    <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">{{i.NameofClub}}</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate culpa perferendis eveniet labore maxime ducimus doloribus totam sint. Cumque sint illum aperiam deleniti nobis ab perspiciatis aspernatur nulla ratione atque dolorum reiciendis obcaecati, quaerat sit? Cupiditate, earum sit cumque sequi similique quibusdam dolor laboriosam reiciendis temporibus, dicta rem culpa, sunt voluptatum. Consequuntur fugit saepe minus, perspiciatis dolorem amet fugiat non eum nesciunt facere natus recusandae incidunt eveniet quas voluptate asperiores, fuga cupiditate optio quibusdam similique deserunt ipsa aperiam? Accusantium recusandae atque mollitia iusto excepturi ipsam facere nostrum aut nesciunt officiis perferendis ad quasi unde nihil fugit quibusdam non rerum, quisquam laborum doloremque voluptatem! Dolorem ipsam iste excepturi perspiciatis dignissimos alias mollitia maxime reprehenderit vitae explicabo optio dolor architecto facere, totam aut tempora saepe eum pariatur consectetur blanditiis, porro cupiditate! Iste, nam doloremque, velit voluptatem possimus facere sit ut aliquid vel, nulla nemo at. Iusto minus nesciunt, magni ea, asperiores dolorum, fugit quo nisi optio sed doloribus iste nostrum in culpa tempore. Dicta repellendus accusantium error temporibus nostrum officia aliquam, blanditiis minima dolores? Aut nam rem neque dolorum, voluptatum commodi ducimus qui voluptatibus dicta! Labore eum neque, reprehenderit ad error modi inventore incidunt perferendis exercitationem explicabo consectetur aliquid dignissimos deleniti nisi obcaecati eveniet fugiat. Culpa dolorem aspernatur deleniti quod quas quis ab a quaerat perspiciatis magni similique iure rerum error nostrum, fugiat, aut eaque cum quam amet ullam rem repellat. Esse deleniti modi consequatur quidem vero, doloremque asperiores tempora autem quod dolore ab repudiandae. Quo quisquam culpa enim saepe accusamus, corporis nisi assumenda. Delectus ducimus vitae consequuntur in facilis. Repellat asperiores maiores illum eum ipsum a ab consequatur magni quos quisquam enim modi sequi, suscipit temporibus tenetur, eligendi quibusdam! Inventore a nemo doloribus obcaecati itaque fugiat illum quam, saepe libero minus repellat sunt ratione doloremque voluptate. Obcaecati quidem labore ducimus architecto saepe optio deserunt, perferendis cupiditate omnis non harum doloribus nesciunt laborum consectetur asperiores corporis. Blanditiis repellat nobis sint magnam accusamus. Non consequatur dolor nam, adipisci provident molestias voluptate repudiandae perspiciatis eaque enim tenetur reprehenderit perferendis ipsum possimus quo minima illo? Architecto cum repellendus quisquam blanditiis enim quod suscipit veniam eaque ut saepe optio, illo et velit, provident quasi consequatur, autem iusto? Eaque eius aperiam dolorum beatae explicabo minima, consequatur, excepturi repudiandae, dolorem voluptates eveniet blanditiis alias! Sequi praesentium suscipit fugiat! Consectetur modi nihil esse nemo excepturi sapiente dolore culpa impedit in optio nulla atque recusandae ullam eaque est molestiae soluta error exercitationem facere inventore deleniti, maxime laboriosam quibusdam rerum. Veniam, repellat quos eius architecto vitae dolorum dolore illo impedit alias maxime, earum, ab modi placeat vel corporis expedita eveniet dicta aperiam. Saepe veniam alias sint porro voluptate, harum neque dolorum nisi id deleniti perferendis ea quam eaque temporibus architecto, vel blanditiis quia autem. Ut, reiciendis fugiat consequatur omnis sit cupiditate inventore deserunt recusandae beatae quibusdam? Consectetur quasi dolor provident error hic ad velit asperiores pariatur deserunt doloremque voluptates sit alias atque odio magnam ratione aut quam, eum laboriosam ex voluptatum! Adipisci possimus debitis corporis animi qui! Non, nobis illum!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="modal_header">
+          <img src="{{i.Logo.url}}" class="card-img-top rounded-circle" alt="...">
+          {% if i.Description %}
+          <p class="modal_description">{{ i.Description }}</p>
+          {% endif %}
+        </div>
+        <div class="modal_important">
+          {% for j in memb %}
+            {% if j.identifier == i.identifier and j.Post == "President" %}
+              <div class="roles">
+                {% if j.Photo %}
+                <img src="{{ j.Photo.url }}" class="card-img-top" alt="...">
+                {% endif %}
+                <h3>{{ j.Name }}</h3>
+                <h4>{{ j.Post }}</h4>
+              </div>
+            {% endif %}
+            {% if j.identifier == i.identifier and j.Post == "Vice-President" %}
+              <div class="roles">
+                {% if j.Photo %}
+                <img src="{{ j.Photo.url }}" class="card-img-top" alt="...">
+                {% endif %}
+                <h3>{{ j.Name }}</h3>
+                <h4>{{ j.Post }}</h4>
+              </div>
+            {% endif %}
+            {% if j.identifier == i.identifier and j.Post == "Faculty-Advisor" %}
+              <div class="roles">
+                {% if j.Photo %}
+                <img src="{{ j.Photo.url }}" class="card-img-top" alt="...">
+                {% endif %}
+                <h3>{{ j.Name }}</h3>
+                <h4>{{ j.Post }}</h4>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <h3>Members</h3>
+        <div class="members">
+          {% for j in memb %}
+          {% if j.Post == "Member" %}
+          <div class="roles">
+            {% if j.Photo %}
+            <img src="{{ j.Photo.url }}" class="card-img-top" alt="...">
+            {% endif %}
+            <h3>{{ j.Name }}</h3>
+            <h4>{{ j.Post }}</h4>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
