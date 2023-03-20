@@ -261,8 +261,10 @@ id="backtonav"
                     <li>
                       <a href="{% url 'campus' %}">Campus <i class="fa fa-angle-down"></i></a>
                       <ul class="dropdown">
-                        <li><a href="{% url 'magazine' %}">Magazine</a></li>
-                        <li><a href="{% url 'placements' %}">Placements</a></li>
+                        <li>
+                          <a href="{% url 'magazine' %}">Magazine</a>
+                        </li>
+                      
                         
                         <li>
                           <a href="{% url 'events' %}"> Events </a>
@@ -273,15 +275,19 @@ id="backtonav"
                         <li>
                           <a href="{% url 'clubs' %}"> Clubs </a>
                         </li>
-                        <li>
-                          <a href="{% url 'nirf' %}"> NIRF </a>
-                        </li>
                         
                       </ul>
                     </li>
-                    <li class="static"><a href="{% url 'jobs' %}">Jobs</a></li>
+                    <li>
+                      <a href="{% url 'placements' %}">Placements</a>
+                    </li>
+                    <li class="static">
+                      <a href="{% url 'jobs' %}">Jobs</a>
+                    </li>
                     
-                    <li><a href="{% url 'tenders' %}">Tenders</a></li>
+                    <li>
+                      <a href="{% url 'tenders' %}">Tenders</a>
+                    </li>
                     <!-- <li>
                         <a href="#">AIMS <i class="fa fa-user"></i></a>
                       </li> -->

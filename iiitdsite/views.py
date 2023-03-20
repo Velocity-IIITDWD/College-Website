@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from .models import Faculty, Image,Magazine_Issues, Magazine_Team, NewsLetterEmail, Events, EventsImages, About, AboutUsTestimonial, Tenders, Updates
 from .models import OurFamilyLink, AcademicsECE, AcademicsCSE, AcademicsDSAI, Academics, ResearchPoints, ResearchStudents
 from .models import CurriculumLink, NewsPage, AcademicCalLink, HomePageUpcomingEvents, Administration, Staff, Senate, Financial_Committee,BOG 
-from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, CampusPageDetails, Clubs,Image_category, Nirf
+from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, CampusPageDetails, Clubs,Image_category, Nirf,Club_Members
 from .weather import temp_cel, temp_fah
 UserModel = get_user_model()
 
@@ -922,7 +922,8 @@ def campus(request):
 
 def clubs(request):
     s = Clubs.objects.all()
-    return render(request,'iiitdsite/clubs.html', {'s':s})
+    memb = Club_Members.objects.all()
+    return render(request,'iiitdsite/clubs.html', {'s':s,'memb':memb})
 
 def admissionProcedure(request):
     return render(request,'iiitdsite/admission_procedure.html')

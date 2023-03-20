@@ -246,162 +246,163 @@
     animation: loader 1.2s infinite;
 } */
 
-@keyframes I1 {
-  0% {
-    height: 0px;
-  }
-  25% {
-    height: 45px;
-  }
-}
-@keyframes I2 {
-  0% {
-    height: 0px;
-  }
-  25%{
-    height: 0px;
-  }
-  50% {
-    height: 45px;
-  }
-}
-
-@keyframes Tbar {
-  0% {
-    height: 0px;
-  }
-  25%{
-    height: 0px;
-  }
-  50% {
-    height: 45px;
-  }
-}
-
-@keyframes I3 {
-    0% {
-      height: 0px;
-      
+@keyframes second1 {
+      0% {
+        height: 0px;
+      }
+      25% {
+        height: 28px;
+      }
     }
-    50%{
-      height:0px;
+    @keyframes second2 {
+      0% {
+        height: 0px;
+      }
+      25%{
+        height: 0px;
+      }
+      50% {
+        height: 56px;
+      }
     }
-    75% {
-      height: 45px;
-    }
-  }
-
-  @keyframes T {
-    0% {
-      height: 0px;
-      
-    }
-    75%{
-      height:0px;
-    }
-    100% {
-      height: 85px;
-    }
-  }
-
-  @keyframes box {
-    0% {
-      height: 0px;
-      
-    }
-    75%{
-      height:0px;
-    }
-    100% {
-      height: 22px;
-    }
-  }  
-
-.I1 {
-  background: #003366;
-  width: 30px;
-  height: 30px;
-  margin-left: 15px;
-  animation: I1 1s;
-}
-
-.I2 {
-  background: #003366;
-  width: 30px;
-  height: 48px;
-  margin-left: 15px;
-  animation: I2 1s;
-  margin-bottom: 21px;
-}
-
-.I3 {
-    background: #003366;
-    width: 30px;
-    height: 77px;
-    margin-left: 15px;
-    animation: I3 1s;
-    margin-bottom:50px;
-  }
-
-  .T {
-    background: #003366;
-    width: 30px;
-    height: 77px;
-    margin-left: 25px;
-    animation: T 1s;
-    margin-bottom: 50px;
-  }  
-
-  .Tbar{
-      transform: rotate(90deg);
-      background: #003366;
-      width: 30px;
-      height: 60px;
-      margin-left: -30px;
-      animation: Tbar 1s;
-      margin-bottom: 190px
-
-  }
-
-
-
-.dharwad{
-    font-size:20px;
-    color:white;
-    background:#003366;
-    margin-top: 95px;
-    position:absolute;
-    margin-right: -30px;
-    animation: text 1.2s ;
-    font-family: 'Poppins', sans-serif;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-right: -20px;
   
-}
-.vikas{
-  font-size:20px;
-  color:#003366;
-  margin-top: 160px;
-  position:absolute;
-  margin-right: -30px;
-  animation: vikas 1.2s ;
-  font-family: 'Poppins', sans-serif;
+    @keyframes second3 {
+      0% {
+        height: 0px;
+        
+      }
+      50%{
+        height:0px;
+      }
+      75% {
+        height: 84px;
+      }
+    }
+  
+    @keyframes first2 {
+      0% {
+        width: 0px;
+        
+      }
+      75%{
+        width:0px;
+      }
+      100% {
+        width: 62px;
+      }
+    }
+  
+    @keyframes first1 {
+      0% {
+        height: 0px;
+        
+      }
+      75%{
+        height:0px;
+      }
+      100% {
+        height: 28px;
+      }
+    } 
 
-  margin-right: -15px;
-}
+  
+  .main{
+      display:flex;
+      gap:14px;
+      flex-direction:column;
+      width:auto;
+      height:auto;
+      align-items:center;
+    }
+    .top{
+      display:flex;
+      align-items:flex-end;
+      width:188px;
+      gap:14px;
+      height:126px;
+    }
+    .I{
+      width:auto;
+      height:auto;
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      gap:14px;
+    }
+    .first1{
+      background: #003366;
+      width: 28px;
+      height: 28px;
+      animation: first1 1s;
+    }
+    .second1{
+      background: #003366;
+      width: 28px;
+      height: 28px;
+      animation: second1 1s;
+    }
+    .second2{
+      background: #003366;
+      width: 28px;
+      height: 56px;
+      animation: second2 1s;
+    }
+    .second3{
+      background: #003366;
+      width: 28px;
+      height: 84px;
+      animation: second3 1s;
+    }
+    .first2{
+      background: #003366;
+      width: 62px;
+      height: 28px;
+      animation: first2 1s;
+    }
+  .dharwad{
+      font-size:18px;
+      color:white;
+      background:#003366;
+      display:flex;
+      height:28px;
+      justify-content:center;
+      align-items:center;
+      /* margin-top: 80px; */
+      /* margin-right: -30px; */
+      animation: text 1.2s ;
+      font-family: 'Poppins', sans-serif;
+      /* padding-right: 7px; */
+      /* padding:4px 0; */
+      width:100%;
+      /* padding-left: 7px; */
+      /* margin-right: -20px; */
+      /* animation-delay: 2s; */
+  }
+  .vikas{
+    font-size:18px;
+    color:#003366;
+    /* margin-top: 130px; */
+    /* position:absolute; */
+    /* margin-right: -30px; */
+    animation: vikas 1.2s ;
+    font-family: 'Poppins', sans-serif;
+    /* animation-delay: 2s; */
+    /* margin-right: -15px; */
+    }
+
+
 
 
 @keyframes text {
     0% {
-      font-size: 0px;
+      height: 0px;
       
     }
     85% {
-      font-size: 0px;
+      height: 0px;
     }
     100% {
-      font-size: 20px;
+      height: 28px;
     }
   }  
 
@@ -418,51 +419,19 @@
     }
   } 
 
-.box1 {
-    background: #003366;
-    width: 30px;
-    height: 30px;
-
-    animation: box 1s;
-
-    position:absolute;
-    transform: translate(-65px,-45px);
-
-  } 
-
-  .box2 {
-    background: #003366;
-    width: 30px;
-    height: 30px;
-    animation: box 1s;
-    position:absolute;
-    transform: translate(-20px,-65px);
-  } 
-
-  .box3 {
-    background: #003366;
-    width: 30px;
-    height: 30px;
-
-    animation: box 1s;
-    
-    position:absolute;
-    transform: translate(25px,-95px);
-  } 
 
 
   @media screen and (max-width: 500px) {
     .loader {
-    /* background: #003366; */
-    position: fixed;
-    background:white;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000000000000;
-  }
+      position: fixed;
+      background:white;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000000000000;
+    }
   
   
   
@@ -474,27 +443,27 @@
       animation: loader 1.2s infinite;
   } */
   
-  @keyframes I1 {
-    0% {
-      height: 0px;
+    @keyframes second1 {
+      0% {
+        height: 0px;
+      }
+      25% {
+        height: 20px;
+      }
     }
-    25% {
-      height: 30px;
+    @keyframes second2 {
+      0% {
+        height: 0px;
+      }
+      25%{
+        height: 0px;
+      }
+      50% {
+        height: 40px;
+      }
     }
-  }
-  @keyframes I2 {
-    0% {
-      height: 0px;
-    }
-    25%{
-      height: 0px;
-    }
-    50% {
-      height: 30px;
-    }
-  }
   
-  @keyframes I3 {
+    @keyframes second3 {
       0% {
         height: 0px;
         
@@ -503,11 +472,24 @@
         height:0px;
       }
       75% {
-        height: 30px;
+        height: 60px;
       }
     }
   
-    @keyframes T {
+    @keyframes first2 {
+      0% {
+        width: 0px;
+        
+      }
+      75%{
+        width:0px;
+      }
+      100% {
+        width: 44;
+      }
+    }
+  
+    @keyframes first1 {
       0% {
         height: 0px;
         
@@ -516,110 +498,102 @@
         height:0px;
       }
       100% {
-        height: 30px;
-      }
-    }
-  
-    @keyframes box {
-      0% {
-        height: 0px;
-        
-      }
-      75%{
-        height:0px;
-      }
-      100% {
-        height: 10px;
+        height: 20px;
       }
     }  
   
-  .I1 {
-    background: #003366;
-    width: 16px;
-    height: 16px;
-    margin-left: 13px;
-    animation: I1 1s;
-  }
-  
-  .I2 {
-    background: #003366;
-    width: 16px;
-    height: 25.6px;
-    margin-left: 13px;
-    animation: I2 1s;
- 
-  }
-  
-  .I3 {
-      background: #003366;
-      width: 16px;
-      height: 41.26px;
-      margin-left: 13px;
-      animation: I3 1s;
- 
+    .main{
+      display:flex;
+      gap:10px;
+      flex-direction:column;
+      width:auto;
+      height:auto;
+      align-items:center;
     }
-  
-    .T {
-      background: #003366;
-      width: 16px;
-      height: 50px;
-      margin-left: 15px;
-      animation: T 1s;
-      margin-bottom: 19px
-    }  
-  
-    .Tbar{
-        transform: rotate(90deg);
-        background: #003366;
-        width: 16px;
-        height: 35px;
-        margin-left: -15px;
-        animation: I2 1s;
-        margin-bottom: 105px
-  
+    .top{
+      display:flex;
+      align-items:flex-end;
+      width:134px;
+      gap:10px;
+      height:90px;
     }
-  
-  
-
+    .I{
+      width:auto;
+      height:auto;
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      gap:10px;
+    }
+    .first1{
+      background: #003366;
+      width: 20px;
+      height: 20px;
+      animation: first1 1s;
+    }
+    .second1{
+      background: #003366;
+      width: 20px;
+      height: 20px;
+      animation: second1 1s;
+    }
+    .second2{
+      background: #003366;
+      width: 20px;
+      height: 40px;
+      animation: second2 1s;
+    }
+    .second3{
+      background: #003366;
+      width: 20px;
+      height: 60px;
+      animation: second3 1s;
+    }
+    .first2{
+      background: #003366;
+      width: 44px;
+      height: 20px;
+      animation: first2 1s;
+    }
   .dharwad{
       font-size:15px;
       color:white;
       background:#003366;
-      margin-top: 80px;
-      position:absolute;
-      margin-right: -30px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height:20px;
+      /* margin-top: 80px; */
+      /* margin-right: -30px; */
       animation: text 1.2s ;
       font-family: 'Poppins', sans-serif;
-      /* padding-right: 7px;
-      padding-left: 7px; */
-      padding-right: 20px;
-      padding-left: 20px;
-      margin-right: -20px;
+      /* padding-right: 7px; */
+      width:100%;
+      /* padding-left: 7px; */
+      /* margin-right: -20px; */
       /* animation-delay: 2s; */
   }
   .vikas{
     font-size:15px;
     color:#003366;
-    margin-top: 130px;
-    position:absolute;
-    margin-right: -30px;
+    /* margin-top: 130px; */
+    /* position:absolute; */
+    /* margin-right: -30px; */
     animation: vikas 1.2s ;
     font-family: 'Poppins', sans-serif;
     /* animation-delay: 2s; */
-    margin-right: -15px;
-  }
-  
-    
-  @keyframes text {
+    /* margin-right: -15px; */
+    }  
+    @keyframes text {
       0% {
-        font-size: 0px;
+        height: 0px;
         
       }
       85% {
-        font-size: 0px;
+        height: 0px;
       }
       100% {
-        font-size: 15px;
+        height: 20px;
       }
     }  
   
@@ -635,40 +609,6 @@
         font-size: 15px;
       }
     } 
-  
-  .box1 {
-      background: #003366;
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-      animation: box 1s;
-      margin-bottom: 67px;
-      position:absolute;
-      margin-right:93px;
-    } 
-  
-    .box2 {
-      background: #003366;
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-      animation: box 1s;
-      margin-bottom: 83px;
-      position:absolute;
-      margin-right:35px;
-    } 
-  
-    .box3 {
-      background: #003366;
-      width: 20px;
-      height: 20px;
-      margin-left: 10px;
-      animation: box 1s;
-      margin-bottom: 104px;
-      position:absolute;
-      margin-right:-23px;
-    } 
-  
   }
   /*preloader css end */
       #News{
@@ -869,17 +809,29 @@
   <body>
     <div class="dontload">
       <div class="loader">
-        <div class="I1"></div>
-        <div class="I2"></div>
-        <div class="I3"></div>
-        <div class="T"></div>
-        <div class="Tbar"></div>
-        <div class="dharwad">D  H  A  R  W  A  D</div>
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
-        <div class="vikas">ज्ञानेन विकास:</div>
-    </div>
+        <div class="main">
+          <div class="top">
+            <div class="I">
+              <div class="first1"></div>
+              <div class="second1"></div>
+            </div>
+            <div class="I">
+              <div class="first1"></div>
+              <div class="second2"></div>
+            </div>
+            <div class="I">
+              <div class="first1"></div>
+              <div class="second3"></div>
+            </div>
+            <div class="I">
+              <div class="first2"></div>
+              <div class="second3"></div>
+            </div>
+          </div>
+          <div class="dharwad">D H A R W A D</div>
+          <div class="vikas">ज्ञानेन विकास:</div>
+        </div>
+      </div>
     </div>
 
     <!-- Start Header Area -->
@@ -910,15 +862,15 @@
               <div class="main-menu">
                 <!-- main menu navbar start -->
                 <nav class="desktop-menu">
-                  <ul>
+                  <ul >
                     <li class="static">
-                      <a class="mainNav" href="{% url 'home' %}">Home </a>
+                      <a style="font-size:14px;" class="mainNav" href="{% url 'home' %}">Home </a>
                     </li>
                     <li class="static">
-                      <a class="mainNav" href="{% url 'about' %}">About</a>
+                      <a style="font-size:14px;" class="mainNav" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="static">
-                      <a class="mainNav" href="{% url 'academics' %}">Academics <i class="fa fa-angle-down"></i></a>
+                      <a style="font-size:14px;" class="mainNav" href="{% url 'academics' %}">Academics <i class="fa fa-angle-down"></i></a>
                       <ul class="megamenu dropdown" style="transform: translateY(-1rem);">
                         <li class="mega-title">
                           <a href="#">Courses</a>
@@ -941,7 +893,9 @@
                         <li class="mega-title">
                           <a href="">Academic Information</a>
                           <ul>
-                            <li><a href={{acad_link.acad_cal.url}}>Academic Calendar</a></li>
+                            <li>
+                              <a href={{acad_link.acad_cal.url}}>Academic Calendar</a>
+                            </li>
                             <li>
                               <a href="{% url 'faculty' %}">Faculty</a>
                             </li>
@@ -971,7 +925,7 @@
                       </ul>
                     </li>
                     <li>
-                      <a class="mainNav">Admissions <i class="fa fa-angle-down"></i></a>
+                      <a style="font-size:14px;" class="mainNav">Admissions <i class="fa fa-angle-down"></i></a>
                       <ul class="dropdown">
                         <li>
                           <a href="{% url 'fees' %}"> Fees </a>
@@ -992,21 +946,21 @@
                     </li>
 
                     <li>
-                      <a class="mainNav">Administration <i class="fa fa-angle-down"></i></a>
+                      <a style="font-size:14px;" class="mainNav">Administration <i class="fa fa-angle-down"></i></a>
                       <ul class="dropdown">
 
                         <li>
                           <a href="{% url 'bog' %}"> Board of Governors </a>
                         </li>
+
                         <li>
                           <a href="{% url 'senate' %}"> Senate </a>
                         </li>
+
                         <li>
                           <a href="{% url 'ficommit' %}"> Financial Committee </a>
                         </li>
-                        <li>
-                          <a href="{% url 'faculty' %}"> Faculty </a>
-                        </li>
+                
                         <li>
                           <a href="{% url 'staff' %}"> Staff </a>
                         </li>
@@ -1015,29 +969,37 @@
                     </li>
 
                     <li>
-                      <a class="mainNav" href="{% url 'campus' %}">Campus <i class="fa fa-angle-down"></i></a>
+                      <a style="font-size:14px;" class="mainNav" href="{% url 'campus' %}">Campus <i class="fa fa-angle-down"></i></a>
                       <ul class="dropdown">
-                        <li><a href="{% url 'magazine' %}">Magazine</a></li>
-                        <li><a href="{% url 'placements' %}">Placements</a></li>
-                        
+                        <li>
+                          <a href="{% url 'magazine' %}">Magazine</a>
+                        </li>
+
                         <li>
                           <a href="{% url 'events' %}"> Events </a>
                         </li>
+
                         <li>
                           <a href="{% url 'gallery' %}"> Gallery </a>
                         </li>
+                        
                         <li>
                           <a href="{% url 'clubs' %}"> Clubs </a>
                         </li>
-                        <li>
-                          <a href="{% url 'nirf' %}"> NIRF </a>
-                        </li>
+
                         
                       </ul>
                     </li>
-                    <li class="static"><a class="mainNav" href="{% url 'jobs' %}">Jobs</a></li>
+                    <li>
+                      <a style="font-size:14px;" class="mainNav" href="{% url 'placements' %}">Placements</a>
+                    </li>
+                    <li class="static">
+                      <a style="font-size:14px;" class="mainNav" href="{% url 'jobs' %}">Jobs</a>
+                    </li>
                     
-                    <li><a class="mainNav tenders" href="{% url 'tenders' %}">Tenders</a></li>
+                    <li>
+                      <a style="font-size:14px;" class="mainNav tenders" href="{% url 'tenders' %}">Tenders</a>
+                    </li>
                     <!-- <li>
                         <a href="#">AIMS <i class="fa fa-user"></i></a>
                       </li> -->
@@ -1207,10 +1169,10 @@
   window.addEventListener('scroll',function(){
   $('.header-area').css('display','block');
   let header = document.querySelector('header');
-  let windowPosition = window.scrollY>400;
+  let windowPosition = window.scrollY>100;
   let windowSize = $(window).width();
   header.classList.toggle('scrolling-active',windowPosition);
-  if(window.scrollY>400){
+  if(window.scrollY>100){
     $('.mainNav').css('color','#000');
     $('.mainNav').css('margin-right','10px');
     $('.mainNav').css('padding-bottom','32px');
