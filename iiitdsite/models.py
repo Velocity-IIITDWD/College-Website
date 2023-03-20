@@ -316,10 +316,11 @@ class Club_Members(models.Model):
     Name =models.CharField(max_length=30)
     Photo=models.ImageField(upload_to='Clubs/Members/',blank=True,null=True)
     Post=models.CharField(max_length=20)
+    identifier=models.CharField(max_length=200,null=True,blank=True)
     NameOfClub=models.ForeignKey(Clubs,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.Name
+        return self.Name[:30]
 
 
 class Senate(models.Model):
