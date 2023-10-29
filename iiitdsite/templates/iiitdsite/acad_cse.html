@@ -1,5 +1,5 @@
 {% load static %}
-<img src="{% static 'iiitdsite/images/CSE1.jpg' %}" class="img-fluid rounded mt-2" />
+<img src="{% static 'iiitdsite/images/CSE1.JPG' %}" class="img-fluid rounded mt-2" />
 <br>
 <br>
 <p>
@@ -13,4 +13,11 @@
   In consonance with the ethos of IIIT, research activities are always the main focus of the department. Areas of research include Data Analytics, Artificial Intelligence, Machine Learning, Cryptography & Network Security, Computer Networks and Algorithms.
 </p>
 
-<a href="{{curr_cse}}"><p><b>See the curriculum</b></p></a>
+{% comment %} Buttons {% endcomment %}
+
+<div style="display: flex; gap:1rem; padding:1rem 0">
+  <a href="{% url 'CSE_curr' %}"><p><b>See the curriculum</b></p></a>
+
+  <a href="{% url 'faculty' %}#cse"><p><b>See the faculty</b></p></a>
+</div>
+

@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from .models import Faculty, Image,Magazine_Issues, Magazine_Team, NewsLetterEmail, Events, EventsImages, About, AboutUsTestimonial, Tenders, Updates
 from .models import OurFamilyLink, AcademicsECE, AcademicsCSE, AcademicsDSAI, Academics, ResearchPoints, ResearchStudents
 from .models import CurriculumLink, NewsPage, AcademicCalLink, HomePageUpcomingEvents, Administration, Staff, Senate, Financial_Committee,BOG 
-from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, CampusPageDetails, Clubs,Image_category
+from .models import ugcselinks, phdlinks, Scholarship, Alert, Placements, HomePageGallery, Jobs,Announcements, CampusPageDetails, Clubs,Image_category, Nirf,Club_Members
 from .weather import temp_cel, temp_fah
 UserModel = get_user_model()
 
@@ -70,8 +70,11 @@ def homekannada(request):
     return render(request, 'iiitdsite/index(kannada).html', {'alert': alert, 'main_event': main_event, 'events': events, 'event': event, 'images': EventsImages, 'upcoming_events': upcoming_events, 'main_news': main_news, 'acad_link': acad_link, 'news': news, 'currilink': currilink, 'temp_cel': temp_cel, 'temp_fah': temp_fah, 'links': links,})
 
 def faculty(request):
-    members = Faculty.objects.all()
-    return render(request, 'iiitdsite/faculty.html', {'members':members})
+    humanitiesmembers = Faculty.objects.filter(department__icontains='Humanities')
+    ecemembers = Faculty.objects.filter(department__icontains='Electronics')
+    csemembers = Faculty.objects.filter(department__icontains='Computer')
+    dsaimembers = Faculty.objects.filter(department__icontains='Data')
+    return render(request, 'iiitdsite/faculty.html', {'ecemembers':ecemembers,'csemembers':csemembers,'dsaimembers':dsaimembers,'humanitiesmembers':humanitiesmembers})
 
 
 def eventshindi(request):
@@ -919,7 +922,8 @@ def campus(request):
 
 def clubs(request):
     s = Clubs.objects.all()
-    return render(request,'iiitdsite/clubs.html', {'s':s})
+    memb = Club_Members.objects.all()
+    return render(request,'iiitdsite/clubs.html', {'s':s,'memb':memb})
 
 def admissionProcedure(request):
     return render(request,'iiitdsite/admission_procedure.html')
@@ -968,3 +972,19 @@ def gallery(request, cat_id):
     }
     return render(request,'iiitdsite/galleryDetail.html',context)
 
+
+def DSAI_Curr(request):
+    return render(request,'iiitdsite/DSAI_curr.html')
+
+def CSE_Curr(request):
+    return render(request,'iiitdsite/CSE_curr.html')
+
+def ECE_Curr(request):
+    return render(request,'iiitdsite/ECE_curr.html')
+
+def nirf(request):
+    nirf = Nirf.objects.all()
+    context={
+        "nirf": nirf
+    }
+    return render(request,'iiitdsite/nirf.html',context)

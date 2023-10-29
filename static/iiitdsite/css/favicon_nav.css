@@ -1,14 +1,17 @@
 /* Default CSS*/
 /* Imported CSS */
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* End Imported CSS*/
 
 /* Default CSS*/
 body {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Noto Serif', serif;
   overflow-x: hidden;
   font-size: 15px;
   color: #333;
+  text-align: justify;
   /* height: 100%; */
   /* margin: 0;
   padding: 0; */
@@ -28,6 +31,7 @@ p {
   line-height: 1.7;
   margin: 0;
   font-size: 16px;
+  text-align: justify;
 }
 
 h1,
@@ -80,7 +84,7 @@ a:hover {
 }
 .main-menu ul li a {
   color: #333333;
-  font-size: 16px;
+  font-size: 14px;
   padding: 52px 15px;
   font-weight: 500;
   display: block;

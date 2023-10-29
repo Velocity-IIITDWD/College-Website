@@ -80,5 +80,9 @@ urlpatterns = [
     path('updates',views.UpdatesListView.as_view(),name='updates'),
     path('tenders',views.TendersListView.as_view(),name='tenders'),
     path('clubs',views.clubs,name='clubs'),
-    path('magazine-team',views.magazine_team,name='magazine-team')
+    path('magazine-team',views.magazine_team,name='magazine-team'),
+    path('nirf',views.nirf,name="nirf"),
+    path('BTechDSAI',views.DSAI_Curr,name="DSAI_curr"),
+    path('BTechCSE',views.CSE_Curr,name="CSE_curr"),
+    path('BTechECE',views.ECE_Curr,name="ECE_curr"),
     ]

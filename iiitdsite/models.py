@@ -15,6 +15,7 @@ class Faculty(models.Model):
     interest = models.CharField(max_length=500,null=True)
     profile =  models.CharField(max_length=200,null=True)
     image = models.ImageField(upload_to='Faculty/', blank=True, null=True)
+
     def __str__(self):
         return self.name
 
@@ -222,6 +223,7 @@ class phdlinks(models.Model):
     date = models.DateField(null=True)
     form= models.CharField(max_length=200,blank=True, null=True)
     instructions = models.FileField(upload_to='PhdAdmission/', blank=True, null=True)
+
     def __str__(self): 
          return self.title[:50]
 
@@ -242,6 +244,7 @@ class Jobs(models.Model):
     date = models.DateField()
     form= models.CharField(max_length=200,blank=True, null=True)
     instructions = models.FileField(upload_to='Jobs/', blank=True, null=True)
+
     def __str__(self): 
          return self.job_title[:50]
 
@@ -254,6 +257,7 @@ class Announcements(models.Model):
     title = models.CharField(max_length=150)
     subtitle = models.CharField(max_length=200)
     date = models.DateTimeField(auto_now_add=True)
+
     def __str__(self): 
          return self.title[:50]
 
@@ -261,6 +265,7 @@ class Updates(models.Model):
     title = models.CharField(max_length=150)
     subtitle = models.CharField(max_length=200)
     date = models.DateTimeField(auto_now_add=True)
+
     def __str__(self): 
          return self.title[:50]
 
@@ -270,6 +275,7 @@ class Tenders(models.Model):
     publishedDate= models.DateField()
     lastDate = models.DateField()
     time = models.TimeField(null=True)
+
     def __str__(self): 
          return self.tender_title[:50]
 
@@ -279,6 +285,7 @@ class Magazine_Issues(models.Model):
     file = models.FileField(upload_to='Magazine/Issues/', blank=True, null=True)
     description= models.TextField(blank=True, null=True)
     publishedDate= models.DateField()
+
     def __str__(self): 
          return self.title[:50]
 
@@ -287,6 +294,7 @@ class Magazine_Team(models.Model):
     role = models.CharField(max_length=200,null=True)
     tag = models.CharField(max_length=200,null=True)
     image = models.ImageField(upload_to='Magazine/Team/', blank=True, null=True)
+
     def __str__(self): 
          return self.name[:50]
 
@@ -298,14 +306,29 @@ class Clubs(models.Model):
     LinkedIn = models.CharField(max_length=200, blank=True)
     Facebook = models.CharField(max_length=200, blank=True)
     Mail = models.CharField(max_length=200, blank=True)
+    Description=models.TextField(blank=True,null=True)
+    identifier=models.CharField(unique=True, max_length=200,null=True,blank=True)
+
     def __str__(self): 
          return self.NameofClub[:50]
+    
+class Club_Members(models.Model):
+    Name =models.CharField(max_length=30)
+    Photo=models.ImageField(upload_to='Clubs/Members/',blank=True,null=True)
+    Post=models.CharField(max_length=20)
+    identifier=models.CharField(max_length=200,null=True,blank=True)
+    NameOfClub=models.ForeignKey(Clubs,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.Name[:30]
+
 
 class Senate(models.Model):
     name = models.CharField(max_length=200,null=True)
     role = models.CharField(max_length=200,null=True)
     tag = models.CharField(max_length=200,null=True)
     image = models.ImageField(upload_to='Senate/', blank=True, null=True)
+
     def __str__(self): 
          return self.name[:50]
 
@@ -314,6 +337,7 @@ class Financial_Committee(models.Model):
     role = models.CharField(max_length=200,null=True)
     tag = models.CharField(max_length=200,null=True)
     image = models.ImageField(upload_to='FinanceCommittee/', blank=True, null=True)
+
     def __str__(self): 
          return self.name[:50]
 
@@ -322,6 +346,7 @@ class BOG(models.Model):
     role = models.CharField(max_length=200,null=True)
     tag = models.CharField(max_length=200,null=True)
     image = models.ImageField(upload_to='BOG/', blank=True, null=True)
+
     def __str__(self): 
          return self.name[:50]
 
@@ -329,6 +354,7 @@ class Staff(models.Model):
     name = models.CharField(max_length=200,null=True)
     role = models.CharField(max_length=200,null=True)
     image = models.ImageField(upload_to='Staff/', blank=True, null=True)
+
     def __str__(self): 
          return self.name[:50]
 
@@ -355,8 +381,13 @@ class Image(models.Model):
 
     def __str__(self):
         return str(self.category)
+    
+class Nirf(models.Model):
+    title = models.CharField(max_length=1000,null=True)
+    report = models.FileField(upload_to='NIRF/Reports',null=True,blank=True)
             
-        
+    def __str__(self):
+        return str(self.title)
 
 
 

@@ -39,53 +39,228 @@
     <div class="container-fluid" style="margin-left:45px">
 			<h1 class="text-center" style="font-size: 60px;margin-right: 5.5rem;text-decoration: underline;text-underline-offset: 6px;">Faculty</h1>
 			<br /><br />
-      <div class="d-flex" style="flex-wrap: wrap;">
-          {% for member in members %}
-          
-            <a href="{{member.get_absolute_url}}" style="color: #333333;">
-              <div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem;">
-                <img src="{{member.image.url}}" class="card-img-top" alt="...">
-                <br>
-                <p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
-                <p class="card-text" style="text-align: center;">{{member.designation}}</p>
-              </div>
-              
+      <div>
 
-              <!-- <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" style="transform:scale(0.8);">
-                <div class="card shadow-sm border-0 rounded">
-                  <div class="card-body p-0">
-                    <figure>
-                      <img
-                        src={{member.image.url}}
-                        alt=""
-                        class="w-100 card-img-top"
-                      />
-                    </figure>
-                  </div>
-                  <div class="p-4">
-                    <h5 class="mb-0">{{member.name}}</h5>
-                    <p class="small text-muted">{{facultydata.department}}</p>
-                    <p>{{facultydata.designation}}</p>
-                    <ul class="social mb-0 list-inline mt-3">
-                      <li class="list-inline-item m-0">
-                        <a href="{{member.mail}}" class="social-link"
-                          ><i class="fa fa-envelope"></i
-                        ></a>
-                      </li>
-                      <li class="list-inline-item m-0">
-                        <a href="#" class="social-link"
-                          ><i class="fa fa-linkedin"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div> -->
+		{% comment %} CSE FACULTY {% endcomment %}
 
-            </a>
-          {% endfor %}
+		<div id="CSE-Faculty">
+			<a href="" name="cse"></a>
+			<div style="margin-bottom:2rem ;">
+				<h1>Computer Science And Engineering</h1>
+			</div>
+			<div class="d-flex" style="flex-wrap: wrap;">
+				{% for member in csemembers %}
+				<a href="{{member.get_absolute_url}}" style="color: #333333;">
+					<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem; height: 20rem;">
+						<img src="{{member.image.url}}" class="card-img-top" alt="...">
+					<br>
+					<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+					<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+					</div>
+				
+				
+				<!-- <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" style="transform:scale(0.8);">
+					<div class="card shadow-sm border-0 rounded">
+						<div class="card-body p-0">
+							<figure>
+								<img
+								src={{member.image.url}}
+								alt=""
+								class="w-100 card-img-top"
+								/>
+							</figure>
+						</div>
+						<div class="p-4">
+							<h5 class="mb-0">{{member.name}}</h5>
+							<p class="small text-muted">{{facultydata.department}}</p>
+							<p>{{facultydata.designation}}</p>
+							<ul class="social mb-0 list-inline mt-3">
+								<li class="list-inline-item m-0">
+									<a href="{{member.mail}}" class="social-link"
+									><i class="fa fa-envelope"></i
+										></a>
+									</li>
+									<li class="list-inline-item m-0">
+										<a href="#" class="social-link"
+										><i class="fa fa-linkedin"></i
+											></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+						
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+			
+		{% comment %} DSAI FACULTY {% endcomment %}
+
+	
+		<div id="DSAI-Faculty">
+			<a href="" name="dsai"></a>
+			<div style="margin-bottom:2rem ;">
+				<h1>Data Science And Engineering</h1>
+			</div>
+			<div class="d-flex" style="flex-wrap: wrap;">
+				{% for member in dsaimembers %}
+				<a href="{{member.get_absolute_url}}" style="color: #333333;">
+					<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem; height: 20rem;">
+						<img src="{{member.image.url}}" class="card-img-top" alt="...">
+					<br>
+					<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+					<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+					</div>
+				
+				
+				<!-- <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" style="transform:scale(0.8);">
+					<div class="card shadow-sm border-0 rounded">
+						<div class="card-body p-0">
+							<figure>
+								<img
+								src={{member.image.url}}
+								alt=""
+								class="w-100 card-img-top"
+								/>
+							</figure>
+						</div>
+						<div class="p-4">
+							<h5 class="mb-0">{{member.name}}</h5>
+							<p class="small text-muted">{{facultydata.department}}</p>
+							<p>{{facultydata.designation}}</p>
+							<ul class="social mb-0 list-inline mt-3">
+								<li class="list-inline-item m-0">
+									<a href="{{member.mail}}" class="social-link"
+									><i class="fa fa-envelope"></i
+										></a>
+									</li>
+									<li class="list-inline-item m-0">
+										<a href="#" class="social-link"
+										><i class="fa fa-linkedin"></i
+											></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+						
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+
+			
+		{% comment %} ECE FACULTY {% endcomment %}
+	
+
+		<div id="ECE-Faculty">
+			<a href="" name="ece"></a>
+			<div style="margin-bottom:2rem ;">
+				<h1>Electronics and Communications Engineering</h1>
+			</div>
+			<div class="d-flex" style="flex-wrap: wrap;">
+				{% for member in ecemembers %}
+				<a href="{{member.get_absolute_url}}" style="color: #333333;">
+					<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem; height: 20rem;">
+						<img src="{{member.image.url}}" class="card-img-top" alt="...">
+					<br>
+					<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+					<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+					</div>
+				
+				
+				<!-- <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" style="transform:scale(0.8);">
+					<div class="card shadow-sm border-0 rounded">
+						<div class="card-body p-0">
+							<figure>
+								<img
+								src={{member.image.url}}
+								alt=""
+								class="w-100 card-img-top"
+								/>
+							</figure>
+						</div>
+						<div class="p-4">
+							<h5 class="mb-0">{{member.name}}</h5>
+							<p class="small text-muted">{{facultydata.department}}</p>
+							<p>{{facultydata.designation}}</p>
+							<ul class="social mb-0 list-inline mt-3">
+								<li class="list-inline-item m-0">
+									<a href="{{member.mail}}" class="social-link"
+									><i class="fa fa-envelope"></i
+										></a>
+									</li>
+									<li class="list-inline-item m-0">
+										<a href="#" class="social-link"
+										><i class="fa fa-linkedin"></i
+											></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+						
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+			
+		{% comment %} Humanities FACULTY {% endcomment %}
+
+	
+		<div id="Humanities-Faculty">
+			<div style="margin-bottom:2rem ;">
+				<h1>Humanities and Science</h1>
+			</div>
+			<div class="d-flex" style="flex-wrap: wrap;">
+				{% for member in humanitiesmembers %}
+				<a href="{{member.get_absolute_url}}" style="color: #333333;">
+					<div class="card m-3 shadow p-3 mb-5 bg-body" style="width: 14rem; height: 20rem;">
+						<img src="{{member.image.url}}" class="card-img-top" alt="...">
+					<br>
+					<p class="card-text" style="text-align: center;"><b>{{member.name}}</b></p>
+					<p class="card-text" style="text-align: center;">{{member.designation}}</p>
+					</div>
+				
+				
+				<!-- <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" style="transform:scale(0.8);">
+					<div class="card shadow-sm border-0 rounded">
+						<div class="card-body p-0">
+							<figure>
+								<img
+								src={{member.image.url}}
+								alt=""
+								class="w-100 card-img-top"
+								/>
+							</figure>
+						</div>
+						<div class="p-4">
+							<h5 class="mb-0">{{member.name}}</h5>
+							<p class="small text-muted">{{facultydata.department}}</p>
+							<p>{{facultydata.designation}}</p>
+							<ul class="social mb-0 list-inline mt-3">
+								<li class="list-inline-item m-0">
+									<a href="{{member.mail}}" class="social-link"
+									><i class="fa fa-envelope"></i
+										></a>
+									</li>
+									<li class="list-inline-item m-0">
+										<a href="#" class="social-link"
+										><i class="fa fa-linkedin"></i
+											></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+						
+					</a>
+					{% endfor %}
+				</div>
+			</div>
       </div>
-		</div>
+	</div>
         <style>
             .card{
                 transition:transform 0.5s;

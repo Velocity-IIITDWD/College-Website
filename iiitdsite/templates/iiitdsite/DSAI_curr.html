@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<title>BTech DSAI Curriculum</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link
+		  rel="icon"
+		  type="img/png"
+		  sizes="55x55"
+		  href="{% static 'iiitdsite/images/iiit-logo-small.png' %}"
+		/>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+		<link rel="stylesheet" href="{% static 'iiitdsite/css/footer.css' %}">
+		<link rel="stylesheet" href="{% static 'iiitdsite/css/favicon_nav.css' %}">
+		<link rel="stylesheet" href="{% static 'iiitdsite/css/top_nav-scroll.css' %}">
+		<link rel="stylesheet" href="{% static 'iiitdsite/css/faculty.css' %}" />
+		<link
+		  rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+		  crossorigin="anonymous"
+		/>
+	  </head>
+      <style>
+        .Curr-text{
+            font-size: 60px;
+            margin-right: 5.5rem;
+            text-decoration: underline;
+            text-underline-offset: 6px;
+        }
+        .type-courses-table{
+          width:30rem;
+        }
+        .course-detail{
+          width: 50rem;
+        }
+        .thead-color{
+          background-color: #FFA500;
+        }
+        .sem-color{
+          background-color: #8EAADB;
+        }
+        @media(max-width:1000px) {
+          body{
+                font-size: 8px;
+            }
+            .Curr-text{
+              margin-right: unset;
+            }
+            .course-detail{
+               width: unset;
+            }
+            .type-courses-table{
+               width: unset;
+              }
+        }
+        @media(max-width:500px){
+            body{
+                font-size: 8px;
+            }
+            .Curr-text{
+                font-size: 40px;
+                margin-right: 0;
+            }
+          .type-courses{
+            display: flex;
+            justify-content: center;
+          }
+          .course-detail{
+            width: 0rem;
+          }
+          .type-courses-table{
+            width:18.5rem;
+            margin-bottom: 3rem;
+          }
+          .align-middle{
+           width: 10px;
+          }
+        }
+      </style>
+  <body>
+    
+   <!-- Start Header Area -->
+   {% include 'iiitdsite/nav_bar.html' %}
+   <script>
+     var a = document.querySelector('.desktop-menu').querySelectorAll('li');
+     a[29].className='active';
+   </script>
+    <!-- Start Header Area -->
+    <br>
+    <div class="container-fluid" >
+			<div class="text-center">
+                <h3 class="text-center Curr-text">Curriculum for BTech Program</h3>
+                <h4 class="mt-5">Data Science and Artificial Intelligence</h4>
+			<br /><br />
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="d-flex flex-column  flex-sm-row">
+                    <div class="type-courses">
+                        <table class="table table-bordered type-courses-table" >
+                            <thead class="thead-color">
+                                <tr>
+                                <th scope="col" class="align-middle"></th>
+                                <th scope="col" class="align-middle">Type of courses</th>
+                                <th scope="col" class="align-middle">Credits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle">Core</td>
+                                    <td class="align-middle">30%</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">2</td>
+                                    <td class="align-middle">Elective Domain and Courses</td>
+                                    <td class="align-middle">25%</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">3</td>
+                                    <td class="align-middle">Mathematics, Science, Humanities and Engineering</td>
+                                    <td class="align-middle">25%</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">4</td>
+                                    <td class="align-middle">Soft Skills</td>
+                                    <td class="align-middle">10%</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">5</td>
+                                    <td class="align-middle">Projects</td>
+                                    <td class="align-middle">10%</td>
+                                </tr>
+                                <tr>
+                                  <td class="align-middle"></td>
+                                  <td class="align-middle">Minimum Credits Required = 160</td>
+                                  <td class="align-middle">100%</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ml-sm-3 ">
+                        <table class="table table-bordered course-detail">
+                            <thead class="thead-color">
+                                <tr>
+                                    <th class="align-middle">Course Code</th>
+                                    <th class="align-middle">Course Title</th>
+                                    <th class="align-middle">Credits <br>(L-T-P-S-C)</th>
+                                    <th class="align-middle">Prerequisite</th>
+                                  </tr>
+                            </thead>
+                           
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" class="text-center sem-color"><strong>Semester 1</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">DS101</td>
+                                    <td class="align-middle">Mathematics for Data Science</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS102</td>
+                                    <td class="align-middle">Finance and Accounting</td>
+                                    <td class="align-middle">3-0-2-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS103</td>
+                                    <td class="align-middle">Problem Solving through Programming (Intro to Logic and Computational Thinking)</td>
+                                    <td class="align-middle">3-1-2-0-5</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td  class="align-middle">DS104</td>
+                                    <td class="align-middle">Data Science and AI Applications</td>
+                                    <td class="align-middle">3-0-0-4-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">HS101</td>
+                                    <td class="align-middle">Language and Communication</td>
+                                    <td class="align-middle">2-1-0-0-3</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 20</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4" class="text-center sem-color"><strong>Semester 2</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS105</td>
+                                    <td class="align-middle">Probability and Statistics</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">CS102</td>
+                                    <td class="align-middle">Data Structures</td>
+                                    <td class="align-middle">3-1-2-0-5</td>
+                                    <td class="align-middle">DS103</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">EG101</td>
+                                    <td class="align-middle">Engineering101</td>
+                                    <td class="align-middle">2-1-2-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">HS107</td>
+                                    <td class="align-middle">Economics</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">HS102</td>
+                                    <td class="align-middle">Professional Communication</td>
+                                    <td class="align-middle">2-0-4-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 21</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4" class="text-center sem-color"><strong>Semester 3</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS201</td>
+                                    <td class="align-middle">Data and Business Analytics</td>
+                                    <td class="align-middle">3-0-2-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">CS201</td>
+                                    <td class="align-middle">Discrete Mathematics</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">CS207</td>
+                                    <td class="align-middle">Object Oriented Programming</td>
+                                    <td class="align-middle">3-0-2-0-4</td>
+                                    <td class="align-middle">DS103</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">HS201</td>
+                                    <td class="align-middle">Psychology/Sociology/LifeSkills Basket</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">CS202</td>
+                                    <td class="align-middle">Design & Analysis of Algorithms</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle">CS102</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">HS202</td>
+                                    <td class="align-middle">Ethics</td>
+                                    <td class="align-middle">3-0-0-0-3</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 24</strong></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td colspan="4" class="text-center sem-color"><strong>Semester 4</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">MA202</td>
+                                    <td class="align-middle">Linear Algebra</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">EC219</td>
+                                    <td class="align-middle">Introduction to Systems Thinking</td>
+                                    <td class="align-middle">3-0-2-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS202</td>
+                                    <td class="align-middle">Operating Systems and Cloud Computing</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle">CS102</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS203</td>
+                                    <td class="align-middle">Software Engineering and Services</td>
+                                    <td class="align-middle">3-0-2-0-4</td>
+                                    <td class="align-middle">DS103</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">CS210</td>
+                                    <td class="align-middle">	Database Management Systems</td>
+                                    <td class="align-middle">3-1-2-0-5</td>
+                                    <td class="align-middle">CS102</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS209</td>
+                                    <td class="align-middle">Global Business Perspectives</td>
+                                    <td class="align-middle">3-0-0-0-3</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 24</strong></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td colspan="4" class="text-center sem-color"><strong>Semester 5</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS204</td>
+                                    <td class="align-middle">Graphs and Social Networks</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS205</td>
+                                    <td class="align-middle">Computer and Communication Networks</td>
+                                    <td class="align-middle">3-1-2-0-5</td>
+                                    <td class="align-middle">CS102</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS206</td>
+                                    <td class="align-middle">Algorithms for Artificial Intelligence</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS207</td>
+                                    <td class="align-middle">Machine Learning</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle">MA202</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS208</td>
+                                    <td class="align-middle">Visualization and App Development</td>
+                                    <td class="align-middle">2-1-2-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 21</strong></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td colspan="4" class="text-center sem-color"><strong>Semester 6</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS301</td>
+                                    <td class="align-middle">Legal Aspects of IT</td>
+                                    <td class="align-middle">3-0-2-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS302</td>
+                                    <td class="align-middle">Financial Data Analytics</td>
+                                    <td class="align-middle">2-1-2-0-4</td>
+                                    <td class="align-middle">DS201</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS303</td>
+                                    <td class="align-middle">Innovation and Entrepreneurship</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS304</td>
+                                    <td class="align-middle">Data Security and Privacy</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle"></td>
+                                    <td class="align-middle">Elective 1</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS398</td>
+                                    <td class="align-middle">Mini Project I</td>
+                                    <td class="align-middle">0-0-0-8-2</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 22</strong></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td colspan="4" class="text-center sem-color"><strong>Semester 7</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS304</td>
+                                    <td class="align-middle">Healthcare Data Analytics</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle">DS201</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle"></td>
+                                    <td class="align-middle">Elective 2</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle"></td>
+                                    <td class="align-middle">Elective 3</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle">CS102</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle"></td>
+                                    <td class="align-middle">Elective 4</td>
+                                    <td class="align-middle">3-1-0-0-4</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS399</td>
+                                    <td class="align-middle">Mini Project II</td>
+                                    <td class="align-middle">0-0-0-8-2</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle"></td>
+                                    <td class="align-middle">Environmental Study*</td>
+                                    <td class="align-middle">0-0-0-8-2</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 20</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4" class="text-center sem-color"><strong>Semester 8</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="align-middle">DS499</td>
+                                    <td class="align-middle">Major Project</td>
+                                    <td class="align-middle">0-0-0-32-8</td>
+                                    <td class="align-middle"></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 8</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="4"><strong>Semester Credits: 160</strong></td>
+                                  </tr>
+                                <tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 3rem 0rem; padding: 0px 15px">
+                <p><strong>*Note:</strong></p>
+                    <ol>
+                        <strong>
+                            <li>1. Environmental studies is a project course that can be completed any time before the end of 7th Semester.</li>
+                        </strong>
+                        <strong>
+                            <li>2. Special Topic courses of 1 or 2 credits can be offered in any semester.</li>
+                        </strong>
+                    </ol>
+            </div>
+	</div>
+       
+   <!--------------footer-------------->
+
+		{% include 'iiitdsite/footer.html' %}
+		<!-------------footer ends---------->
+		<!-- Nav bar js -->
+		<script>
+			//smooth scroll js
+
+			var scroll = new SmoothScroll('a[href*="#"]');
+			var scroll = new SmoothScroll('a[href*="#"]', {
+				speed: 9000,
+				speedAsDuration: true,
+			});
+		</script>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+		<script>
+			(function ($) {
+				"use strict";
+
+				// Off Canvas Open close start
+				$(".off-canvas-btn").on("click", function () {
+					$("body").addClass("fix");
+					$(".off-canvas-wrapper").addClass("open");
+				});
+
+				$(".btn-close-off-canvas,.off-canvas-overlay").on("click", function () {
+					$("body").removeClass("fix");
+					$(".off-canvas-wrapper").removeClass("open");
+				});
+
+				// slide effect dropdown
+				function dropdownAnimation() {
+					$(".dropdown").on("show.bs.dropdown", function (e) {
+						$(this)
+							.find(".dropdown-menu")
+							.first()
+							.stop(true, true)
+							.slideDown(500);
+					});
+
+					$(".dropdown").on("hide.bs.dropdown", function (e) {
+						$(this)
+							.find(".dropdown-menu")
+							.first()
+							.stop(true, true)
+							.slideUp(500);
+					});
+				}
+				dropdownAnimation();
+
+				//offcanvas mobile menu start
+				var $offCanvasNav = $(".mobile-menu"),
+					$offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+				/Add Toggle Button With Off Canvas Sub Menu/;
+				$offCanvasNavSubMenu
+					.parent()
+					.prepend('<span class="menu-expand"><i></i></span>');
+
+				/Close Off Canvas Sub Menu/;
+				$offCanvasNavSubMenu.slideUp();
+
+				/Category Sub Menu Toggle/;
+				$offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+					var $this = $(this);
+					if (
+						$this
+							.parent()
+							.attr("class")
+							.match(
+								/\b(menu-item-has-children|has-children|has-sub-menu)\b/
+							) &&
+						($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+					) {
+						e.preventDefault();
+						if ($this.siblings("ul:visible").length) {
+							$this.parent("li").removeClass("active");
+							$this.siblings("ul").slideUp();
+						} else {
+							$this.parent("li").addClass("active");
+							$this
+								.closest("li")
+								.siblings("li")
+								.removeClass("active")
+								.find("li")
+								.removeClass("active");
+							$this.closest("li").siblings("li").find("ul:visible").slideUp();
+							$this.siblings("ul").slideDown();
+						}
+					}
+				});
+
+				// tooltip active js
+				$('[data-toggle="tooltip"]').tooltip();
+			})(jQuery);
+		</script>
+		<!--ion icon cdn-->
+		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+		<!-- Nav bar js end-->
+
+		<!-- Search box in top nav -->
+		<script>
+			//search box js
+
+			$(document).ready(function () {
+				$(".search1").each(function () {
+					var self = $(this);
+					var div = self.children("div");
+					var placeholder = div.children("input").attr("placeholder");
+					var placeholderArr = placeholder.split(/ +/);
+					if (placeholderArr.length) {
+						var spans = $("<div />");
+						$.each(placeholderArr, function (index, value) {
+							spans.append($("<span />").html(value + "&nbsp;"));
+						});
+						div.append(spans);
+					}
+					self.click(function () {
+						self.addClass("open");
+						setTimeout(function () {
+							self.find("input").focus();
+						}, 750);
+					});
+					$(document).click(function (e) {
+						if (!$(e.target).is(self) && !jQuery.contains(self[0], e.target)) {
+							self.removeClass("open");
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
